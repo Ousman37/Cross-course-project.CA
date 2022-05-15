@@ -1,5 +1,6 @@
 /* ! import fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -11,13 +12,25 @@
 :root {
   --body-font-family: "Merriweather", sans-serif;
   --font-family: "Roboto", sans-serif;
+  --family-font: "Oswald", sans-serif;
   --body-font-color: #676767;
   --light-color: #fff;
-  --dark-color: #2e2e2e;
+  --dark-color: #141313;
+  --orange: #ff4f00;
+  --color-red-3: #990000;
+  --gray-dark: #303030;
+  --success: #00b55a;
+  --color-green-2: #5aab6a;
   --dark-color-light: #4d4d4d;
-  --accent-color: #f55556;
+  --accent-color: #0a3641;
   --body-font-color: #676767;
   --section-background-color: #fef5f5;
+  --color-red-2: #c86464;
+  --color-blue-2: #5b9dd9;
+  --color-green-1: #dff0d8;
+  --color-yellow-3: #785e1c;
+  --color-yellow-2: #ab934f;
+  --color-yellow-1: #f8f2d5;
 }
 
 html {
@@ -27,10 +40,9 @@ html {
 
 body {
   width: 100%;
-
+  text-rendering: optimizeLegibility;
   font-size: 1.4rem;
-
-  font-family: var(--body-font-family);
+  --font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: var(--body-font-color);
   line-height: 1.5;
@@ -47,6 +59,7 @@ a {
 }
 
 h1 {
+  font-family: var(--family-font);
   font-size: 3.125rem;
   line-height: 4rem;
   color: var(--dark-color);
@@ -70,6 +83,7 @@ p {
   font-size: 1rem;
   color: #465b52;
   margin: 15px 0 20px 0;
+  font-family: var(--body-font-family);
 }
 
 .section-p1 {
@@ -90,15 +104,217 @@ p {
   padding: 20px 80px;
   background: var(--light-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 #navbar {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#navbar li a {
+#navbar li {
+  list-style: none;
   padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1.2rem;
   font-weight: 600;
+  color: var(--accent-color);
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a:active {
+  color: var(--orange);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 0.125rem;
+  background: var(--orange);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.hero {
+  background-image: url("../images/hero.jpg");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 20% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero h4 {
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+  color: var(--light-color);
+}
+.hero h1 {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  display: block;
+  line-height: 10vw;
+  font-size: 5vw;
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+.hero h2 {
+  font-size: 1.3rem;
+  color: var(--light-color);
+}
+p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+}
+.hero button {
+  border-color: #fff;
+  border-width: 0.125rem;
+  background-color: var(--light-color);
+  color: var(--gray-dark);
+  padding: 0.75em 1.5em;
+  border-radius: 6px;
+
+  text-transform: uppercase;
+  max-width: calc(7.9rem + 10vw);
+  min-width: calc(7.9rem + 10vw);
+  font-size: calc(0.47rem + 0.45vw);
+}
+.hero button:hover {
+  color: #fff;
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+
+.fa-cart-shopping {
+  background-color: var(--orange);
+  border-width: 0.125rem;
+  padding: 0.75em 1.5em;
+  color: var(--light-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 25px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-green-2);
+  border-radius: 4px;
+  margin: 15px 0;
+}
+.fa-dhl {
+  font-size: 9rem;
+
+  color: var(--gray-dark);
+}
+.feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+.feature .fe-box h6 {
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--light-color);
+  background-color: var(--color-red-2);
+}
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.feature .fe-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.feature .fe-box:nth-child(2) h6 {
+  background-color: cadetblue;
+}
+.feature .fe-box:nth-child(3) h6 {
+  background-color: var(--color-green-2);
+}
+.feature .fe-box:nth-child(4) h6 {
+  background-color: var(--color-yellow-3);
+}
+.feature .fe-box:nth-child(5) h6 {
+  background-color: var(--orange);
+}
+.feature .fe-box:nth-child(6) h6 {
+  background-color: var(--color-red-2);
+}
+/* !HEADER End*/
+
+/* !Feature section*/
+.product1 {
+  text-align: center;
+}
+.product1 p {
+  color: var(--dark-color-light);
+}
+.product1 .product {
+  width: 23%;
+  min-height: 250px;
+  padding: 10px 12px;
+  border: 1px solid var(--orange);
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+}
+.product1 .product:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+.product1 .product img {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.product1 .product .description {
+  text-align: start;
+  padding: 0.625rem 0;
+}
+.product1 .product .description span {
+  color: var(--dark-color);
+  font-size: 2rem;
+}
+.product1 .product .description h5 {
+  padding-top: 0.4375rem;
+  font-size: 2.1rem;
+  color: var(--dark-color-light);
+}
+
+.product1 .product .description i {
+  font-size: 1.75rem;
+  color: rgba(243, 181, 25);
+}
+
+.product1 .product .description h4 {
+  padding-top: 0.4375rem;
+  font-size: 1.9375rem;
+  font-weight: 700;
+  color: var(--body-font-color);
+}
+.product1 .product .fa-cart-plus {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 3.125rem;
+  background-color: var(--light-color);
+  font-weight: 500;
 }
 #navbar {
 }
@@ -108,8 +324,26 @@ p {
 }
 #navbar {
 }
-/* !HEADER START*/
-/* !HEADER START*/
+#navbar {
+}
+#navbar {
+}
+#navbar {
+}
+#navbar {
+}
+#navbar {
+}
+
+#navbar {
+}
+#navbar {
+}
+#navbar {
+}
+#navbar {
+}
+
 /* !HEADER START*/
 /* !HEADER START*/
 /* !HEADER START*/
