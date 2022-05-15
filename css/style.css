@@ -198,10 +198,11 @@ p {
 
 .fa-cart-shopping {
   background-color: var(--orange);
-  border-width: 0.125rem;
-  padding: 0.75em 1.5em;
+  border-width: 0.12rem;
+  padding: 0.71em 1.5em;
   color: var(--light-color);
-  font-size: 2rem;
+  border-radius: 1.125rem;
+  font-size: 14px;
   cursor: pointer;
 }
 .feature .fe-box {
@@ -258,10 +259,18 @@ p {
 /* !HEADER End*/
 
 /* !Feature section*/
-.product1 {
+.product1 h2 {
   text-align: center;
 }
-.product1 p {
+.product-container,
+.product1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.section-p1 p {
+  text-align: center;
   color: var(--dark-color-light);
 }
 .product1 .product {
@@ -274,6 +283,7 @@ p {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 0;
   transition: 0.2s ease;
+  position: relative;
 }
 .product1 .product:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
@@ -308,16 +318,15 @@ p {
   font-weight: 700;
   color: var(--body-font-color);
 }
-.product1 .product .fa-cart-plus {
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  border-radius: 3.125rem;
-  background-color: var(--light-color);
-  font-weight: 500;
+.product1 .product .fa-cart-shopping {
+  border-radius: 50%;
+  position: absolute;
+  font-size: 2rem;
+  bottom: 20px;
+  right: 10px;
+  font-size: 14px;
 }
-#navbar {
-}
+
 #navbar {
 }
 #navbar {
