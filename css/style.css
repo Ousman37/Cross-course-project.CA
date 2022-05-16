@@ -42,7 +42,7 @@ body {
   width: 100%;
   text-rendering: optimizeLegibility;
   font-size: 1.4rem;
-  --font-family: "Roboto", sans-serif;
+  --family-font: "Oswald", sans-serif;
   font-weight: 400;
   color: var(--body-font-color);
   line-height: 1.5;
@@ -67,12 +67,10 @@ h1 {
 h2 {
   font-size: 2.875 rem;
   line-height: 2.875rem;
-  color: var(--dark-color);
 }
 
 h4 {
   font-size: 1.25 rem;
-  color: var(--dark-color-light);
 }
 h6 {
   font-weight: 700;
@@ -259,7 +257,11 @@ p {
 /* !HEADER End*/
 
 /* !Feature section*/
-.product1 h2 {
+#d-info h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .product-container,
@@ -327,11 +329,51 @@ p {
   font-size: 14px;
 }
 
-#navbar {
+/* !BANNER SECTION*/
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/background.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
 }
-#navbar {
+#banner h4 {
+  color: var(--light-color);
+  font-size: 16px;
 }
-#navbar {
+#banner h2 {
+  font-family: var(--family-font);
+  color: var(--light-color);
+  font-size: 3rem;
+  padding: 10px 0;
+}
+#banner span {
+  color: var(--color-red-3);
+}
+
+button.cta {
+  background-color: var(--light-color);
+  color: var(--gray-dark);
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 500;
+  padding: 15px 32px;
+  text-align: center;
+
+  font-size: 16px;
+}
+button.cta:hover {
+  color: #fff;
+  background-color: var(--orange);
+  border-color: var(--orange);
 }
 #navbar {
 }
@@ -353,7 +395,6 @@ p {
 #navbar {
 }
 
-/* !HEADER START*/
 /* !HEADER START*/
 /* !HEADER START*/
 /* !HEADER START*/
