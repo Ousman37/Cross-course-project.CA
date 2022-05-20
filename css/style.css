@@ -69,7 +69,6 @@ h1 {
 h2 {
   font-size: 2.875 rem;
   line-height: 2.875rem;
-  color: var(--dark-color);
 }
 
 h4 {
@@ -272,13 +271,18 @@ p {
   border-color: var(--orange);
 }
 
+.fa-bag-shopping:hover {
+  color: var(--body-font-color);
+
+  border-color: var(--orange);
+}
+
 .fa-bag-shopping {
-  background-color: var(--orange);
   border-width: 0.12rem;
   padding: 0.71em 1.5em;
-  color: var(--light-color);
+  color: var(--orange);
   border-radius: 1.125rem;
-  font-size: 1.254rem;
+  font-size: 1.959rem;
   cursor: pointer;
 }
 
@@ -518,8 +522,339 @@ p {
 }
 
 /* !Blog page  section*/
+
+#blog-header {
+  background-image: url(../images/outdoor1.jpg);
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 30% right 0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-text h2 {
+  text-transform: uppercase;
+  color: var(--light-color);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.blog-text p {
+  color: var(--light-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#blog-content {
+  padding: 150px 150px 0 150px;
+}
+
+#blog-content .blog-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+#blog-content .blog-image {
+  width: 40%;
+  margin-right: 40px;
+}
+
+#blog-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog-content .blog-details {
+  width: 50%;
+}
+
+.blog-details p {
+  color: var(--body-font-color);
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.blog-details h4 {
+  font-size: 5rem;
+  color: var(--dark-color);
+}
+
+#blog-content .blog-details a {
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 00.3s;
+}
+
+#blog-content .blog-details a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+
+#blog-content .blog-details a:hover {
+  color: var(--orange);
+}
+
+#blog-content .blog-details a:hover::after {
+  background-color: var(--orange);
+}
+
+#blog-content .blog-box h1 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--orange);
+  z-index: -9;
+}
+
+#blog-content .blog-details {
+  background-image: url(../images/outdoor1.jpg);
+}
+
 /* !Contact page  section*/
+#contact-header {
+  background-image: url(../images/sunset.jpg);
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 30% right 0;
+  padding: 14px;
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  bottom: 20px;
+}
+
+#contact-header h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+  font-family: " Oswald";
+  font-weight: 900;
+  color: var(--light-color);
+  margin: 13px;
+}
+
+#contact-header p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: " Oswald";
+  font-weight: 600;
+  color: var(--light-color);
+  margin: 13px;
+}
+
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact-details .details {
+  width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span {
+  font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#contact-details .details a bdi {
+  color: var(--orange);
+  cursor: pointer;
+  padding-bottom: 15px;
+}
+
+#contact-details .details span {
+  padding: 20px 0;
+}
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+
+#contact-details .details li img {
+  width: 5rem;
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+#contact-details .details li p {
+  cursor: pointer;
+  color: var(--body-font-color);
+  margin: 0;
+  font-size: 14px;
+}
+
+#contact-details .details li p:hover {
+  color: var(--orange);
+}
+
+#contact-details .map {
+  width: 55%;
+  height: 400px;
+}
+
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#form-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid var(--dark-color-light);
+}
+
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--body-font-color);
+}
+
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--body-font-color);
+}
+
+#form-details .people div {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+#form-details .people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+#form-details .people div span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 /* !About  section*/
+
+#about-header {
+  background-image: url(../images/about-header.jpg);
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 30% right 0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-header h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: " Oswald";
+  font-weight: 700;
+  margin: 13px;
+}
+
+#about-head p {
+  text-align: start;
+  font-size: 1.3rem;
+  color: var(--dark-color-light);
+}
+
+#about-header .blog-text p {
+  text-align: center;
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+
+#about-head img {
+  width: 40%;
+  height: auto;
+  background-color: var(--light-color);
+}
+
+#about-head div {
+  padding-left: 40px;
+}
+#about-stores {
+  text-align: center;
+}
+
+#about-stores video {
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
+}
+
+#about-stores .video video {
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#about-stores a span {
+  color: var(--orange);
+}
 
 /* !BANNER SECTION*/
 
@@ -663,7 +998,7 @@ button.cta:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(../images/mervil-.jpg);
+  background-image: url(../images/outdoor5.jpg);
   min-width: 30%;
   height: 30vh;
 
@@ -866,7 +1201,425 @@ footer .install img {
   color: var(--orange);
 }
 
+/* !  CART page  section*/
+
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img {
+  width: 70px;
+}
+#cart table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+
+#cart table td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+}
+#cart table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+  border: 1px solid var(--dark-color-light);
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td {
+  padding-top: 15px;
+}
+
+#cart table tbody td {
+  font-size: 13px;
+}
+
+#cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal {
+  padding-bottom: 15px;
+}
+
+#coupon input {
+  padding: 15px 20px;
+  width: 60%;
+  outline: none;
+  margin-right: 10px;
+  border: 1px solid var(--dark-color-light);
+}
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid var(--dark-color-light);
+  padding: 30px;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#subtotal table td {
+  width: 50%;
+  border: 1px solid var(--dark-color-light);
+  padding: 10px;
+  font-size: 13px;
+}
+
+#subtotal button {
+  background-color: var(--success);
+}
+
+#subtotal button.cta {
+  background-color: var(--success);
+  color: var(--light-color);
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 500;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  transition: 00.2s;
+}
 /* !START MEDIA QUERY*/
+
+@media (max-width: 912px) {
+  /*.section-p1 {
+    margin: 40px 40px;
+  }
+  .section-m1 {
+    margin: 0px 0px;
+  }*/
+  .logo {
+    width: 14rem;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--light-color);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 00.3s;
+  }
+  #navbar .active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-menu i {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .hero {
+    height: 60vh;
+
+    background-position: top 20% right 40%;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .feature {
+    justify-content: center;
+  }
+
+  .feature .fe-box {
+    width: 150px;
+
+    margin: 15px 15px;
+  }
+
+  .product1,
+  .product-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .product1 .product {
+    margin: 15px;
+  }
+  #banner {
+    height: 20vh;
+  }
+
+  #sm-banner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 6rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 2rem;
+  }
+  #sm-banner .banner-box2,
+  #sm-banner .banner-box {
+    margin-bottom: 10px;
+  }
+  #sm-banner .banner-box {
+    min-width: 198px;
+    height: 20vh;
+  }
+
+  #banner3 .banner-box {
+    width: 28%;
+    height: 25vh;
+  }
+  #newsletter .form {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  #newsletter {
+    padding: 0 20px;
+  }
+
+  #banner3 {
+    padding: 0 40px;
+  }
+  #sm-banner span {
+    font-size: 1rem;
+  }
+
+  /* !Blog Page  START*/
+  .blog-details h4 {
+    font-size: 3rem;
+    color: var(--dark-color);
+  }
+
+  #blog-header {
+    height: 30vh;
+  }
+  #blog-content img {
+    width: 100%;
+  }
+
+  #blog-content {
+    padding: 100px 40px 0 40px;
+  }
+  #blog-content .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #blog-content .blog-image {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 820px) {
+  /*.section-p1 {
+    margin: 40px 40px;
+  }
+  .section-m1 {
+    margin: 0px 0px;
+  }*/
+  .logo {
+    width: 14rem;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--light-color);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 00.3s;
+  }
+  #navbar .active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-menu i {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .hero {
+    height: 60vh;
+
+    background-position: top 20% right 40%;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .feature {
+    justify-content: center;
+  }
+
+  .feature .fe-box {
+    width: 150px;
+
+    margin: 15px 15px;
+  }
+
+  .product1,
+  .product-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .product1 .product {
+    margin: 15px;
+  }
+  #banner {
+    height: 20vh;
+  }
+
+  #sm-banner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 6rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 2rem;
+  }
+  #sm-banner .banner-box2,
+  #sm-banner .banner-box {
+    margin-bottom: 10px;
+  }
+  #sm-banner .banner-box {
+    min-width: 198px;
+    height: 20vh;
+  }
+
+  #banner3 .banner-box {
+    width: 28%;
+    height: 25vh;
+  }
+  #newsletter .form {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  #newsletter {
+    padding: 0 20px;
+  }
+
+  #banner3 {
+    padding: 0 40px;
+  }
+  #sm-banner span {
+    font-size: 1rem;
+  }
+
+  /* !Blog Page  START*/
+  .blog-details h4 {
+    font-size: 3rem;
+    color: var(--dark-color);
+  }
+
+  #blog-header {
+    height: 30vh;
+  }
+  #blog-content img {
+    width: 100%;
+  }
+
+  #blog-content {
+    padding: 100px 40px 0 40px;
+  }
+  #blog-content .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #blog-content .blog-image {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  /* !About  section*/
+  #about-head {
+    flex-direction: column;
+  }
+  #about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #about-head div {
+    padding-left: 0px;
+  }
+  #about-head p {
+    font-size: 1.2rem;
+    text-align: start;
+    color: var(--dark-color-light);
+  }
+  #about-header h2 {
+    text-align: center;
+    font-family: " Oswald";
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  #about-stores video {
+    width: 100%;
+  }
+}
 
 @media (max-width: 799px) {
   /*.section-p1 {
@@ -976,11 +1729,174 @@ footer .install img {
   #sm-banner span {
     font-size: 1rem;
   }
+
+  /* !CONTACT PAGE FORM*/
+  #form-details {
+    padding: 40px;
+  }
+
+  #form-details form {
+    width: 50%;
+  }
 }
 
+@media (max-width: 540px) {
+  .logo {
+    width: 11rem;
+    margin-top: 11px;
+  }
+  #header {
+    padding: 10px 30px;
+  }
+  .hero h1 {
+    font-size: 23px;
+  }
+  .hero h2 {
+    font-size: 22px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .hero p {
+    margin: 12px 0 20px 0;
+  }
+  .hero h4 {
+    font-size: 18px;
+    padding-bottom: 12px;
+    margin-top: 12px;
+  }
+  .hero {
+    height: 70vh;
+
+    background-position: 55%;
+    padding: 0 20px;
+  }
+  .feature {
+    justify-content: space-between;
+  }
+  .feature .fe-box {
+    width: 155px;
+
+    margin: 0 0 15px 0;
+  }
+  .product1 .product {
+    width: 100%;
+  }
+  footer .colum {
+    margin-left: 20px;
+  }
+
+  #banner1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  #newsletter h4 {
+    font-size: 14px;
+  }
+  #banner {
+    height: 40vh;
+    width: 100%;
+  }
+  #sm-banner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    column-gap: 9rem;
+
+    height: 100vh;
+  }
+  #sm-banner .banner-box2 {
+    margin-top: 20px;
+  }
+
+  #sm-banner .section-p1 {
+    height: 40vh;
+  }
+
+  #sm-banner .banner-box {
+    width: 340px;
+    height: 30vh;
+  }
+  #banner3 {
+    padding: 0 20px;
+  }
+  #banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    flex-direction: column;
+  }
+
+  #banner3 .banner-box {
+    width: 100%;
+  }
+  #newsletter .form,
+  #newsletter input {
+    width: 100%;
+  }
+
+  #newsletter {
+    padding: 40px 20px;
+  }
+
+  .footer-data {
+    text-align: start;
+  }
+
+  /* !single-product-details*/
+  #product-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .single-product-details {
+    text-align: start;
+  }
+
+  #product-details .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+  #product-details .single-product-details {
+    width: 100%;
+  }
+
+  /* !Blog Page  START*/
+
+  .blog-details h4 {
+    font-size: 2.3rem;
+    color: var(--dark-color);
+  }
+
+  #pagination a {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+
+  #blog-content {
+    padding: 100px 10px 0 10px;
+  }
+  #blog-content .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #blog-content .blog-image {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  #blog-content .blog-details {
+    width: 100%;
+  }
+}
 @media (max-width: 477px) {
   .section-p1 {
-    margin: 0px;
+    margin: 40px 0px;
   }
   .logo {
     width: 11rem;
@@ -1104,6 +2020,120 @@ footer .install img {
   #product-details .single-product-details {
     width: 100%;
   }
+
+  /* !Blog Page  START*/
+
+  .blog-details h4 {
+    font-size: 2.3rem;
+    color: var(--dark-color);
+  }
+
+  #pagination a {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+
+  #blog-content {
+    padding: 100px 10px 0 10px;
+  }
+  #blog-content .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #blog-content .blog-image {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  #blog-content .blog-details {
+    width: 100%;
+  }
+  /* !About  section*/
+  #about-head {
+    flex-direction: column;
+  }
+  #about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #about-head div {
+    padding-left: 0px;
+  }
+  #about-head p {
+    text-align: start;
+    color: var(--dark-color-light);
+  }
+  #about-header h2 {
+    text-align: center;
+    font-family: " Oswald";
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  #about-stores video {
+    width: 100%;
+  }
+
+  /* !CONTACT PAGE FORM  section*/
+
+  #contact-header h2 {
+    font-size: 1.8rem;
+  }
+  #contact-header p {
+    font-size: 1rem;
+  }
+
+  #contact-details {
+    flex-direction: column;
+  }
+  #contact-details .details {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+
+  #contact-details .map {
+    width: 100%;
+  }
+  #form-details {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+  #form-details form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #contact-details .details h2,
+  #form-details form h2 {
+    font-size: 1.4rem;
+    margin-right: 20px;
+  }
+
+  #contact-details .details {
+    width: 80%;
+  }
+  #contact-details .details li p {
+    font-size: 1.3rem;
+  }
 }
+
+@media (max-width: 280px) {
+  .section-p1 {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 7rem;
+    margin-top: 11px;
+  }
+  #blog-header {
+    height: 30vh;
+    width: 100%;
+  }
+}
+
+/* !HEADER START*/
 
 /* !HEADER START*/
