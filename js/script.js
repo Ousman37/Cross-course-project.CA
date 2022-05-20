@@ -1,3 +1,5 @@
+console.log(hello, Ben);
+
 const menuBar = document.getElementById("menu-bar");
 const nav = document.getElementById("navbar");
 

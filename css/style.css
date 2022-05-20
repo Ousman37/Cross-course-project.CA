@@ -1202,6 +1202,9 @@ footer .install img {
 }
 
 /* !  CART page  section*/
+#cart table {
+  overflow-x: auto;
+}
 
 #cart table {
   width: 100%;
@@ -1307,7 +1310,7 @@ footer .install img {
 }
 
 #subtotal button.cta {
-  background-color: var(--success);
+  background-color: #073e23;
   color: var(--light-color);
   padding: 0.75em 1.5em;
   border-radius: 4px;
@@ -1460,12 +1463,12 @@ footer .install img {
 }
 
 @media (max-width: 820px) {
-  /*.section-p1 {
+  .section-p1 {
     margin: 40px 40px;
   }
   .section-m1 {
     margin: 0px 0px;
-  }*/
+  }
   .logo {
     width: 14rem;
   }
@@ -1619,6 +1622,11 @@ footer .install img {
   #about-stores video {
     width: 100%;
   }
+  /* !Cart  PAGE */
+
+  #cart-add {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 799px) {
@@ -1737,6 +1745,12 @@ footer .install img {
 
   #form-details form {
     width: 50%;
+  }
+
+  /* !Cart  PAGE */
+
+  #cart table td:nth-child(3) {
+    width: 100%;
   }
 }
 
@@ -1893,7 +1907,26 @@ footer .install img {
   #blog-content .blog-details {
     width: 100%;
   }
+  /* !Cart  PAGE */
+  #cart-add {
+    flex-direction: column;
+  }
+  #coupon {
+    width: 100%;
+  }
+  #subtotal {
+    width: 100%;
+    padding: 20px;
+  }
+  #cart table {
+    width: 100%;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+    /* white-space: nowrap; */
+    letter-spacing: normal;
+  }
 }
+
 @media (max-width: 477px) {
   .section-p1 {
     margin: 40px 0px;
@@ -2116,6 +2149,61 @@ footer .install img {
   }
   #contact-details .details li p {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .section-p1 {
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 7rem;
+    margin-top: 11px;
+  }
+  /* !Cart  PAGE */
+  #cart-add {
+    flex-direction: column;
+  }
+  #coupon {
+    width: 100%;
+  }
+  #subtotal {
+    width: 100%;
+    padding: 20px;
+  }
+  #cart table {
+    width: 100%;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+    /* white-space: nowrap; */
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 375px) {
+  .section-p1 {
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 7rem;
+    margin-top: 11px;
+  }
+  /* !Cart  PAGE */
+  #cart-add {
+    flex-direction: column;
+  }
+  #coupon {
+    width: 100%;
+  }
+  #subtotal {
+    width: 100%;
+    padding: 20px;
+  }
+  #cart table {
+    width: 100%;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+    /* white-space: nowrap; */
+    letter-spacing: normal;
   }
 }
 
