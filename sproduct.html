@@ -16,48 +16,52 @@
                <link rel="stylesheet" href="./css/style.css" />
              </head>
              <body>
-           <section id="header">
-              <a href="#">
-                <img src="/images/RainyDays_Logo.png" class="logo" alt="logo" />
-              </a>
-              <div>
-                <ul id="navbar">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a class="active"  href="shop.html">Shop</a></li>
-        
-                   <div class="search-box">
-                  <form action="" class="search-form">
-                    <span class="form-icon search-icon">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" class="search-input" placeholder="search" />
-                  </form>
-                  </div>
-        
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li>
+
+             <!-- !Header Section  -->
+           
+               <header class="header" id="header">
+                  <nav class="nav container" id="nav">
+                   <a href="index.html">
+                   <img src="/images/RainyDays_Logo.png" class="logo" alt="logo" />
+                   </a>
+
+                   <div>
+                      <ul class="list" id="navbar">
+                      <li><a  href="index.html">Home</a></li>
+                      <li><a href="shop.html">Shop</a></li>
+           
+                    <div class="search-box">
+                      <form action="" class="search-form">
+                       <span class="form-icon search-icon">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                       </span>
+                       <input type="text" class="search-input" placeholder="search" />
+                     </form>
+                     </div>
+           
+                     <li><a href="blog.html">Blog</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                     <li id="lg-bag"> <a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>  
+                      <a href="#" id="close"><i class="fa-regular fa-x"></i></a>
+                   </ul>
+                   </div>
+
+                   <div class="menu-toggle-icon lg-screen-hidden place-items-center" id="menu-toggle-icon">
                     <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                  </li>
-        
-                <button type="button" class="menu-toggler">
-                  <i class="fa-solid toggle-icon fa-bars" id="open-menu-icon"></i>
-                  <i class="fa-x toggle-icon fa-bars" id="close-menu-icon"></i>
-                </button>
-                 <!--<li>
-                   <a href="cart.html" id="close"> <i class="fa-solid fa-x"></i></a>
-                 </li>-->
-                 
-                </ul>
-              </div>
-             <!-- <div class="mobile-menu">
-               <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                <i id="menu-bar"  class="fa-solid fa-outdent"></i>
-              </div>-->
-            </section>
-            <!-- !Header Section Ends  -->
+                    <i id="bar" class="fa-solid fa-bars"></i>
+
+                        <!--! Cart -->
+                   <div id="add-cart">
+                     <h2 class="cart-title">Your Cart</h2>
+                   </div>
   
+                  
+                   </div>
+                   </nav>
+               </header>
+               <!-- !Header Section Ends  -->
+           
   
            <section id="product-details" class="section-p1">
             <div class="single-pro-image">
@@ -109,7 +113,9 @@
             </div>
             </div>
             <input type="number" value="1">
-            <button class="cta-btn">Add To Cart</button>
+            <a href="cart.html">
+            <button type="button" name="button"  class="cta-btn">Add To Cart</button>
+            </a>
             <h4>Product Details</h4>
             <span>Ultralight and extremely stretchable, this shell jacket is
             a waterproof and windproof technical wonder. It offers packable
@@ -267,27 +273,10 @@
          </div>
        </div>
      <!-- ! image Js  -->
-        <script>
-       var  mainImage =document.getElementById("mainImage")
-       var smallImage =document.getElementsByClassName("small-image")
 
-       smallImage[0].onclick = function (){
-         mainImage.src = smallImage[0].src;
-       }
-       smallImage[1].onclick = function (){
-           mainImage.src = smallImage[1].src;
-         }
-       smallImage[2].onclick = function (){
-           mainImage.src = smallImage[2].src;
-         }
-        smallImage[3].onclick = function (){
-           mainImage.src = smallImage[3].src;
-         }
-        console.log(mainImage)
-      </script>
-          
+ 
            <!-- !Hero -->
-
+     <script src="/js/cart.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>

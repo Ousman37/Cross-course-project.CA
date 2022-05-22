@@ -16,19 +16,22 @@
                <link rel="stylesheet" href="./css/style.css" />
              </head>
              <body>
-               <!-- !Header Section  -->
+
+                             <!-- !Header Section  -->
            
-               <section id="header">
-                 <a href="index.html">
+               <header class="header" id="header">
+                  <nav class="nav container" id="nav">
+                   <a href="index.html">
                    <img src="/images/RainyDays_Logo.png" class="logo" alt="logo" />
-                 </a>
-                 <div>
-                   <ul id="navbar">
-                     <li><a href="index.html">Home</a></li>
-                     <li><a   href="shop.html">Shop</a></li>
+                   </a>
+
+                   <div>
+                      <ul class="list" id="navbar">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="shop.html">Shop</a></li>
            
-                      <div class="search-box">
-                     <form action="" class="search-form">
+                    <div class="search-box">
+                      <form action="" class="search-form">
                        <span class="form-icon search-icon">
                          <i class="fa-solid fa-magnifying-glass"></i>
                        </span>
@@ -36,29 +39,23 @@
                      </form>
                      </div>
            
-                     <li><a   href="blog.html">Blog</a></li>
-                     <li><a  href="about.html">About</a></li>
-                     <li><a class="active" href="contact.html">Contact</a></li>
-                     <li>
-                       <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                     </li>
-           
-                   <button type="button" class="menu-toggler">
-                     <i class="fa-solid toggle-icon fa-bars" id="open-menu-icon"></i>
-                     <i class="fa-x toggle-icon fa-bars" id="close-menu-icon"></i>
-                   </button>
-                    <!--<li>
-                      <a href="cart.html" id="close"> <i class="fa-solid fa-x"></i></a>
-                    </li>-->
-                    
+                     <li><a href="blog.html">Blog</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a  class="active"  href="contact.html">Contact</a></li>
+                     <li id="lg-bag"> <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>  
+                      <a href="#" id="close"><i class="fa-regular fa-x"></i></a>
                    </ul>
-                 </div>
-                <!-- <div class="mobile-menu">
-                  <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                   <i id="menu-bar"  class="fa-solid fa-outdent"></i>
-                 </div>-->
-               </section>
+                   </div>
+
+                   <div class="menu-toggle-icon lg-screen-hidden place-items-center" id="menu-toggle-icon">
+                    <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <i id="bar" class="fa-solid fa-bars"></i>
+                  
+                   </div>
+                   </nav>
+               </header>
                <!-- !Header Section Ends  -->
+           
            
                <!-- !CONTACT FROM  Section  -->
                <section id="contact-header">
