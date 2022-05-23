@@ -539,7 +539,7 @@ p {
   font-weight: 600;
 }
 
-/* !Single page  section*/
+/*!-----Single product details------ */
 
 #product-details {
   display: flex;
@@ -603,6 +603,10 @@ p {
   outline: none;
 }
 
+.single-product-details .fa-indent {
+  color: var(--orange);
+  margin-left: 10px;
+}
 .cta-btn {
   background-color: var(--orange);
   color: var(--light-color);
@@ -618,8 +622,7 @@ p {
   transition: 00.2s;
 }
 
-/* !Blog page  section*/
-
+/*!-----!Blog page  section------ */
 #blog-header {
   background-image: url(../images/outdoor1.jpg);
   height: 40vh;
@@ -1298,7 +1301,7 @@ footer .install img {
   color: var(--orange);
 }
 
-/* !  CART page  section*/
+/*---- CART ITEMS DETAILS -----*/
 #cart table {
   overflow-x: auto;
 }
@@ -1343,6 +1346,8 @@ footer .install img {
   border: 1px solid var(--dark-color-light);
   border-left: none;
   border-right: none;
+
+  font-size: 2.3rem;
 }
 
 #cart table thead td {

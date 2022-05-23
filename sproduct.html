@@ -116,7 +116,7 @@
             <a href="cart.html">
             <button type="button" name="button"  class="cta-btn">Add To Cart</button>
             </a>
-            <h4>Product Details</h4>
+            <h4>Product Details <i class="fa-solid fa-indent"></i> </h4>
             <span>Ultralight and extremely stretchable, this shell jacket is
             a waterproof and windproof technical wonder. It offers packable
              protection for weather exposed activities like alpinism and climbing,
@@ -272,11 +272,36 @@
            <a href="#">Privacy policy</a>
          </div>
        </div>
-     <!-- ! image Js  -->
+     <!------- !js for product gallery  ------ -->
+  
+       <script>
+       var productDetails = document.getElementById("product-details")
+       var smallImage = document.getElementById("small-image")
 
- 
+       smallImage[0].onclick = function (){
+          productDetails.src = smallImage[0].src;
+          } 
+      
+       smallImage[1].onclick = function () {
+         productDetails.src = smallImage[1].src;
+       }
+
+      smallImage[2].onclick = function () {
+        productDetails.src = smallImage[2].src;
+      }  
+       smallImage[3].onclick = function () {      
+          productDetails.src = smallImage[3].src;
+       }
+   
+   
+
+   
+   
+
+         
+       </script>
            <!-- !Hero -->
-     <script src="/js/cart.js"></script>
+    
     <script src="/js/script.js"></script>
   </body>
 </html>
