@@ -194,6 +194,9 @@ p {
   align-items: center;
 }
 
+.fa-user {
+  font-size: 1.8rem;
+}
 #close {
   display: none;
 }
@@ -230,6 +233,7 @@ p {
   color: var(--light-color);
 }
 p {
+  font-family: var(--font-family);
   font-size: 1.3rem;
   color: var(--light-color);
 }
@@ -387,6 +391,7 @@ p {
 /* !HEADER End*/
 
 /* !SHOP PAGE  section*/
+/*
 #add-cart {
   position: fixed;
   top: 0;
@@ -394,9 +399,9 @@ p {
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  background: var(--orange);
+
   box-shadow: -2px 0 4px hsl(0, 4% 15% / 10%);
-}
+}*/
 
 #header-page {
   background-image: url(../images/hiking.jpg);
@@ -470,6 +475,7 @@ p {
 }
 
 #product-details .single-product-details h4 {
+  font-family: var(--font-family);
   padding: 40px 0 20px 0;
 }
 #product-details .single-product-details h2 {
@@ -481,6 +487,7 @@ p {
 }
 #product-details .single-product-details p {
   text-align: start;
+  font-size: 1.8rem;
 }
 
 #product-details .single-product-details select {
@@ -873,7 +880,12 @@ p {
 
 #banner1 p {
   color: var(--body-font-color);
-  font-size: 16px;
+  font-size: 1.8rem;
+}
+
+#banner1 h2 {
+  font-family: var(--font-family);
+  font-size: 1.8rem;
 }
 
 #banner {
