@@ -1,5 +1,10 @@
-$(".like-btn").on("click", function () {
-  $(this).toggleClass("is-active");
-});
+const removeCartItemButtons = document.getElementsByClassName("cta-danger");
 
-console.log("hello");
+console.log(removeCartItemButtons);
+
+for (var i = 0; i < removeCartItemButtons.length; i++) {
+  var button = removeCartItemButtons[i];
+  button.addEventListener("click", function () {
+    console.log("clicked");
+  });
+}
