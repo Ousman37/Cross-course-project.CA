@@ -1648,6 +1648,10 @@ footer .install img {
     display: none;
   }
 
+  .fa-bag-shopping {
+    display: none;
+  }
+
   .hero {
     height: 60vh;
 
@@ -1799,6 +1803,9 @@ footer .install img {
     display: none;
   }
 
+  .fa-bag-shopping {
+    display: none;
+  }
   .hero {
     height: 60vh;
 
@@ -1984,6 +1991,10 @@ footer .install img {
   #lg-bag {
     display: none;
   }
+
+  .fa-bag-shopping {
+    display: none;
+  }
   .hero {
     height: 60vh;
     background-position: top 20% right 40%;
@@ -2109,6 +2120,10 @@ footer .install img {
     font-size: 24px;
   }
   #lg-bag {
+    display: none;
+  }
+
+  .fa-bag-shopping {
     display: none;
   }
 
@@ -2324,6 +2339,10 @@ footer .install img {
     font-size: 24px;
   }
   #lg-bag {
+    display: none;
+  }
+
+  .fa-bag-shopping {
     display: none;
   }
 
@@ -2597,7 +2616,9 @@ footer .install img {
   #lg-bag {
     display: none;
   }
-
+  .fa-bag-shopping {
+    display: none;
+  }
   .logo {
     width: 7rem;
     margin-top: 11px;
@@ -2666,6 +2687,9 @@ footer .install img {
   }
 
   .fa-bag-shopping {
+    display: none;
+  }
+  #lg-bag {
     display: none;
   }
 
@@ -2738,6 +2762,10 @@ footer .install img {
     font-size: 24px;
   }
   #lg-bag {
+    display: none;
+  }
+
+  .fa-bag-shopping {
     display: none;
   }
 
