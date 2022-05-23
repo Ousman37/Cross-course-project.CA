@@ -552,7 +552,7 @@ p {
   margin-right: 50px;
 }
 
-.s-image-group {
+.small-image-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -731,8 +731,9 @@ p {
 /*!-----!!Contact page  section------ */
 
 #contact-header {
-  background-image: url(../images/sunset.jpg);
-  height: 30vh;
+  background-image: url(../images/about-header.jpg);
+
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: top 30% right 0;
@@ -890,10 +891,10 @@ p {
   font-weight: 600;
 }
 
-/*
 /*!-----!!Contact page  section------ */
-*/ #about-header {
+#about-header {
   background-image: url(../images/about-header.jpg);
+
   height: 40vh;
   width: 100%;
   background-size: cover;
@@ -958,7 +959,7 @@ p {
 }
 
 /*!-----!/* !BANNER SECTION*/
------- */ #banner1 {
+#banner1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
