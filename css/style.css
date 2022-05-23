@@ -147,6 +147,13 @@ p {
   left: 0;
 }
 
+#lg-bag p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #990000;
+}
+
 #navbar {
   display: flex;
   align-items: center;
@@ -326,7 +333,7 @@ p {
   width: 23%;
   min-height: 250px;
   padding: 11px 10px;
-  border: 1px solid var(--orange);
+  border: 1px solid var(--dark-color);
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -516,7 +523,12 @@ p {
 
 /*!-----!Blog page  section------ */
 #blog-header {
-  background-image: url(../images/outdoor1.jpg);
+  background-image: linear-gradient(
+    rgb(125, 114, 114) 1%,
+    rgb(201, 144, 144),
+    rgb(107, 107, 130)
+  );
+  /*background-image: url(../images/outdoor1.jpg);*/
   height: 40vh;
   width: 100%;
   background-size: cover;

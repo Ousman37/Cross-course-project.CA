@@ -1,4 +1,4 @@
-const removeCartItemButtons = document.getElementsByClassName("cta-danger");
+const removeCartItemButtons = document.querySelector(".cta-danger");
 
 console.log(removeCartItemButtons);
 
