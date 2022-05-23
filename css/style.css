@@ -516,10 +516,15 @@ p {
   align-items: center;
   justify-content: center;
 }
-#header-page h2,
-#header-page p {
+#header-page h2 {
   text-transform: uppercase;
   color: var(--orange);
+  font-size: 2.6rem;
+}
+
+#header-page p {
+  color: var(--orange);
+
   font-size: 2rem;
 }
 
