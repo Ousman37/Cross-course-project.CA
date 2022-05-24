@@ -12,7 +12,7 @@
       src="https://kit.fontawesome.com/03d5a1f99a.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/ui.css" />
+    
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -62,131 +62,56 @@
     </header>
     <!-- !Header Section Ends  -->
 
-    <section id="contact-header">
-      <h2>#Shop with Rainy-days</h2>
-      <p>LEAVE A MESSAGE, WE LOVE TO HEAR FROM YOU!</p>
-    </section>
-
-    <div class="cart-4 colum">
-      <div class="cart">
-        <h1>Cart items</h1>
-        <div class="row">
-          <div class="cart-6 colum">
-            <button class="tiny secondary" id="clear">Clear the cart</button>
+    <div id="main">
+      <header id="header" class="header">
+        <h2>Shopping Cart</h2>
+        <div class="iconShopping">
+          <p>0</p>
+          <i class="fa-solid fa-cart-shopping"></i>
+      </header>
+      
+      <div class="itemsBox">
+      <div class="item">
+      <img src="./images/RainyDays_Jacket13.jpeg" alt="product" />
+        <div class="itemDescription">
+          <h3>RainyDays Jacket</h3>
+          <p>NOK<span>2 599 </span></p>
+          <a href="#" title="add to cart" class="addToCart"> Add to cart </a>
           </div>
-          <div class="cart-6 colum">
-            <button class="tiny disabled" title="Work in progress">
-              Checkout
-            </button>
+          </div>
+
+          <div class="item">
+            <img src="./images/RainyDays_Jacket14.png" alt="product" />
+             <div class="itemDescription">
+             <h3>RainyDays Jacket</h3>
+             <p>NOK<span>2 599 </span></p>
+              <a href="#" title="add to cart" class="addToCart"> Add to cart </a>
+          </div>
+          </div>
+
+           <div class="item">
+             <img src="./images/RainyDays_Jacket12.png" alt="product" />
+            <div class="itemDescription">
+            <h3>RainyDays Jacket</h3>
+            <p>NOK<span>2 599 </span></p>
+            <a href="#" title="add to cart" class="addToCart"> Add to cart </a>
+            </div>
+           </div>
           </div>
         </div>
-        <div id="cartItems">Loading cart...</div>
-        Total price: <strong id="totalPrice">0 $</strong>
+
+        <div id="cartBok">
+         <div class="cart">
+          <i class="fa fa-close"></i>
+           <h3>Cart</h3>
+        </div>
       </div>
-    </div>
-    <!-- !CART PAGE Section  -->
-
-    <div class="shopping-cart">
-      <!-- Title -->
-      <div class="title">Shopping Bag</div>
-
-      <!-- Product #1 -->
-      <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <i class="fa-solid fa-trash-can"></i>
-
-          <span class="like-btn"></span>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-
-        <div class="image">
-          <img src="./images/RainyDays_Jacket13.jpeg" alt="product" />
-        </div>
-        <div class="description">
-          <span>RainyDays Jacket</span>
-          <span>color</span>
-          <span>black</span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-          <input type="text" name="name" value="1" />
-          <button class="minus-btn" type="button" name="button">
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
-
-        <div class="total-price">2 599 NOK</div>
-      </div>
-
-      <!-- Product #2 -->
-      <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <i class="fa-solid fa-trash-can"></i>
-
-          <span class="like-btn"></span>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-
-        <div class="image">
-          <img src="./images/RainyDays_Jacket12.png" alt="product" />
-        </div>
-
-        <div class="description">
-          <span>RainyDays Jacket</span>
-          <span>color</span>
-          <span>orange</span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-          <input type="text" name="name" value="1" />
-          <button class="minus-btn" type="button" name="button">
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
-
-        <div class="total-price">2 599 NOK</div>
-      </div>
-
-      <!-- Product #3 -->
-      <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <i class="fa-solid fa-trash-can"></i>
-          <span class="like-btn"></span>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-
-        <div class="image">
-          <img src="./images/RainyDays_Jacket14.png" alt="product" />
-        </div>
-
-        <div class="description">
-          <span>RainyDays Jacket</span>
-          <span>color</span>
-          <span>Blue</span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <i class="fa-solid fa-plus"></i>
-          </button>
-          <input type="text" name="name" value="1" />
-          <button class="minus-btn" type="button" name="button">
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
-
-        <div class="total-price">2 599 NOK</div>
-      </div>
-    </div>
+        
+        
+        
+        
+        
+        
 
     <!-- !APPLY COUPON Section -->
     <!-- <section id="cart-add" class="section-p1">
@@ -221,12 +146,12 @@
 
               </div>
               
-            </section>
+            </section>-->
 
              <hr class="horizontal-line" />
 
             <!-- !FOOTER SECTION -->
-    <!--      <footer class="section-p1">
+          <footer class="section-p1">
             <div class="colum">
             <img class="logo" src="./images/RainyDays_Logo.png" alt="logo">
             <h4>Contact</h4>
@@ -290,11 +215,8 @@
            <a href="#">Terms & Conditions</a>
            <a href="#">Privacy policy</a>
          </div>
-        
-       </div>-->
-
-    <!-- !Hero -->
-    <!-- !Hero -->
-    <script src="/js/cart.js"></script>
+       </div>
+    <!-- !Script -->
+    <script src="/js/index.js"></script>
   </body>
 </html>
