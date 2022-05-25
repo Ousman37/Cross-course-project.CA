@@ -14,6 +14,22 @@
     ></script>
     
     <link rel="stylesheet" href="./css/style.css" />
+    <script>
+function Delete(e) {
+  let items = [];
+  JSON.parse(localStorage.getItem("items")).map((data) => {
+    if (
+      data.id !=
+      e.parentElement.parentElement.children[0].textContent
+    ) {
+      items.push(data);
+    }
+  });
+  localStorage.setItem("items", JSON.stringify(items));
+  window.location.reload();
+};
+
+    </script>
   </head>
 
   <body>
@@ -97,8 +113,10 @@
             <a href="#" title="add to cart" class="addToCart"> Add to cart </a>
             </div>
            </div>
+           
           </div>
         </div>
+        
 
         <div id="cartBok">
          <div class="cart">

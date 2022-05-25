@@ -69,9 +69,9 @@ window.onload = function () {
   const cartBokTable = cartBok.querySelector("table");
   //console.log(cartBokTable);
   let tableData = "";
-  tableData += `<tr> <th>S no</th> <th>Item Name</th><th>Item No</th><th>Item Price</th><th></th></tr>`;
+  tableData += `<tr><th>S no</th><th>Item Name</th> <th> Item No </th><th> Item Price </th><th></th></tr>`;
 
-  if (JSON.parse(localStorage.getItem("items")) === null) {
+  if (JSON.parse(localStorage.getItem("items"))[0] === null) {
     tableData += `<tr> <td colspan="5">No items Found</td></tr>`;
   } else {
     JSON.parse(localStorage.getItem("items")).map((data) => {
@@ -81,10 +81,10 @@ window.onload = function () {
         `</th><th>` +
         data.name +
         `</th><th>` +
-        data.no +
+        data.number +
         `</th><th>` +
         data.price +
-        `</th><th><a href="#">Delete</a></th></tr>`;
+        `</th><th><a href="#" onclick=Delete(this);>Delete</a></th></tr>`;
     });
   }
   cartBokTable.innerHTML = tableData;
