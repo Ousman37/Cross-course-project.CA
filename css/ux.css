@@ -88,7 +88,6 @@ p {
   margin: 40px 0;
 }
 .logo {
-  margin-right: 10px;
   width: 12rem;
 }
 
@@ -132,7 +131,7 @@ p {
   opacity: 0;
 }
 
-/*!---- !Navigation START ------------------*/
+/* !HEADER START ------------------*/
 #nav {
   height: 8rem;
   display: flex;
@@ -193,116 +192,170 @@ p {
 #close {
   display: none;
 }
+/*! HOME PAGE SECTION -----------------*/
 
-/*!-----!Blog Page  section------ */
-#blog-header {
-  background-image: linear-gradient(
-    rgb(125, 114, 114) 1%,
-    rgb(201, 144, 144),
-    rgb(107, 107, 130)
-  );
-  /*background-image: url(../images/outdoor1.jpg);*/
-  height: 40vh;
+/*!-----!!Contact page  section------ */
+
+#contact-header {
+  background-image: url(../images/about-header.jpg);
+
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: top 30% right 0;
   padding: 14px;
   display: flex;
+  background-color: transparent;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  bottom: 20px;
 }
 
-.blog-text h2 {
+#contact-header h2 {
   text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+  font-family: " Oswald";
+  font-weight: 900;
   color: var(--light-color);
-  font-size: 3rem;
-  font-weight: 700;
+  margin: 13px;
 }
 
-.blog-text p {
+#contact-header p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: " Oswald";
+  font-weight: 600;
   color: var(--light-color);
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 10px;
+  margin: 13px;
 }
 
-#blog-content {
-  padding: 150px 150px 0 150px;
-}
-
-#blog-content .blog-box {
+#contact-details {
   display: flex;
   align-items: center;
-  width: 100%;
-  position: relative;
-  padding-bottom: 90px;
+  justify-content: space-between;
 }
-
-#blog-content .blog-image {
+#contact-details .details {
   width: 40%;
-  margin-right: 40px;
 }
 
-#blog-content img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+#contact-details .details span,
+#form-details form span {
+  font-size: 12px;
 }
 
-#blog-content .blog-details {
-  width: 50%;
+#contact-details .details h2,
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
 }
 
-.blog-details p {
+.details bdi {
+  color: var(--orange);
+  cursor: pointer;
+  font-size: 2rem;
+  padding-bottom: 15px;
+}
+
+#contact-details .details span {
+  padding: 20px 0;
+}
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+
+#contact-details .details li img {
+  width: 5rem;
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+#contact-details .details li p {
+  cursor: pointer;
   color: var(--body-font-color);
-  line-height: 2rem;
-  letter-spacing: 0.1rem;
+  margin: 0;
+  font-size: 14px;
 }
 
-.blog-details h4 {
-  font-size: 5rem;
-  color: var(--dark-color);
-}
-
-#blog-content .blog-details a {
-  font-size: 11px;
-  color: #000;
-  font-weight: 700;
-  position: relative;
-  transition: 00.3s;
-}
-
-#blog-content .blog-details a::after {
-  content: "";
-  width: 50px;
-  height: 1px;
-  background-color: rgba(23, 22, 22, 0.1);
-  position: absolute;
-  top: 4px;
-  right: -60px;
-}
-
-#blog-content .blog-details a:hover {
+#contact-details .details li p:hover {
   color: var(--orange);
 }
 
-#blog-content .blog-details a:hover::after {
-  background-color: var(--orange);
+#contact-details .map {
+  width: 55%;
+  height: 400px;
 }
 
-#blog-content .blog-box h1 {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  font-size: 70px;
-  font-weight: 700;
-  color: var(--orange);
-  z-index: -9;
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
 }
 
-#blog-content .blog-details {
-  background-image: url(../images/outdoor1.jpg);
+#form-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid var(--dark-color-light);
+}
+
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--body-font-color);
+}
+
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--body-font-color);
+}
+
+#form-details .people div {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+#form-details .people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+#form-details .people div span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /*!-----!!NEW LETTER* ------------------ */
@@ -366,6 +419,39 @@ p {
   white-space: nowrap;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+/*----------button--------------*/
+/*
+.cta-btn {
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  background-color: var(--orange);
+  color: var(--light-color);
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: 00.2s;
+}*/
+
+.cta-btn {
+  background-color: var(--orange);
+  color: var(--light-color);
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  transition: 00.2s;
 }
 
 /*!-----!*!FOOTER SECTION * ----------------- */
@@ -479,22 +565,6 @@ footer .install img {
 .legal-information a:hover,
 .legal-information a:focus {
   color: var(--orange);
-}
-
-#pagination {
-  text-align: center;
-}
-#pagination a {
-  color: var(--light-color);
-  background-color: var(--orange);
-  padding: 15px 20px;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-}
-#pagination a i {
-  font-size: 16px;
-  font-weight: 600;
 }
 
 /*!-----!* START MEDIA QUERY * ------ */

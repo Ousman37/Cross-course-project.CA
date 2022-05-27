@@ -88,7 +88,6 @@ p {
   margin: 40px 0;
 }
 .logo {
-  margin-right: 10px;
   width: 12rem;
 }
 
@@ -132,7 +131,7 @@ p {
   opacity: 0;
 }
 
-/*!---- !Navigation START ------------------*/
+/* !HEADER START ------------------*/
 #nav {
   height: 8rem;
   display: flex;
@@ -193,15 +192,62 @@ p {
 #close {
   display: none;
 }
+/*! HOME PAGE SECTION -----------------*/
 
-/*!-----!Blog Page  section------ */
-#blog-header {
-  background-image: linear-gradient(
-    rgb(125, 114, 114) 1%,
-    rgb(201, 144, 144),
-    rgb(107, 107, 130)
-  );
-  /*background-image: url(../images/outdoor1.jpg);*/
+.feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 25px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-green-2);
+  border-radius: 4px;
+  margin: 15px 0;
+}
+.fa-dhl {
+  font-size: 9rem;
+  color: var(--gray-dark);
+}
+.feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+.feature .fe-box h6 {
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark-color-light);
+}
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.feature .fe-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.feature .fe-box:nth-child(2) h6 {
+  background-color: var(--accent-color);
+}
+.feature .fe-box:nth-child(3) h6 {
+  background-color: var(--color-green-2);
+}
+.feature .fe-box:nth-child(4) h6 {
+  background-color: var(--success);
+}
+.feature .fe-box:nth-child(5) h6 {
+  background-color: var(--orange);
+}
+.feature .fe-box:nth-child(6) h6 {
+  background-color: var(--color-red-2);
+}
+
+/*!-----!!Contact page  section------ */
+#about-header {
+  background-image: url(../images/about-header.jpg);
+
   height: 40vh;
   width: 100%;
   background-size: cover;
@@ -213,96 +259,57 @@ p {
   justify-content: center;
 }
 
-.blog-text h2 {
-  text-transform: uppercase;
-  color: var(--light-color);
-  font-size: 3rem;
+#about-header h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: " Oswald";
   font-weight: 700;
+  margin: 13px;
+  color: #fef5f5;
 }
 
-.blog-text p {
-  color: var(--light-color);
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 10px;
+#about-head p {
+  text-align: start;
+  font-size: 1.3rem;
+  color: var(--dark-color-light);
 }
 
-#blog-content {
-  padding: 150px 150px 0 150px;
+#about-header .blog-text p {
+  text-align: center;
 }
 
-#blog-content .blog-box {
+#about-head {
   display: flex;
   align-items: center;
-  width: 100%;
-  position: relative;
-  padding-bottom: 90px;
 }
 
-#blog-content .blog-image {
+#about-head img {
   width: 40%;
-  margin-right: 40px;
+  height: auto;
+  background-color: var(--light-color);
 }
 
-#blog-content img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+#about-head div {
+  padding-left: 40px;
+}
+#about-stores {
+  text-align: center;
 }
 
-#blog-content .blog-details {
-  width: 50%;
+#about-stores video {
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
 }
 
-.blog-details p {
-  color: var(--body-font-color);
-  line-height: 2rem;
-  letter-spacing: 0.1rem;
+#about-stores .video video {
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
 }
 
-.blog-details h4 {
-  font-size: 5rem;
-  color: var(--dark-color);
-}
-
-#blog-content .blog-details a {
-  font-size: 11px;
-  color: #000;
-  font-weight: 700;
-  position: relative;
-  transition: 00.3s;
-}
-
-#blog-content .blog-details a::after {
-  content: "";
-  width: 50px;
-  height: 1px;
-  background-color: rgba(23, 22, 22, 0.1);
-  position: absolute;
-  top: 4px;
-  right: -60px;
-}
-
-#blog-content .blog-details a:hover {
+#about-stores a span {
   color: var(--orange);
-}
-
-#blog-content .blog-details a:hover::after {
-  background-color: var(--orange);
-}
-
-#blog-content .blog-box h1 {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  font-size: 70px;
-  font-weight: 700;
-  color: var(--orange);
-  z-index: -9;
-}
-
-#blog-content .blog-details {
-  background-image: url(../images/outdoor1.jpg);
 }
 
 /*!-----!!NEW LETTER* ------------------ */
