@@ -137,7 +137,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /*padding: 20px 80px;*/
+  padding: 20px 80px;
   background: var(--light-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
@@ -199,7 +199,7 @@ p {
   height: 90vh;
   width: 100%;
   background-size: cover;
-  background-position: top 20% right 0;
+  background-position: center;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
@@ -230,17 +230,17 @@ p {
   color: var(--light-color);
 }
 .hero button {
-  border-color: #fff;
-  border-width: 0.125rem;
   background-color: var(--light-color);
-  color: var(--gray-dark);
-  padding: 0.75em 1.5em;
-  border-radius: 6px;
+  color: var(--orange);
 
-  text-transform: uppercase;
-  max-width: calc(7.9rem + 10vw);
-  min-width: calc(7.9rem + 10vw);
-  font-size: calc(0.47rem + 0.45vw);
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  font-weight: 800;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: 00.2s;
 }
 .hero button:hover {
   color: #fff;
