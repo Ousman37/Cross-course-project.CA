@@ -499,13 +499,13 @@ footer .install img {
 
 /*!-----!* START MEDIA QUERY * ------ */
 
-@media (max-width: 1000px) {
-  /*.section-p1 {
+/*@media (max-width: 1000px) {
+ .section-p1 {
     margin: 40px 40px;
   }
   .section-m1 {
     margin: 0px 0px;
-  }*/
+  }
 
   .logo {
     width: 14rem;
@@ -610,7 +610,7 @@ footer .install img {
   }
 
   /* !Blog Page  START ------------------*/
-  .blog-details h4 {
+/*.blog-details h4 {
     font-size: 3rem;
     color: var(--dark-color);
   }
@@ -635,7 +635,7 @@ footer .install img {
     margin-right: 0px;
     margin-bottom: 30px;
   }
-}
+}*/
 
 @media (max-width: 912px) {
   /*.section-p1 {

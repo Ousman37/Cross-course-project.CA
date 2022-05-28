@@ -219,9 +219,32 @@ p {
   text-transform: uppercase;
   color: var(--light-color);
 }
-.hero h2 {
-  font-size: 1.3rem;
-  color: var(--light-color);
+
+#supper-deals {
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--dark-color-light);
+  margin-top: 15px;
+}
+#supper-deals h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--dark-color-light);
+  margin-top: 15px;
+}
+
+#supper-deals span {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--dark-color-light);
+}
+
+#supper-deals strong {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-red-3);
+  text-decoration: underline;
+  cursor: pointer;
 }
 p {
   font-family: var(--font-family);
@@ -524,7 +547,9 @@ p {
 
 #banner1 h2 {
   font-family: var(--font-family);
-  font-size: 1.8rem;
+  font-size: 2.9rem;
+  text-decoration: underline;
+  line-height: 1em;
 }
 
 #banner {
@@ -873,8 +898,6 @@ footer .install img {
   font-size: 16px;
   font-weight: 600;
 }
-
-/*!-----!* START MEDIA QUERY * ------ */
 
 /*!-----!* START MEDIA QUERY * ------ ------------------------------------------------*/
 
