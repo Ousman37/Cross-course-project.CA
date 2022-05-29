@@ -32,12 +32,13 @@ html {
 }
 
 body {
+  /* background-image: linear-gradient(rgb(0, 114, 66) 0%, rgb(4, 109, 87) 10%);*/
   width: 100%;
   text-rendering: optimizeLegibility;
   font-size: 1.4rem;
   --family-font: "Oswald", sans-serif;
   font-weight: 400;
-  color: var(--body-font-color);
+  background: #ebebeb;
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -198,7 +199,6 @@ p {
 
 #contact-header {
   background-image: url(../images/about-header.jpg);
-
   height: 50vh;
   width: 100%;
   background-size: cover;
@@ -209,7 +209,6 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   bottom: 20px;
 }
 
@@ -239,25 +238,6 @@ p {
 }
 #contact-details .details {
   width: 40%;
-}
-
-#contact-details .details span,
-#form-details form span {
-  font-size: 12px;
-}
-
-#contact-details .details h2,
-#form-details form h2 {
-  font-size: 26px;
-  line-height: 35px;
-  padding: 20px 0;
-}
-
-.details bdi {
-  color: var(--orange);
-  cursor: pointer;
-  font-size: 2rem;
-  padding-bottom: 15px;
 }
 
 #contact-details .details span {
@@ -301,12 +281,20 @@ p {
   height: 100%;
 }
 
+/*! end of the Contact details*/
+
+#form-details {
+  background-color: white;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 3px solid whitesmoke;
+}
+
 #form-details {
   display: flex;
   justify-content: space-between;
   margin: 30px;
   padding: 80px;
-  border: 1px solid var(--dark-color-light);
+  border: 1px solid #e1e1e1;
 }
 
 #form-details form {
@@ -315,23 +303,64 @@ p {
   flex-direction: column;
   align-items: flex-start;
 }
-#form-details form input {
-  width: 100%;
-  padding: 12px 15px;
-  outline: none;
-  margin-bottom: 20px;
-  border: 1px solid var(--body-font-color);
-}
-
 #form-details form input,
 #form-details form textarea {
   width: 100%;
-  padding: 12px 15px;
+  padding: 10px 15px;
   outline: none;
   margin-bottom: 20px;
-  border: 1px solid var(--body-font-color);
+  border: 1px solid #e1e1e1;
 }
 
+input.invalid {
+  border: 1px solid red;
+}
+.error-hint {
+  color: red;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid rgb(165, 171, 15);
+  border-radius: 1px;
+  margin-top: 2rem;
+  outline: none;
+  margin-bottom: 2rem;
+}
+button {
+  background: none;
+  border: 1px solid rgb(165, 171, 15);
+  width: 150px;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+button:hover {
+  background-color: rgb(165, 171, 15);
+  color: white;
+  border: black;
+}
+.hidden {
+  display: none;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.thank-you {
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/*! people starts here */
 #form-details .people div {
   padding-bottom: 25px;
   display: flex;
@@ -677,33 +706,6 @@ footer .install img {
   }
   #sm-banner span {
     font-size: 1rem;
-  }
-
-  /* !Blog Page  START ------------------*/
-  .blog-details h4 {
-    font-size: 3rem;
-    color: var(--dark-color);
-  }
-
-  #blog-header {
-    height: 30vh;
-  }
-  #blog-content img {
-    width: 100%;
-  }
-
-  #blog-content {
-    padding: 100px 40px 0 40px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
   }
 }
 

@@ -73,7 +73,7 @@
                <!-- !CONTACT FROM  Section  -->
                <section id="contact-header">
                  <h2 >#Need to get in touch?</h2>
-                 <p>LEAVE A MESSAGE, WE LOVE TO HEAR FROM YOU!</p>
+                 <p>we´d love to hear from you! Place send us a message.</p>
                </section>
 
                <section id="contact-details" class="section-p1">
@@ -116,27 +116,38 @@
                </section>
 
                <section id="form-details" class="section-p1">
-                <form action="">
+               <form id="contactForm">
                  <span>LEAVE A MESSAGE</span>
                  <h2>We love to hear from you</h2>
+
+                 <label>First name </label>
+                 <input name="name" id="firstName" placeholder="Your first and last name" />
+                 <div class="error-hint hidden" id="firstNameError">We need your first name – it’s nicer that way</div>
+
                  
 
-                 <label for="name">Name 
-                 <input type="text" placeholder="Your Name">
-                 
-                 <label for="email">Email address 
-                 <input type="text" placeholder="Your Email">
-                 </label>
+                   <label>Last  name </label>
+                   <input name="name" id="lastName" placeholder="Your first and last name" />
+                   <div class="error-hint hidden" id="lastNameError">Last name, too, please!</div>
+
                
-                 <input type="text" placeholder="Subject">
+
+                   <label>Email </label>
+                    <input name="email" id="email"  placeholder="your email address " />
+                    <div class="error-hint hidden" id="emailError">Oops! You need to type your email here</div>
+                    
+
+                    <label>Message</label>
+                    <textarea name="message"  id="message" cols="30" rows="10"  placeholder="your message "></textarea>
+                    <div class="error-hint hidden" id="messageError">
+                      your message is required.</div>  
                   
-                  <label for="message">Message 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                </label>
-                </label>
-                <button class="cta-btn" type="submit">Submit</button>
+                  <hr />
+
+                 <button type="submit">Submit</button>
+               </div>
                 </form>
-                <div class="people">
+                  <div class="people">
                  <div>
                   <img src="./images/xhuman1.jpg" alt=" A man ">
                   <p><span>John Smith</span>Senior Marketing Manager <br> Phone: + 000 123 000 77 88 
@@ -162,7 +173,7 @@
 
              <!-- !NEW LETTER-->
      
-            <section id="newsletter" class="section-m1 section-p1">
+        <section id="newsletter" class="section-m1 section-p1">
         <div class="news_text">
           <h4>Sign Up For Newsletters</h4>
           <p> Get E-mail updates about our latest shop and <span> special offers. </span></p>
@@ -231,14 +242,13 @@
            <a href="#">Terms & Conditions</a>
            <a href="#">Privacy policy</a>
          </div>
-        
        </div>
 
  
-           <!-- !Hero -->
-           <!-- !Hero -->
+          
+           <!-- !SCRIPT-->
 
-    <script src="/js/script.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>
 
