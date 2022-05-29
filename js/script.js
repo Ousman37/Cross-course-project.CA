@@ -173,3 +173,5 @@ function updateCartUI() {
     updateCartUI();
   });
 }
+
+// contact from validation
