@@ -365,7 +365,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: var(--gap-md);
+  gap: 25px;
 }
 
 .hero button {
