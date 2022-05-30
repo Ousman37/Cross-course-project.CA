@@ -138,7 +138,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /*padding: 20px 80px;*/
+  padding: 20px 80px;
   background: var(--light-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
@@ -194,6 +194,110 @@ p {
   display: none;
 }
 
+/*!---Login drop down menu -----*/
+
+.menu {
+  width: 100%;
+  height: 29px;
+}
+
+.menu > .menu-content {
+  width: 200px;
+  height: 65px;
+  float: right;
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  position: relative;
+  color: var(--body-font-color);
+}
+.menu > .menu-content > a {
+  color: var(--body-font-color);
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid var(--orange);
+  top: 59px;
+  right: 260px;
+  /*display: none;*/
+}
+
+.login-form {
+  background-color: var(--body-font-color);
+  position: absolute;
+  width: 300px;
+  height: auto;
+  top: 79px;
+  right: 150px;
+  border-radius: 2px;
+  border-bottom: 5px solid grey transparent;
+  display: none;
+}
+
+.login-form > form {
+  font-family: var(--body-font-family);
+  width: 250px;
+  margin: 25px auto;
+  font-size: 14px;
+  color: #fff;
+  line-height: -0.05em;
+}
+input[type="text"],
+input[type="password"] {
+  font-family: var(--body-font-family);
+  font-size: 15px;
+  width: 250px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  font-family: var(--body-font-family);
+  background: var(--orange);
+  width: 95%;
+  height: 35px;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-weight: lighter;
+  color: #eee;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: var(--gray-dark);
+}
+.login-form > form a {
+  font-family: var(--body-font-family);
+  position: relative;
+  top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.fa-unlock-keyhole,
+.fa-user {
+  margin-right: 11px;
+}
+
+.fa-user {
+  margin-left: 8px;
+}
+
+/*!---Login drop down menu ends-----*/
 /*!-----!Blog Page  section------ */
 #blog-header {
   background-image: linear-gradient(
