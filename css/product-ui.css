@@ -232,8 +232,8 @@ p {
   position: absolute;
   width: 300px;
   height: auto;
-  top: 79px;
-  right: 150px;
+  top: 20px;
+  right: -150px;
   border-radius: 2px;
   border-bottom: 5px solid grey transparent;
   /*display: none;*/

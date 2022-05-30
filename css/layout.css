@@ -1,6 +1,5 @@
 /* ! import fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,500&display=swap");
 *,
 *::before,
 *::after {
@@ -10,8 +9,7 @@
 }
 /* !RESET/BASE*/
 :root {
-  --body-font-family: "Oswald", sans-serif;
-  --font-family: "Poppins", sans-serif;
+  --body-font-family: "Poppins", sans-serif;
   --body-font-color: #676767;
   --light-color: #fff;
   --dark-color: #141313;
@@ -35,7 +33,7 @@ body {
   width: 100%;
   text-rendering: optimizeLegibility;
   font-size: 1.4rem;
-  --family-font: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: var(--body-font-color);
   line-height: 1.5;
@@ -54,7 +52,7 @@ a {
 
 /* ! REUSABLE CLASSES */
 h1 {
-  font-family: var(--family-font);
+  font-family: var(--body-font-family);
   font-size: 3.125rem;
   line-height: 4rem;
   color: var(--dark-color);
@@ -77,7 +75,7 @@ p {
   color: var(--body-font-color);
   font-weight: 400;
   margin: 15px 0 20px 0;
-  font-family: var(--font-family);
+  font-family: var(--body-font-color);
 }
 
 .section-p1 {
@@ -160,7 +158,7 @@ p {
 #navbar li a {
   text-decoration: none;
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: var(--body-font-family);
   color: var(--accent-color);
   transition: 0.3s ease;
@@ -206,7 +204,7 @@ p {
   float: right;
   font-family: var(--body-font-family);
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: -0.05em;
   position: relative;
   color: var(--body-font-color);
@@ -289,6 +287,7 @@ input[type="submit"]:hover {
 
 .fa-unlock-keyhole,
 .fa-user {
+  cursor: pointer;
   margin-right: 11px;
 }
 
@@ -321,11 +320,10 @@ input[type="submit"]:hover {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   line-height: 2em;
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: var(--light-color);
   margin-bottom: 25px;
-  text-shadow: 1px 1px 2px;
 }
 
 #supper-deals {
@@ -367,21 +365,23 @@ p {
 }
 
 .hero button {
+  max-width: calc(7.9rem + 10vw);
+  min-width: calc(7.9rem + 10vw);
   background-color: var(--color-yellow-3);
   color: var(--orange);
   border-radius: 3px;
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--orange);
   font-weight: 800;
-  border: none;
-  padding: 9px 40px;
+
+  padding: 11px 11px 15px;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
   font-size: 1.3rem;
   transition: 00.2s;
-  box-shadow: 2px 2px 2px 3px;
+  /*box-shadow: 2px 2px 2px 3px;*/
 }
 .hero button:hover {
   background-color: var(--orange);
@@ -577,7 +577,7 @@ p {
 }
 
 #product-details .single-product-details h4 {
-  font-family: var(--font-family);
+  font-family: var(--body-font-family);
   padding: 40px 0 20px 0;
 }
 #product-details .single-product-details h2 {
@@ -671,7 +671,7 @@ p {
   font-size: 16px;
 }
 #banner h2 {
-  font-family: var(--family-font);
+  font-family: var(--body-font-family);
   color: var(--light-color);
   font-size: 3rem;
   padding: 10px 0;
@@ -765,7 +765,7 @@ button.cta:hover {
 #sm-banner span {
   text-transform: uppercase;
   font-size: 1.25 rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--light-color);
   padding-bottom: 15px;
 }
@@ -885,6 +885,8 @@ footer .colum {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
+  font-family: var(--body-font-family);
+  font-weight: 500;
 }
 footer .logo {
   width: 10rem;
@@ -920,7 +922,7 @@ footer p {
   color: var(--light-color);
   border: 1px solid var(--orange);
   border-radius: 6px;
-  color: var(--light-color);
+
   transition: background-color 0.25s;
 }
 

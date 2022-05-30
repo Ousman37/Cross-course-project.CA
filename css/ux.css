@@ -289,6 +289,7 @@ input[type="submit"]:hover {
 
 .fa-unlock-keyhole,
 .fa-user {
+  cursor: pointer;
   margin-right: 11px;
 }
 

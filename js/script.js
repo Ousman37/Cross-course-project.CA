@@ -174,4 +174,4 @@ function updateCartUI() {
   });
 }
 
-// contact from validation
+// log in  from validation

@@ -194,7 +194,7 @@ p {
   display: none;
 }
 
-/*! menu login in --------------*/
+/*!---Login drop down menu -----*/
 
 .menu {
   width: 100%;
@@ -297,7 +297,7 @@ input[type="submit"]:hover {
   margin-left: 8px;
 }
 
-/*---------- !SHOP PAGE  SECTION -----------------*/
+/*!---Login drop down menu ends-----*/
 
 #header-main {
   /*background-image: url(../images/hiking.jpg);*/
