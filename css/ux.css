@@ -75,7 +75,7 @@ h5 {
 
 p {
   font-size: 1.2rem;
-  color: var(--body-font-color);
+  color: var(--font-family);
   font-weight: 400;
   margin: 15px 0 20px 0;
   font-family: var(--font-family);
@@ -334,7 +334,7 @@ button {
   padding: 0.5rem;
   font-weight: 700;
   font-size: 1.2rem;
-  margin-top: 10px;
+
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.5s;
@@ -450,24 +450,6 @@ label {
   border-bottom-left-radius: 0;
 }
 
-/*----------button--------------*/
-/*
-.cta-btn {
-  width: fit-content;
-  margin: auto;
-  margin-top: 10px;
-  background-color: var(--orange);
-  color: var(--light-color);
-  border-radius: 3px;
-  cursor: pointer;
-  border: none;
-  font-weight: 500;
-  padding: 10px 15px;
-  text-align: center;
-  font-size: 1.3rem;
-  transition: 00.2s;
-}*/
-
 .cta-btn {
   background-color: var(--orange);
   color: var(--light-color);
@@ -549,8 +531,21 @@ footer p {
 }
 
 footer .social-media {
+  display: inline-block;
+  animation: float 5s ease-in-out infinite;
   margin-top: 20px;
-  font-size: 3rem;
+  font-size: 44px;
+}
+
+footer .social-media i {
+  padding-right: 4px;
+  cursor: pointer;
+  color: var(--light-color);
+}
+
+footer .social-media :hover,
+footer a:hover {
+  color: var(--orange);
 }
 
 footer .social-media i {
@@ -559,9 +554,30 @@ footer .social-media i {
   color: var(--color-yellow-3);
 }
 
-footer .social-media i:hover,
-footer a:hover {
-  color: var(--orange);
+.fa-facebook {
+  animation: calc(delay 1s);
+}
+.fa-twitter {
+  animation: calc(delay 2s);
+}
+.fa-pinterest-p {
+  animation: calc(delay 3s);
+}
+
+.fa-instagram {
+  animation: calc(delay 4s);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(5);
+  }
 }
 
 footer .install img {
@@ -835,33 +851,6 @@ footer .install img {
   #sm-banner span {
     font-size: 1rem;
   }
-
-  /* !Blog Page  START*/
-  .blog-details h4 {
-    font-size: 3rem;
-    color: var(--dark-color);
-  }
-
-  #blog-header {
-    height: 30vh;
-  }
-  #blog-content img {
-    width: 100%;
-  }
-
-  #blog-content {
-    padding: 100px 40px 0 40px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
 }
 
 @media (max-width: 820px) {
@@ -988,63 +977,6 @@ footer .install img {
   }
   #sm-banner span {
     font-size: 1rem;
-  }
-
-  /* !Blog Page  START*/
-  .blog-details h4 {
-    font-size: 3rem;
-    color: var(--dark-color);
-  }
-
-  #blog-header {
-    height: 30vh;
-  }
-  #blog-content img {
-    width: 100%;
-  }
-
-  #blog-content {
-    padding: 100px 40px 0 40px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-  /* !About  section*/
-  #about-head {
-    flex-direction: column;
-  }
-  #about-head img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #about-head div {
-    padding-left: 0px;
-  }
-  #about-head p {
-    font-size: 1.2rem;
-    text-align: start;
-    color: var(--dark-color-light);
-  }
-  #about-header h2 {
-    text-align: center;
-    font-family: " Oswald";
-    font-size: 3.5rem;
-    font-weight: 700;
-  }
-  #about-stores video {
-    width: 100%;
-  }
-  /* !Cart  PAGE */
-
-  #cart-add {
-    flex-direction: column;
   }
 }
 
@@ -1364,54 +1296,6 @@ footer .install img {
   #product-details .single-product-details {
     width: 100%;
   }
-
-  /* !Blog Page  START*/
-
-  .blog-details h4 {
-    font-size: 2.3rem;
-    color: var(--dark-color);
-  }
-
-  #pagination a {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-  }
-
-  #blog-content {
-    padding: 100px 10px 0 10px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-
-  #blog-content .blog-details {
-    width: 100%;
-  }
-  /* !Cart  PAGE */
-  #cart-add {
-    flex-direction: column;
-  }
-  #coupon {
-    width: 100%;
-  }
-  #subtotal {
-    width: 100%;
-    padding: 20px;
-  }
-  #cart table {
-    width: 100%;
-    border-collapse: collapse;
-    /* table-layout: fixed; */
-    /* white-space: nowrap; */
-    letter-spacing: normal;
-  }
 }
 
 @media (max-width: 477px) {
@@ -1587,60 +1471,6 @@ footer .install img {
     width: 100%;
   }
 
-  /* !Blog Page  START*/
-
-  .blog-details h4 {
-    font-size: 2.3rem;
-    color: var(--dark-color);
-  }
-
-  #pagination a {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-  }
-
-  #blog-content {
-    padding: 100px 10px 0 10px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-
-  #blog-content .blog-details {
-    width: 100%;
-  }
-  /* !About  section*/
-  #about-head {
-    flex-direction: column;
-  }
-  #about-head img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #about-head div {
-    padding-left: 0px;
-  }
-  #about-head p {
-    text-align: start;
-    color: var(--dark-color-light);
-  }
-  #about-header h2 {
-    text-align: center;
-    font-family: " Oswald";
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  #about-stores video {
-    width: 100%;
-  }
-
   /* !CONTACT PAGE FORM  section*/
 
   #contact-header h2 {
@@ -1752,13 +1582,6 @@ footer .install img {
     width: 100%;
     padding: 20px;
   }
-  #cart table {
-    width: 100%;
-    border-collapse: collapse;
-    /* table-layout: fixed; */
-    /* white-space: nowrap; */
-    letter-spacing: normal;
-  }
 }
 @media (max-width: 375px) {
   .section-p1 {
@@ -1818,24 +1641,6 @@ footer .install img {
     top: 7px;
     padding-right: 40px;
   }
-  /* !Cart  PAGE */
-  #cart-add {
-    flex-direction: column;
-  }
-  #coupon {
-    width: 100%;
-  }
-  #subtotal {
-    width: 100%;
-    padding: 20px;
-  }
-  #cart table {
-    width: 100%;
-    border-collapse: collapse;
-    /* table-layout: fixed; */
-    /* white-space: nowrap; */
-    letter-spacing: normal;
-  }
 }
 
 @media (max-width: 280px) {
@@ -1894,12 +1699,4 @@ footer .install img {
     width: 7rem;
     margin-top: 11px;
   }
-  #blog-header {
-    height: 30vh;
-    width: 100%;
-  }
 }
-
-/* !HEADER START*/
-
-/* !HEADER START*/

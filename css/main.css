@@ -441,8 +441,10 @@ footer p {
 }
 
 footer .social-media {
+  display: inline-block;
+  animation: float 5s ease-in-out infinite;
   margin-top: 20px;
-  font-size: 3rem;
+  font-size: 44px;
 }
 
 footer .social-media i {
@@ -454,6 +456,38 @@ footer .social-media i {
 footer .social-media i:hover,
 footer a:hover {
   color: var(--orange);
+}
+
+footer .social-media i {
+  padding-right: 4px;
+  cursor: pointer;
+  color: var(--color-yellow-3);
+}
+
+.fa-facebook {
+  animation: calc(delay 1s);
+}
+.fa-twitter {
+  animation: calc(delay 2s);
+}
+.fa-pinterest-p {
+  animation: calc(delay 3s);
+}
+
+.fa-instagram {
+  animation: calc(delay 4s);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(5);
+  }
 }
 
 footer .install img {
