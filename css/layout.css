@@ -1,5 +1,3 @@
-/* ! import fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,500&display=swap");
 *,
 *::before,
 *::after {
@@ -7,19 +5,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* !RESET/BASE*/
+
 :root {
-  --body-font-family: "Poppins", sans-serif;
-  --body-font-color: #676767;
-  --light-color: #fff;
+  --light-clr: #fff;
+  --dark-clr: #504f4f;
   --dark-color: #141313;
-  --orange: #ff4f00;
   --color-red-3: #990000;
-  --gray-dark: #303030;
+  --accent-clr: #ff4f00;
   --success: #00b55a;
-  --dark-color-light: #4d4d4d;
-  --body-font-color: #676767;
-  --section-background-color: #fef5f5;
+  --font-clr: #676767;
+  --accent-g-clr: hsla(171, 71%, 26%, 0.781);
+  --font-family: "Merriweather" sans-serif;
+  /*--font-family: "DM Serif Display" sans-serif;*/
+  --font-size-xsm: 1.2rem;
+  --font-size-sm: 1.6rem;
+  --font-size-md: 2.4rem;
+  --font-size-lg: 3.6rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
   --after-content: "2";
 }
@@ -31,12 +36,10 @@ html {
 
 body {
   width: 100%;
-  text-rendering: optimizeLegibility;
-  font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: var(--body-font-color);
-  line-height: 1.5;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  color: var(--dark-clr);
+  /*line-height: 1.5;*/
   overflow-x: hidden;
 }
 
@@ -44,6 +47,7 @@ ul {
   list-style: none;
 }
 a {
+  color: var(--dark-clr);
   text-decoration: none;
   font: inherit;
   color: inherit;
@@ -55,7 +59,6 @@ h1 {
   font-family: var(--body-font-family);
   font-size: 3.125rem;
   line-height: 4rem;
-  color: var(--dark-color);
 }
 h2 {
   font-size: 2.875 rem;
@@ -71,7 +74,7 @@ h5 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: var();
   color: var(--body-font-color);
   font-weight: 400;
   margin: 15px 0 20px 0;
@@ -114,7 +117,7 @@ p {
   width: 28 8rem;
   height: 4.8rem;
   padding: 1.2rem 6rem 1.2rem 4.4rem;
-  background-color: var(--light-color);
+  background-color: var(--light-clr);
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.04);
   border-radius: 0.9rem;
   border: 1px solid silver;
@@ -157,15 +160,15 @@ p {
 
 #navbar li a {
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: var(--font-size-sm);
   font-weight: 400;
-  font-family: var(--body-font-family);
-  color: var(--accent-color);
+  font-family: var(--font-family);
+  color: var(--dark-clr);
   transition: 0.3s ease;
 }
 #navbar li a:hover,
 #navbar li a:active {
-  color: var(--orange);
+  color: var(--accent-clr);
 }
 
 #navbar li a.active::after,
@@ -173,7 +176,7 @@ p {
   content: "";
   width: 30%;
   height: 0.125rem;
-  background: var(--orange);
+  background: var(--accent-clr);
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -202,15 +205,15 @@ p {
   width: 200px;
   height: 65px;
   float: right;
-  font-family: var(--body-font-family);
-  font-size: 20px;
-  font-weight: 400;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
   letter-spacing: -0.05em;
   position: relative;
-  color: var(--body-font-color);
+  color: var(--dark-clr);
 }
 .menu > .menu-content > a {
-  color: var(--body-font-color);
+  color: var(--dark-clr);
 }
 
 .arrow-up {
@@ -219,14 +222,14 @@ p {
   position: absolute;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid var(--orange);
+  border-bottom: 20px solid var(--accent-clr);
   top: 59px;
   right: 260px;
   /*display: none;*/
 }
 
 .login-form {
-  background-color: var(--body-font-color);
+  background-color: var(--font-family);
   position: absolute;
   width: 300px;
   height: auto;
@@ -238,7 +241,7 @@ p {
 }
 
 .login-form > form {
-  font-family: var(--body-font-family);
+  font-family: var(--font-family);
   width: 250px;
   margin: 25px auto;
   font-size: 14px;
@@ -247,7 +250,7 @@ p {
 }
 input[type="text"],
 input[type="password"] {
-  font-family: var(--body-font-family);
+  font-family: var(--font-family);
   font-size: 15px;
   width: 250px;
   height: 30px;
@@ -260,8 +263,8 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  font-family: var(--body-font-family);
-  background: var(--orange);
+  font-family: var(--font-family);
+  background: var(--accent-clr);
   width: 95%;
   height: 35px;
   font-size: 20px;
@@ -270,7 +273,7 @@ input[type="submit"] {
   border: none;
   outline: none;
   font-weight: lighter;
-  color: #eee;
+  color: var(--dark-clr);
   cursor: pointer;
 }
 
@@ -281,7 +284,7 @@ input[type="submit"]:hover {
   font-family: var(--body-font-family);
   position: relative;
   top: 10px;
-  font-size: 14px;
+  font-size: var(--font-size-md);
   color: white;
 }
 
@@ -314,35 +317,35 @@ input[type="submit"]:hover {
 .hero h4 {
   font-size: 1.4rem;
   padding-bottom: 15px;
-  color: var(--light-color);
+  color: var(--light-clr);
 }
 .hero h1 {
-  font-family: Oswald, sans-serif;
+  font-family: var(--font-family);
   font-weight: 700;
   line-height: 2em;
-  font-size: 2.5rem;
+  font-size: var(--font-size-lg);
   text-transform: uppercase;
-  color: var(--light-color);
+  color: var(--light-clr);
   margin-bottom: 25px;
 }
 
 #supper-deals {
   text-align: center;
   font-size: 1.7rem;
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
   margin-top: 15px;
 }
 #supper-deals h2 {
   text-align: center;
   font-size: 2.4rem;
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
   margin-top: 15px;
 }
 
 #supper-deals span {
   text-align: center;
   font-size: 1.8rem;
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
 }
 
 #supper-deals strong {
@@ -362,20 +365,21 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: var(--gap-md);
 }
 
 .hero button {
   max-width: calc(7.9rem + 10vw);
   min-width: calc(7.9rem + 10vw);
-  background-color: var(--color-yellow-3);
-  color: var(--orange);
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid var(--orange);
   font-weight: 800;
 
   padding: 11px 11px 15px;
-  font-size: 20px;
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
@@ -384,8 +388,8 @@ p {
   /*box-shadow: 2px 2px 2px 3px;*/
 }
 .hero button:hover {
-  background-color: var(--orange);
-  color: var(--light-color);
+  background-color: var(--accent-clr);
+  color: var(--light-clr);
 }
 
 .fa-bag-shopping:hover {
@@ -395,7 +399,7 @@ p {
 .fa-bag-shopping {
   border-width: 0.2rem;
   padding: 0.71em 1.5em;
-  color: var(--orange);
+  color: var(--accent-clr);
   border-radius: 1.125rem;
   width: 80%;
   height: 10%;
@@ -426,9 +430,9 @@ p {
   display: inline-block;
   padding: 9px 8px 6px 8px;
   line-height: 1;
-  font-size: 1rem;
+  font-size: var(--font-size-sm);
   font-weight: 500;
-  color: var(--dark-color-light);
+  color: var(--dark-color);
 }
 .feature {
   display: flex;
@@ -440,20 +444,29 @@ p {
   width: 100%;
   margin-bottom: 10px;
 }
+
+.feature .fe-box:nth-child(1) h6 {
+  background-color: var(--accent-clr);
+  color: var(--light-clr);
+}
 .feature .fe-box:nth-child(2) h6 {
-  background-color: var(--);
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
 }
 .feature .fe-box:nth-child(3) h6 {
-  background-color: var(--color-green-2);
+  background-color: yellow;
+  color: var(--dark-clr);
 }
 .feature .fe-box:nth-child(4) h6 {
   background-color: var(--success);
 }
 .feature .fe-box:nth-child(5) h6 {
-  background-color: var(--orange);
+  background-color: yellowgreen;
+  color: var(--light-clr);
 }
 .feature .fe-box:nth-child(6) h6 {
-  background-color: var(--color-red-2);
+  background-color: var(--accent-clr);
+  color: var(--light-clr);
 }
 
 .product-container,
@@ -466,7 +479,7 @@ p {
 }
 .section-p1 p {
   text-align: center;
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
 }
 .product1 .product {
   display: flex;
@@ -500,13 +513,14 @@ p {
 .product1 .product .description span {
   display: block;
   margin-top: 10px;
-  color: var(--dark-color);
-  font-size: 1.2rem;
+  color: var(--dark-clr);
+  font-size: var(--font-size-sm);
 }
 .product1 .product .description h5 {
   padding-top: 0.4375rem;
-  font-size: 2.1rem;
-  color: var(--dark-color-light);
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  color: var(--dark-clr);
 }
 
 .product1 .product .description i {
@@ -516,9 +530,9 @@ p {
 
 .product1 .product .description h4 {
   padding-top: 0.4375rem;
-  font-size: 1.9375rem;
+  font-size: var(--margin-md);
   font-weight: 700;
-  color: var(--body-font-color);
+  color: var(--dark-clr);
 }
 .product1 .product .fa-cart-shopping {
   border-radius: 50%;
@@ -533,8 +547,8 @@ p {
   text-align: center;
 }
 #pagination a {
-  color: var(--light-color);
-  background-color: var(--orange);
+  color: var(--light-clr);
+  background-color: var(--accent-clr);
   padding: 15px 20px;
   border-radius: 4px;
   font-weight: 600;
@@ -568,7 +582,7 @@ p {
 .small-image-colum {
   flex-basis: 24%;
   cursor: pointer;
-  border: 1px solid var(--light-color);
+  border: 1px solid var(--light-clr);
 }
 
 #product-details .single-product-details {
@@ -577,7 +591,7 @@ p {
 }
 
 #product-details .single-product-details h4 {
-  font-family: var(--body-font-family);
+  font-family: var(--dark-clr);
   padding: 40px 0 20px 0;
 }
 #product-details .single-product-details h2 {
@@ -612,7 +626,7 @@ p {
 }
 
 .single-product-details .fa-indent {
-  color: var(--orange);
+  color: var(--accent-clr);
   margin-left: 10px;
 }
 
@@ -621,7 +635,7 @@ p {
   width: fit-content;
   /*margin: auto;
   margin-top: 10px;*/
-  background-color: var(--orange);
+  background-color: var(--accent-clr);
   color: var(--light-color);
   border-radius: 3px;
   cursor: pointer;
@@ -644,12 +658,13 @@ p {
 
 #banner1 p {
   color: var(--body-font-color);
-  font-size: 1.8rem;
+  font-size: var(--font-size-sm);
 }
 
 #banner1 h2 {
   font-family: var(--font-family);
-  font-size: 2.9rem;
+  font-size: var(--font-size-md);
+  color: var(--dark-clr);
   text-decoration: underline;
   line-height: 1em;
 }
@@ -667,13 +682,13 @@ p {
   background-position: center;
 }
 #banner h4 {
-  color: var(--light-color);
+  color: var(--light-clr);
   font-size: 16px;
 }
 #banner h2 {
-  font-family: var(--body-font-family);
-  color: var(--light-color);
-  font-size: 3rem;
+  font-family: var(--font-family);
+  color: var(--light-clr);
+  font-size: var(--font-size-lg);
   padding: 10px 0;
 }
 #banner span {
@@ -681,8 +696,8 @@ p {
 }
 
 button.cta {
-  background-color: var(--light-color);
-  color: var(--gray-dark);
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
   padding: 0.75em 1.5em;
   border-radius: 4px;
   cursor: pointer;
@@ -691,32 +706,32 @@ button.cta {
   font-weight: 500;
   padding: 15px 32px;
   text-align: center;
-  font-size: 16px;
+  font-size: var(--font-size-sm);
   transition: 00.2s;
 }
 button.cta:hover {
   color: #fff;
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: var(--accent-clr);
+  border-color: var(--accent-clr);
 }
 
 #sm-banner .btn {
   background-color: transparent;
-  color: var(--light-color);
+  color: var(--light-clr);
   padding: 0.75em 1.5em;
   cursor: pointer;
   text-transform: uppercase;
   border: 1px solid #fff;
   font-weight: 600;
   padding: 11px 18px;
-  font-size: 13px;
+  font-size: var(--font-size-xsm);
   transition: 00.2s;
 }
 
 #sm-banner .banner-box:hover button {
   color: #fff;
-  background-color: var(--orange);
-  border-color: 1px solid var(--orange);
+  background-color: var(--accent-clr);
+  border-color: 1px solid var(--accent-clr);
 }
 
 #pro-section1 {
@@ -735,8 +750,9 @@ button.cta:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(../images/hiking5.jpg);
-  min-width: 340px;
+  background-image: url(../images/hiking-people.jpg);
+  box-shadow: rgba(0, 0, 0, 0.01);
+  min-width: 350px;
   height: 30vh;
   background-size: cover;
   background-position: center;
@@ -744,29 +760,31 @@ button.cta:hover {
 }
 
 #sm-banner .banner-box3 {
-  background-image: url(../images/canoeing.jpg);
+  background-image: url(../images/canoeing1.jpg);
+  box-shadow: rgba(0, 0, 0, 0.01);
 }
 #sm-banner .banner-box2 {
-  background-image: url(../images/gurung.jpg);
+  background-image: url(../images/raining.jpg);
+  box-shadow: rgba(0, 0, 0, 0.01);
 }
 #sm-banner h4 {
   text-transform: uppercase;
-  font-size: 1.25 rem;
-  font-weight: 300;
-  color: var(--light-color);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  color: var(--light-clr);
 }
 
 #sm-banner h2 {
   text-transform: uppercase;
   font-size: 1.25 rem;
   font-weight: 800;
-  color: var(--light-color);
+  color: var(--light-clr);
 }
 #sm-banner span {
   text-transform: uppercase;
-  font-size: 1.25 rem;
+  font-size: var(--font-size-sm);
   font-weight: 400;
-  color: var(--light-color);
+  color: var(--light-clr);
   padding-bottom: 15px;
 }
 
@@ -781,7 +799,8 @@ button.cta:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(../images/outdoor5.jpg);
+  background-image: url(../images/running.jpg);
+  box-shadow: rgba(0, 0, 0, 0.01);
   min-width: 30%;
   height: 30vh;
 
@@ -792,22 +811,23 @@ button.cta:hover {
 }
 
 #banner3 .banner-box4 {
-  background-image: url(../images/jozef-fehér.jpg);
+  background-image: url(../images/skiing.jpg);
+  box-shadow: rgba(0, 0, 0, 0.01);
 }
 
 #banner3 .banner-box5 {
-  background-image: url(../images/chenko.jpg);
+  background-image: url(../images/camping-people.jpg);
 }
 
 #banner3 h2 {
-  color: var(--light-color);
-  font-weight: 900;
-  font-size: 22px;
+  color: var(--light-clr);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
 }
 #banner3 h3 {
-  color: var(--light-color);
+  color: var(--color-red-3);
   font-weight: 800;
-  font-size: 15px;
+  font-size: var(--font-size-md);
 }
 /*!-----!!NEW LETTER* ------------------ */
 #newsletter {
@@ -822,22 +842,22 @@ button.cta:hover {
   background-color: var(--color-blue-2);
 }
 #newsletter h4 {
-  font-size: 22px;
-  color: var(--light-color);
-  font-weight: 700;
+  font-size: var(--font-size-md);
+  color: var(--light-clr);
+  font-weight: var(--font-weight-light);
   margin: 40px 80px;
 }
 #newsletter p {
-  font-size: 14px;
-  color: var(--light-color);
+  font-size: var(--font-size-sm);
+  color: var(--light-clr);
   font-weight: 600;
   margin: 20px 30px;
 }
 
 #newsletter p span {
   color: var(--color-red-3);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
 }
 
 #newsletter .form {
@@ -857,7 +877,7 @@ button.cta:hover {
   border-bottom-right-radius: 0;
 }
 #newsletter .cta-btn {
-  color: var(--light-color);
+  color: var(--light-clr);
   padding: 0.75em 1.5em;
   cursor: pointer;
   text-transform: uppercase;
@@ -865,7 +885,7 @@ button.cta:hover {
   font-weight: 600;
   padding: 11px 18px;
   font-size: 13px;
-  background-color: var(--orange);
+  background-color: var(--accent-clr);
   text-transform: unset;
   white-space: nowrap;
   border-top-left-radius: 0;
@@ -885,7 +905,7 @@ footer .colum {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family);
   font-weight: 500;
 }
 footer .logo {
@@ -894,11 +914,11 @@ footer .logo {
 }
 
 footer h4 {
-  font-size: 14px;
+  font-size: var(--font-size-md);
   margin-bottom: 20px;
 }
 footer p {
-  font-size: 13px;
+  font-size: var(--font-size-sm);
   margin-bottom: 0 0 8px 0;
 }
 .colum .install img {
@@ -918,9 +938,9 @@ footer p {
 .button {
   display: inline-block;
   text-align: center;
-  background-color: var(--orange);
-  color: var(--light-color);
-  border: 1px solid var(--orange);
+  background-color: var(--accent-clr);
+  color: var(--light-clr);
+  border: 1px solid var(--accent-clr);
   border-radius: 6px;
 
   transition: background-color 0.25s;
@@ -928,8 +948,8 @@ footer p {
 
 .button-transparent:hover,
 .button-transparent:focus {
-  background-color: var(--light-color);
-  color: var(--orange);
+  background-color: var(--light-clr);
+  color: var(--accent-clr);
   border-color: var(--accent-color);
 }
 .button-transparent {
@@ -949,18 +969,18 @@ footer .social-media {
 footer .social-media i {
   padding-right: 4px;
   cursor: pointer;
-  color: var(--color-yellow-3);
+  color: var(--accent-clr);
 }
 
 footer .social-media i:hover,
 footer a:hover {
-  color: var(--orange);
+  color: var(--accent-clr);
 }
 
 footer .social-media i {
   padding-right: 4px;
   cursor: pointer;
-  color: var(--color-yellow-3);
+  color: var(--accent-clr);
 }
 
 .fa-facebook {
@@ -1018,15 +1038,15 @@ footer .install img {
 
 .legal-information a:hover,
 .legal-information a:focus {
-  color: var(--orange);
+  color: var(--accent-clr);
 }
 
 #pagination {
   text-align: center;
 }
 #pagination a {
-  color: var(--light-color);
-  background-color: var(--orange);
+  color: var(--light-clr);
+  background-color: var(--accent-clr);
   padding: 15px 20px;
   border-radius: 4px;
   font-weight: 600;
