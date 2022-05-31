@@ -88,6 +88,13 @@ addToCartButtons.forEach((btn) => {
   btn.addEventListener("click", addItemFunction);
 });
 
+// Initialize Cart
+function initializeCart() {
+  updateCartUI();
+}
+
+initializeCart();
+
 // add to cart
 
 function addItemFunction(e) {
@@ -96,8 +103,9 @@ function addItemFunction(e) {
   const img = e.target.parentElement.parentElement.previousElementSibling.src;
   const name = e.target.parentElement.previousElementSibling.textContent;
   const desc = e.target.parentElement.children[0].textContent;
-  const price = e.target.parentElement.children[1].textContent;
-  //price = price.replace("Price: $", ``);
+  const price = parseFloat(
+    e.target.parentElement.children[1].textContent.replace("Price: $", ``)
+  );
   const item = new CartItem(name, desc, img, price);
   LocalCart.addItemToLocalCart(id, item);
   console.log(price);
@@ -141,7 +149,7 @@ function updateCartUI() {
     price = Math.round((price * 100) / 100);
     count += 1;
     total += price;
-    total = Math.round((price * 100) / 100);
+    // total = Math.round((total * 100) / 100);
     cartItem.innerHTML = `
                             <img src="${value.img}">
                             <div class="details">
@@ -149,7 +157,7 @@ function updateCartUI() {
                              <p>${value.desc}
                              
                               <span class="quantity">Quantity: ${value.quantity}</span>
-                             <span class="price">Price: ${price}</span>
+                             <span class="price">Price: $${price}</span>
                              </p>
                              </div>
                               <div class="cancel"><i class="fa-solid fa-rectangle-xmark"></i></div>`;

@@ -26,7 +26,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-  --after-content: "0";
+  --after-content: "2";
 }
 
 html {
@@ -343,6 +343,7 @@ input[type="submit"]:hover {
   position: absolute;
   left: 72%;
   top: 25%;
+
   box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.05);
   z-index: 1001;
   /*border: 1px solid blue;*/
@@ -437,7 +438,7 @@ input[type="submit"]:hover {
 }
 
 .full-cart-window {
-  background-color: var(--light-color);
+  background-color: var(--light-clr);
   border-top: none;
   border: solid lightgray 1px;
   position: fixed;

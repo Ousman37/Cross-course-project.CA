@@ -225,7 +225,7 @@ p {
   border-bottom: 20px solid var(--accent-clr);
   top: 59px;
   right: 260px;
-  /*display: none;*/
+  display: none;
 }
 
 .login-form {
@@ -367,35 +367,20 @@ p {
   color: var(--light-color);
 }
 
-.hero .buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.hero button {
-  max-width: calc(7.9rem + 10vw);
-  min-width: calc(7.9rem + 10vw);
-  background-color: var(--accent-clr);
+.hero > #my-button {
+  font-family: var(--font-family);
   color: var(--light-clr);
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid var(--orange);
-  font-weight: 800;
-
-  padding: 11px 11px 15px;
   font-size: var(--font-size-sm);
-  text-transform: uppercase;
-  cursor: pointer;
-  text-align: center;
-  font-size: 1.3rem;
-  transition: 00.2s;
-  /*box-shadow: 2px 2px 2px 3px;*/
+  background-color: transparent;
+  border: 1px solid #ed590e;
+  padding: 16px 25px;
+  font-weight: 800;
 }
-.hero button:hover {
-  background-color: var(--accent-clr);
-  color: var(--light-clr);
+
+.hero > #my-button:hover {
+  color: var(--light-clr) !important;
+  background: #ed590e;
+  background: linear-gradient(to top, #ed590e, #ed590e);
 }
 
 .fa-bag-shopping:hover {
@@ -488,6 +473,13 @@ p {
   color: var(--dark-clr);
 }
 .product1 .product {
+  border-width: 0px 0px 0px 0px;
+  border-color: rgba(255, 255, 255, 1);
+  border-radius: 10;
+  border-style: solid;
+  box-shadow: 0px 5px 15px -2px rgba(10, 16, 34, 0.4); /* hover styles */
+  border-style: solid;
+  box-shadow: 0px 15px 45px -5px rgba(10, 16, 34, 0.3);
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -500,8 +492,6 @@ p {
   transition: 0.2s ease;
   position: relative;
   overflow: hidden;
-  padding: 10px 25px;
-  box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.05);
 }
 .product1 .product:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
@@ -637,10 +627,10 @@ p {
 }
 
 /*----------button--------------*/
-.cta-btn {
+/*.cta-btn {
   width: fit-content;
-  /*margin: auto;
-  margin-top: 10px;*/
+  margin: auto;
+  margin-top: 10px;
   background-color: var(--accent-clr);
   color: var(--light-color);
   border-radius: 3px;
@@ -651,7 +641,7 @@ p {
   text-align: center;
   font-size: 1.3rem;
   transition: 00.2s;
-}
+}*/
 
 /*!-----!/* !BANNER SECTION------------------*/
 #banner1 {
@@ -721,23 +711,38 @@ button.cta:hover {
   border-color: var(--accent-clr);
 }
 
-#sm-banner .btn {
-  background-color: transparent;
+.banner-box > #my-button {
+  font-family: var(--font-family);
   color: var(--light-clr);
-  padding: 0.75em 1.5em;
+  font-size: var(--font-size-sm);
+  background-color: #622404;
+  border: none;
+  padding: 15px 29px;
+  font-weight: 800;
   cursor: pointer;
-  text-transform: uppercase;
-  border: 1px solid #fff;
-  font-weight: 600;
-  padding: 11px 18px;
-  font-size: var(--font-size-xsm);
-  transition: 00.2s;
 }
 
-#sm-banner .banner-box .btn:hover {
-  color: #fff;
-  background-color: var(--accent-clr);
-  border-color: 1px solid var(--accent-clr);
+.banner-box > #my-button:hover {
+  color: var(--light-clr) !important;
+  background: #ed590e;
+  background: linear-gradient(to top, #ed590e, #ed590e);
+}
+
+.banner-box2 > #my-button2 {
+  font-family: var(--font-family);
+  color: var(--light-clr);
+  font-size: var(--font-size-sm);
+  background-color: #622404;
+  border: none;
+  padding: 15px 29px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.banner-box2 > #my-button2:hover {
+  color: var(--light-clr) !important;
+  background: #ed590e;
+  background: linear-gradient(to top, #ed590e, #ed590e);
 }
 
 #pro-section1 {
@@ -847,7 +852,7 @@ button.cta:hover {
   font-size: var(--font-size-md);
 }
 #banner3 h3 {
-  color: var(--color-red-3);
+  color: var(--light-clr);
   font-weight: 800;
   font-size: var(--font-size-md);
 }
