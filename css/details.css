@@ -1,6 +1,3 @@
-/* ! import fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap");
-
 *,
 *::before,
 *::after {
@@ -8,20 +5,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* !RESET/BASE*/
+
 :root {
-  --body-font-family: "Oswald", sans-serif;
-  --font-family: "Poppins", sans-serif;
-  --body-font-color: #676767;
-  --light-color: #fff;
+  --light-clr: #fff;
+  --dark-clr: #504f4f;
   --dark-color: #141313;
-  --orange: #ff4f00;
   --color-red-3: #990000;
-  --gray-dark: #303030;
+  --accent-clr: #ff4f00;
   --success: #00b55a;
-  --dark-color-light: #4d4d4d;
-  --body-font-color: #676767;
-  --section-background-color: #fef5f5;
+  --font-clr: #676767;
+  --accent-g-clr: hsla(171, 71%, 26%, 0.781);
+  --font-family: "Merriweather" sans-serif;
+  /*--font-family: "DM Serif Display" sans-serif;*/
+  --font-size-xsm: 1.2rem;
+  --font-size-sm: 1.6rem;
+  --font-size-md: 2.4rem;
+  --font-size-lg: 3.6rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
   --after-content: "2";
 }
@@ -33,12 +36,10 @@ html {
 
 body {
   width: 100%;
-  text-rendering: optimizeLegibility;
-  font-size: 1.4rem;
-  --family-font: "Oswald", sans-serif;
-  font-weight: 400;
-  color: var(--body-font-color);
-  line-height: 1.5;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  color: var(--dark-clr);
+  /*line-height: 1.5;*/
   overflow-x: hidden;
 }
 
@@ -46,6 +47,7 @@ ul {
   list-style: none;
 }
 a {
+  color: var(--dark-clr);
   text-decoration: none;
   font: inherit;
   color: inherit;
@@ -54,10 +56,9 @@ a {
 
 /* ! REUSABLE CLASSES */
 h1 {
-  font-family: var(--family-font);
+  font-family: var(--body-font-family);
   font-size: 3.125rem;
   line-height: 4rem;
-  color: var(--dark-color);
 }
 h2 {
   font-size: 2.875 rem;
@@ -73,11 +74,11 @@ h5 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: var();
   color: var(--body-font-color);
   font-weight: 400;
   margin: 15px 0 20px 0;
-  font-family: var(--font-family);
+  font-family: var(--body-font-color);
 }
 
 .section-p1 {
@@ -162,13 +163,13 @@ p {
   text-decoration: none;
   font-size: 1.7rem;
   font-weight: 600;
-  font-family: var(--body-font-family);
-  color: var(--accent-color);
+  font-family: var(--font-family);
+  color: var(--dark-clr);
   transition: 0.3s ease;
 }
 #navbar li a:hover,
 #navbar li a:active {
-  color: var(--orange);
+  color: var(--accent-clr);
 }
 
 #navbar li a.active::after,
@@ -176,7 +177,7 @@ p {
   content: "";
   width: 30%;
   height: 0.125rem;
-  background: var(--orange);
+  background: var(--accent-clr);
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -194,7 +195,7 @@ p {
   display: none;
 }
 
-/*!---Login drop down menu -----*/
+/*!---Login drop down menu ends-----*/
 
 .menu {
   width: 100%;
@@ -205,7 +206,7 @@ p {
   width: 200px;
   height: 65px;
   float: right;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family);
   font-size: 20px;
   font-weight: bold;
   letter-spacing: -0.05em;
@@ -222,7 +223,7 @@ p {
   position: absolute;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid var(--orange);
+  border-bottom: 20px solid var(--accent-clr);
   top: 59px;
   right: 260px;
   /*display: none;*/
@@ -241,7 +242,7 @@ p {
 }
 
 .login-form > form {
-  font-family: var(--body-font-family);
+  font-family: var(--font-family);
   width: 250px;
   margin: 25px auto;
   font-size: 14px;
@@ -263,8 +264,8 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  font-family: var(--body-font-family);
-  background: var(--orange);
+  font-family: var(--font-family);
+  background: var(--accent-clr);
   width: 95%;
   height: 35px;
   font-size: 20px;
@@ -281,7 +282,7 @@ input[type="submit"]:hover {
   background: var(--gray-dark);
 }
 .login-form > form a {
-  font-family: var(--body-font-family);
+  font-family: var(--font-family);
   position: relative;
   top: 10px;
   font-size: 14px;
@@ -315,23 +316,23 @@ input[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: var(--light-color);
+  color: var(--light-clr);
   font-size: 1.3rem;
 }
 #header-main h1 {
   text-transform: uppercase;
-  color: var(--light-color);
-  font-size: 2.6rem;
+  color: var(--light-clr);
+  font-size: var(--font-size-lg);
 }
 
 #header-main h4 {
   color: var(--dark-color-light);
-  font-size: 2.6rem;
+  font-size: var(--font-size-md);
   padding: 15px 10px;
 }
 
 #header-main p {
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
   font-size: 1.3rem;
 }
 
@@ -350,24 +351,24 @@ input[type="submit"]:hover {
 .subtotal {
   text-align: right;
   padding: 5%;
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
 }
 .cart-icon {
   text-align: right;
-  color: var(--light-color);
+  color: var(--light-clr);
   cursor: pointer;
 }
 
 .view-cart {
-  background-color: var(--light-color);
-  border: 2px solid var(--orange);
+  background-color: var(--light-clr);
+  border: 2px solid var(--accent-clr);
   color: brown;
 }
 
 .view-cart {
   width: 95%;
   text-align: center;
-  background-color: var(--light-color);
+  background-color: var(--light-clr);
   color: var(--color-red-3);
   cursor: pointer;
   font-size: 1.5rem;
@@ -379,7 +380,7 @@ input[type="submit"]:hover {
   width: 95%;
   text-align: center;
   background-color: var(--color-red-3);
-  color: var(--light-color);
+  color: var(--light-clr);
   cursor: pointer;
   font-size: 1.5rem;
   margin: 10px auto;
@@ -407,23 +408,23 @@ input[type="submit"]:hover {
   padding-left: 10%;
 }
 .cart-item p {
-  color: var(--dark-color-light);
-  font-size: 1.2rem;
+  color: var(--dark-clr);
+  font-size: var(--font-size-md);
 }
 .cart-item .quantity {
   display: block;
   margin-top: 5%;
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
 }
 
 .cart-item .price {
   display: block;
   text-align: right;
   margin-top: 35%;
-  color: var(--dark-color-light);
+  color: var(--dark-color);
 }
 .cart-item h3 {
-  color: var(--dark-color-light);
+  color: var(--dark-clr);
   text-align: left;
   margin-bottom: 5%;
 }
@@ -516,73 +517,82 @@ input[type="submit"]:hover {
   margin-top: 10px;
   padding: 10px 15px;
   cursor: pointer;
-  background-color: var(--orange);
+  background-color: var(--accent-clr);
   border-radius: 3px;
-  font-size: 1.5rem;
-  color: var(--light-color);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--light-clr);
 }
 
-/*!-----!!NEW LETTER* ------------------ */
+/*!-----!!NEWS LETTER* ------------------ */
+
 #newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#newsletter {
+  background: linear-gradient(rgba(1, 3, 0, 0), rgba(1, 3, 0, 24)),
+    url("../images/backgroud.jpg");
   padding: 3rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-image: url(../images/joy-stamp.jpg);
+  height: 50vh;
   background-repeat: no-repeat;
-  background-position: 20% 30%;
-  background-color: var(--color-blue-2);
+  background-position: center;
+  background-size: cover;
 }
 #newsletter h4 {
-  font-size: 22px;
-  color: var(--light-color);
-  font-weight: 700;
+  font-size: var(--font-size-md);
+  color: var(--light-clr);
+  font-weight: var(--font-weight-light);
   margin: 40px 80px;
 }
 #newsletter p {
-  font-size: 14px;
-  color: var(--light-color);
+  font-size: var(--font-size-sm);
+  color: var(--light-clr);
   font-weight: 600;
   margin: 20px 30px;
 }
 
 #newsletter p span {
   color: var(--color-red-3);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
 }
 
-#newsletter .form {
+#newsletter .email-box {
   display: flex;
-  width: 40%;
+  height: 40px;
+  justify-content: center;
 }
 
-#newsletter input {
-  height: 5.1236rem;
-  padding: 0 2.25rem;
-  font-size: 14px;
-  width: 50%;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  outline: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+#newsletter .text-bok {
+  width: 350px;
+  transition: 0.5s;
 }
-#newsletter .cta-btn {
-  color: var(--light-color);
-  padding: 0.75em 1.5em;
-  cursor: pointer;
+
+#newsletter .email-box:hover > .text-bok .text-bok:focus {
+  width: 360px;
+  padding: 0 10px;
+}
+
+#newsletter .text-bok .myButton {
+  border: none;
+  outline: none;
+}
+
+#newsletter .myButton {
+  background-color: var(--accent-clr);
+  color: var(--light-clr);
+  padding: 0 10px;
   text-transform: uppercase;
-  border: 1px solid #fff;
-  font-weight: 600;
-  padding: 11px 18px;
-  font-size: 13px;
-  background-color: var(--orange);
-  text-transform: unset;
-  white-space: nowrap;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  cursor: pointer;
+  margin-left: 3px;
 }
 
 /*!-----!*!FOOTER SECTION * ----------------- */
@@ -629,9 +639,9 @@ footer p {
 .button {
   display: inline-block;
   text-align: center;
-  background-color: var(--orange);
+  background-color: var(--accent-clr);
   color: var(--light-color);
-  border: 1px solid var(--orange);
+  border: 1px solid var(--accent-clr);
   border-radius: 6px;
   color: var(--light-color);
   transition: background-color 0.25s;
@@ -665,7 +675,7 @@ footer .social-media i {
 
 footer .social-media i:hover,
 footer a:hover {
-  color: var(--orange);
+  color: var(--accent-clr);
 }
 
 footer .social-media i {
@@ -736,8 +746,8 @@ footer .install img {
   text-align: center;
 }
 #pagination a {
-  color: var(--light-color);
-  background-color: var(--orange);
+  color: var(--light-clr);
+  background-color: var(--accent-clr);
   padding: 15px 20px;
   border-radius: 4px;
   font-weight: 600;
