@@ -78,7 +78,7 @@ p {
   color: var(--body-font-color);
   font-weight: 400;
   margin: 15px 0 20px 0;
-  font-family: var(--body-font-color);
+  font-family: var(--font-family);
 }
 
 .section-p1 {
@@ -334,15 +334,25 @@ input[type="submit"]:hover {
   align-items: center;
   justify-content: space-between;
 }
+#home-line > bdi {
+  text-decoration: underline;
+  font-size: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-clr);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
 #contact-details .details {
   width: 40%;
 }
 
 #contact-details .details span {
+  margin-top: 0px;
   padding: 20px 0;
 }
 #contact-details .details h3 {
-  font-size: 16px;
+  font-size: var(--font-size-sm);
   padding-bottom: 15px;
 }
 
