@@ -61,23 +61,53 @@
                      <div class="menu-content">
                      <i class="fa-solid fa-unlock-keyhole"></i><a href="#" id="login">Login</a> |<i class="fa-solid fa-user"></i><a href="#">Register</a>
                      </div>
-                     <div class="arrow-up"></div>
+                     <div class="arrow-up">
                      <div class="login-form">
                       <form>
                       <div>
                           <label>Username</label>
-                          <input type="text" placeholder="Username" required>
+                          <input type="text" id="userName" placeholder="user name" required>
+                           <div class="error-hint hidden" id="userNameError">your user name is required.</div>
+                      </div>
+
+                      <div>
+                        <label>Password</label>
+                         <input type="password" id="passWord" placeholder="Password" required>
+                          <div class="error-hint hidden" id="passwordError">your password is invalid.</div>
+                      </div>
+
+                       <div>
+                       <label>Email</label>
+                        <input type="email" id="emailAddress" placeholder="your email address" required>
+                        <div class="error-hint hidden" id="emailError">your email  invalid.</div>
+                        </div>
+
+                       <div>
+                       <input type="submit" value="Create" >
+                        </div>
+                      <p class="message">Already   Registered? <a href="#">Login</a></p>
+                     <div>
+                      <label>Username</label>
+                      <input type="text" id="userName" placeholder="user name" required>
+                      <div class="error-hint hidden" id="userNameError">your  user name is required.</div>
                       </div>
                       <div>
                         <label>Password</label>
-                         <input type="password" placeholder="Password" required>
+                         <input type="password" id="passWord" placeholder="Password" required>
+                         <div class="error-hint hidden" id="passwordError">your password is invalid.</div>
                       </div>
                        <div>
-                      
+                       <label>Email</label>
+                        <input type="email"  id="emailAddress" placeholder="your email address" required>
+                        <div class="error-hint hidden" id="emailError">your email  invalid.</div>
+                        </div>
+                       <div>
                        <input type="submit" value="Log In" >
                         </div>
-                        <div> <a href="#">Forget your password?</a></div>
+                     <p class="message">Not  Registered? <a href="#">Registered</a></p>
+                    
                      </form>
+                     </div>
                     </div>
                     </aside>
                       
@@ -250,10 +280,10 @@
          </div>
         
        </div>
-           <!-- !Hero -->
-           <!-- !Hero -->
-
-    <script src="/js/script.js"></script>
+          
+           <!-- !SCRIPT -->
+   <script src="/js/ui.js"></script>
+  <!--  <script src="/js/script.js"></script>-->
   </body>
 </html>
 

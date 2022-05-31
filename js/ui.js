@@ -1,48 +1,50 @@
-const arrowUp = document.querySelector(".arrow-up");
-const form = document.querySelector(".login-from");
-const login = document.querySelector("#login");
+const userName = document.querySelector("#userName");
+const userNameError = document.querySelector("#userNameError");
+const passWord = document.querySelector("#passWord");
+const passwordError = document.querySelector("#passwordError");
+const emailAddress = document.querySelector("#emailAddress");
+const emailError = document.querySelector("#emailError");
+//const emailError = document.querySelector("#emailError");
+//const emailError = document.querySelector("#emailError");
 
-const validationForm = (formSelector) => {
-  const formElement = document.querySelector(formSelector);
+console.log(userName);
 
-  //const validateionOptions =[
-  //  {
-  //    attribute: "required",
-  //    isvalid: input => input.value.trim() !== "",
-  //    errorMessage(input, label) => `${label.textContent} is required`
-  //  }
-  //]
-  //
-  const validateSingleFormGroup = (formGroup) => {
-    const label = formGroup.querySelector(".arrow-up");
-    const loginForm = formGroup.querySelector(".login-form");
-    const errorContainer = formGroup.querySelector(".error");
-    const errorIcon = formGroup.querySelector(".error-icon");
-    const successIcon = formGroup.querySelector(".success-icon");
+function validateForm() {
+  event.preventDefault();
 
-    for (const option of validateionOptions) {
-      if (input.hasAttribute(option.attribute) && !option.isvalid(input)) {
-        errorContainer.textContent = option.errorMessage(input, label);
-      }
-    }
-  };
+  //console.log("hello");
 
-  formElement.setAttribute("no validate", "");
+  if (checkLength(userName.value, 0) === true) {
+    userNameError.style.display = "none";
+  } else {
+    userNameError.style.display = "block";
+  }
 
-  formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-    validateAllFormGroups(formElement);
-  });
+  if (checkLength(passWord.value, 3) === true) {
+    passwordError.style.display = "none";
+  } else {
+    passwordError.style.display = "block";
+  }
 
-  const validateAllFormGroups = (formToValidate) => {
-    const formGroups = array.from(
-      formToValidate.querySelectorAll(".formGroup")
-    );
+  if (validateEmail(emailAddress.value, 24) === true) {
+    emailError.style.display = "none";
+  } else {
+    emailError.style.display = "block";
+  }
+}
 
-    formGroups.forEach((formGroups) => {
-      validateSingleFormGroup(formGroups);
-    });
-  };
-};
+form.addEventListener("submit", validateForm);
 
-validationForm(".login-from");
+function checkLength(value, len) {
+  if (value.length > len) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function validateEmail(email) {
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(email);
+  return patternMatches;
+}

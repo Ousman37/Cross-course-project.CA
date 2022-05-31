@@ -196,6 +196,13 @@ p {
 
 /*!---Login drop down menu -----*/
 
+input.invalid {
+  border: 1px solid red;
+}
+.error-hint {
+  color: red;
+}
+
 .menu {
   width: 100%;
   height: 29px;
@@ -210,10 +217,10 @@ p {
   font-weight: 400;
   letter-spacing: -0.05em;
   position: relative;
-  color: var(--body-font-color);
+  color: var(--dark-clr);
 }
 .menu > .menu-content > a {
-  color: var(--body-font-color);
+  color: var(--dark-clr);
 }
 
 .arrow-up {
@@ -229,15 +236,15 @@ p {
 }
 
 .login-form {
-  background-color: var(--body-font-color);
+  background-color: var(--light-clr);
   position: absolute;
   width: 300px;
   height: auto;
-  top: 79px;
-  right: 150px;
+  top: 21px;
+  right: -100px;
   border-radius: 2px;
   border-bottom: 5px solid grey transparent;
-  display: none;
+  /*display: none;*/
 }
 
 .login-form > form {
@@ -245,9 +252,10 @@ p {
   width: 250px;
   margin: 25px auto;
   font-size: 14px;
-  color: #fff;
+  color: var(--dark-clr);
   line-height: -0.05em;
 }
+input[type="email"],
 input[type="text"],
 input[type="password"] {
   font-family: var(--font-family);
@@ -273,21 +281,25 @@ input[type="submit"] {
   border: none;
   outline: none;
   font-weight: lighter;
-  color: #eee;
+  color: var(--light-clr);
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background: var(--gray-dark);
+  background: var(--success);
 }
 .login-form > form a {
   font-family: var(--font-family);
   position: relative;
   top: 10px;
   font-size: 14px;
-  color: white;
+  color: var(--dark-clr);
 }
-
+form .message {
+  text-align: center;
+  margin: 15px 0 0;
+  font-size: var(--font-size-sm);
+}
 .fa-unlock-keyhole,
 .fa-user {
   cursor: pointer;
