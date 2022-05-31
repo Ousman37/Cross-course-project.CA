@@ -26,7 +26,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-  --after-content: "2";
+  --after-content: "0";
 }
 
 html {
@@ -377,7 +377,7 @@ p {
 .hero button {
   max-width: calc(7.9rem + 10vw);
   min-width: calc(7.9rem + 10vw);
-  background-color: var(--dark-clr);
+  background-color: var(--accent-clr);
   color: var(--light-clr);
   border-radius: 3px;
   cursor: pointer;
@@ -734,7 +734,7 @@ button.cta:hover {
   transition: 00.2s;
 }
 
-#sm-banner .banner-box:hover button {
+#sm-banner .banner-box .btn:hover {
   color: #fff;
   background-color: var(--accent-clr);
   border-color: 1px solid var(--accent-clr);
@@ -746,11 +746,9 @@ button.cta:hover {
 
 #sm-banner {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: row;
   justify-content: space-between;
-  column-gap: 2rem;
+  flex-wrap: wrap;
+  column-gap: 1rem;
 }
 
 #sm-banner .banner-box {
@@ -764,17 +762,23 @@ button.cta:hover {
   height: 50vh;
   background-size: cover;
   background-position: center;
-  padding: 30px;
+  padding: 20px;
 }
 
-#sm-banner .banner-box3 {
+#sm-banner .banner-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background-image: url(../images/canoeing1.jpg);
   box-shadow: rgba(0, 0, 0, 0.01);
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
 }
-#sm-banner .banner-box2 {
-  background-image: url(../images/raining.jpg);
-  box-shadow: rgba(0, 0, 0, 0.01);
-}
+
 #sm-banner h4 {
   text-transform: uppercase;
   font-size: var(--font-size-md);
@@ -810,7 +814,7 @@ button.cta:hover {
   align-items: flex-start;
   background-image: url(../images/running.jpg);
   box-shadow: rgba(0, 0, 0, 0.01);
-  width: 320px;
+  width: 500px;
   height: 40vh;
   background-size: cover;
   background-position: center;
@@ -819,8 +823,18 @@ button.cta:hover {
 }
 
 #banner3 .banner-box4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background-image: url(../images/skiing.jpg);
   box-shadow: rgba(0, 0, 0, 0.01);
+  width: 500px;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 #banner3 .banner-box5 {
@@ -1319,6 +1333,9 @@ footer .install img {
     min-width: 198px;
     height: 20vh;
   }
+  #sm-banner .banner-box2 {
+    height: 20vh;
+  }
 
   #banner3 .banner-box {
     width: 28%;
@@ -1362,7 +1379,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1405,7 +1422,12 @@ footer .install img {
   .hero h1 {
     font-size: 3rem;
   }
-
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   .feature {
     justify-content: center;
   }
@@ -1438,6 +1460,10 @@ footer .install img {
     flex-wrap: nowrap;
     column-gap: 2rem;
   }
+  #sm-banner .banner-box2 {
+    height: 20vh;
+  }
+
   #sm-banner .banner-box2,
   #sm-banner .banner-box {
     margin-bottom: 10px;
@@ -1610,7 +1636,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1714,6 +1740,16 @@ footer .install img {
   }
   #sm-banner .banner-box2 {
     margin-top: 20px;
+  }
+
+  #sm-banner .banner-box2 {
+    min-width: 50%;
+    height: 30vh;
+  }
+
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
   }
 
   #sm-banner .section-p1 {
@@ -2056,7 +2092,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -2095,27 +2131,128 @@ footer .install img {
     height: 50px;
     position: relative;
     top: 7px;
-    padding-right: 40px;
+    padding-right: -40px;
+    margin-left: -60px;
   }
-  /* !Cart  PAGE */
-  #cart-add {
+  #newsletter .text-bok {
+    width: 260px;
+    transition: 0.5s;
+  }
+  #newsletter p span {
+    font-size: var(--font-size-sm);
+  }
+  #sm-banner .banner-box2 {
+    height: 30vh;
+  }
+  #sm-banner .banner-box2 {
+    min-width: 100px;
+    height: 30vh;
+  }
+
+  .feature {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
-  #coupon {
-    width: 100%;
+
+  .feature .fe-box {
+    width: 80%;
   }
-  #subtotal {
-    width: 100%;
-    padding: 20px;
-  }
-  #cart table {
-    width: 100%;
-    border-collapse: collapse;
-    /* table-layout: fixed; */
-    /* white-space: nowrap; */
-    letter-spacing: normal;
+  .hero {
+    height: 50vh;
+    background-position: 55%;
+    padding: 0 20px;
   }
 }
+
+@media (max-width: 412px) {
+  .section-p1 {
+    margin-bottom: 20px;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--light-clr);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 00.3s;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #menu-toggle-icon {
+    display: flex;
+    align-items: center;
+  }
+  #menu-toggle-icon i {
+    color: var(--orange);
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--dark-color-light);
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
+  .fa-bag-shopping {
+    display: none;
+  }
+  .logo {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: 7px;
+    padding-right: -40px;
+    margin-left: -60px;
+  }
+  #newsletter .text-bok {
+    width: 260px;
+    transition: 0.5s;
+  }
+  #newsletter p span {
+    font-size: var(--font-size-sm);
+  }
+  #sm-banner .banner-box2 {
+    height: 30vh;
+  }
+  #sm-banner .banner-box2 {
+    min-width: 100px;
+    height: 30vh;
+  }
+
+  .feature {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .feature .fe-box {
+    width: 80%;
+  }
+  .hero {
+    height: 50vh;
+    background-position: 55%;
+    padding: 0 20px;
+  }
+}
+
 @media (max-width: 375px) {
   .section-p1 {
     margin-bottom: 20px;
@@ -2172,25 +2309,35 @@ footer .install img {
     height: 50px;
     position: relative;
     top: 7px;
-    padding-right: 40px;
+    padding-left: -60px;
   }
-  /* !Cart  PAGE */
-  #cart-add {
-    flex-direction: column;
+
+  .hero button {
+    background-color: var(--dark-clr);
+    color: var(--light-clr);
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid var(--orange);
+    font-weight: 800;
+    padding: 11px 11px 15px;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.3rem;
+    transition: 00.2s;
+    /* box-shadow: 2px 2px 2px 3px; */
   }
-  #coupon {
-    width: 100%;
+  #newsletter .text-bok {
+    width: 260px;
+    transition: 0.5s;
   }
-  #subtotal {
-    width: 100%;
-    padding: 20px;
+  #newsletter p span {
+    font-size: var(--font-size-sm);
   }
-  #cart table {
-    width: 100%;
-    border-collapse: collapse;
-    /* table-layout: fixed; */
-    /* white-space: nowrap; */
-    letter-spacing: normal;
+
+  #sm-banner .banner-box2 {
+    height: 30vh;
   }
 }
 
@@ -2250,9 +2397,16 @@ footer .install img {
     width: 7rem;
     margin-top: 11px;
   }
-  #blog-header {
-    height: 30vh;
-    width: 100%;
+
+  #newsletter .text-bok {
+    width: 150px;
+    transition: 0.5s;
+  }
+  .hero {
+    height: 40vh;
+  }
+  .hero .buttons {
+    font-size: var(--font-size-sm);
   }
 }
 

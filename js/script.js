@@ -130,9 +130,9 @@ fullCartWindow.addEventListener("mouseleave", () => {
 function updateCartUI() {
   const cartWrapper = document.querySelector(".cart-wrapper");
   cartWrapper.innerHTML = "";
+  let count = 0;
   const items = LocalCart.getLocalCartItems("cartItems");
   if (items === null) return;
-  let count = 0;
   let total = 0;
   for (const [key, value] of items.entries()) {
     const cartItem = document.createElement(`div`);
@@ -163,6 +163,7 @@ function updateCartUI() {
   if (count > 0) {
     cartIcon.classList.add("non-empty");
     let root = document.querySelector(":root");
+    console.log(count);
     root.style.setProperty("--after-content", `"${count}"`);
     const subtotal = document.querySelector(".subtotal");
     subtotal.innerHTML = `SubTotal: $${total}`;
