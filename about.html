@@ -50,7 +50,7 @@
                        <span class="form-icon search-icon">
                          <i class="fa-solid fa-magnifying-glass"></i>
                        </span>
-                       <input type="text" class="search-input" placeholder="Start Typing to Search for Products" />
+                       <input type="text" class="search-input" placeholder=" Search for products here" />
                      </form>
                      </div>
            
@@ -58,58 +58,58 @@
                      <li><a class="active" href="about.html">About</a></li>
                      <li><a href="contact.html">Contact</a></li>
 
+                   <form>
                      <div class="dropdown" data-dropdown>
                        <button class="link" data-dropdown-button> <i class="fa-solid fa-unlock-keyhole "></i>Login</button> |
                        <a href="#" class="link"></a>
-                         <button class="link" data-dropdown-button> <i class="fa-solid fa-user"></i>Register</button>
+                       
                         <div class="dropdown-menu information-grid">
-
-                          
-
-                          
+                            <h4>Already have a account login</h4>
                             <div>
                                <label for="usernmae">Username</label>
-                               <input type="username" name="username" id="username" >
+                               <input type="username" name="username" id="username" required>
+                               <div class="error-hint hidden" id="userNameError">user name, too, please!</div>
                                <div class="dropdown-links">
                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" >
+                                <input type="email" name="email" id="email" required>
+                                <div class="error-hint hidden" id="emailError">Oops! You need to type your email here</div>
                                <label for="password">Password</label>
-                                <input type="password" name="password" id="Password" >
-                               <button type="submit">Login</button>
+                                <input type="password" name="password" id="Password" required>
+                                <div class="error-hint hidden" id="passwordError">Oops! Your password is incorrect! Try again.</div>
+                               <button class="submit-buttons" type="submit">Login</button>
                                 </form>
                                </div>
                                </div>
+                           </div>
+                          </div> 
+                      <form>
+                       <div class="dropdown" data-dropdown>
+                     
+                       <a href="#" class="link"></a>
+                      <button class="link" data-dropdown-button> <i class="fa-solid fa-user"></i>Register</button>
+                      <div class="dropdown-menu information-grid">
+                      <div>
+                        <h4>Don't have an account create</h4>
+                      <label for="usernmae">Username</label>
+                      <input type="username" name="username" id="username" required>
+                      <div class="error-hint hidden" id="userNameError">user name, too, please!</div>
 
-                              <!--<div>
-                               <div class="dropdown-heading">Example</div>
-                               <div class="dropdown-links">
-                               <a href="#" class="link">All</a>
-                               <a href="#" class="link">All</a>
-                               <a href="#" class="link">All</a>
-                               <a href="#" class="link">All</a>
-                               </div>
-                                </div>-->
-                         
-                          <!-- <div class="dropdown" data-dropdown>
+                      <div class="dropdown-links">
+                      <label for="email">Email</label>
+                       <input type="email" name="email" id="email" required>
+                        <div class="error-hint hidden" id="emailError">Oops! You need to type your email here</div>
                         
-                            <div class="dropdown-menu">
-                            <form class="login-form">
-                              <label for="usernmae">User Name</label>
-                              <input type="name" name="username" id="username" >
+                      <label for="password">Password</label>
+                       <input type="password" name="password" id="Password" required>
+                        <div class="error-hint hidden" id="passwordError">Oops! Your password is incorrect! Try again.</div>
+                      <button class="submit-button"  type="submit">Create</button>
+                       </form>
 
-                              <label for="email">Email</label>
-                               <input type="email" name="email" id="email" >
-
-                              <label for="password">Password</label>
-                               <input type="password" name="password" id="Password" >
-                              <button type="submit">Login</button>
-                            </form>
-                          
-                          
-                           </div>
-                           </div>-->
-                           </div>
-                          </div>
+                       
+                      </div>
+                      </div>
+                  </div>
+                 </div>
 
 
 
@@ -285,8 +285,8 @@
        </div>
           
            <!-- !SCRIPT -->
-   <script src="/js/ui.js"></script>
-  <!--  <script src="/js/script.js"></script>-->
+   <script src="/js/ui.js" defer></script>
+   <script src="/js/script.js" defer></script>
   </body>
 </html>
 

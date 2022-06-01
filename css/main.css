@@ -111,16 +111,22 @@ p {
 }
 
 .search-icon {
-  left: 2rem;
+  align-items: center;
+  left: 1rem;
+  color: var(--dark-clr);
 }
 .search-input {
-  width: 28 8rem;
-  height: 4.8rem;
-  padding: 1.2rem 6rem 1.2rem 4.4rem;
-  background-color: var(--light-color);
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.04);
-  border-radius: 0.9rem;
-  border: 1px solid silver;
+  font-family: inherit;
+  font-size: inherit;
+  width: 270px;
+  height: 40px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  text-align: center;
 }
 .search-input::placeholder {
   font-weight: 500;
@@ -193,7 +199,8 @@ p {
 #close {
   display: none;
 }
-/*! dropdown2 ------*/
+/*!---Login drop down menu -----*/
+
 .link {
   background: none;
   border: none;
@@ -207,17 +214,22 @@ p {
 .link:hover {
   color: #ff4f00;
 }
-/*
-.dropdown-menu p {
-  color: #990000;
-}*/
+
+.dropdown-menu h4 {
+  text-transform: capitalize;
+
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  margin-bottom: 1rem;
+  color: var(--dark-clr);
+}
 .dropdown {
   position: relative;
 }
 
 .dropdown-menu {
   position: absolute;
-  left: 0;
+  left: -200px;
   color: black;
   top: calc(100% + 0.25rem);
   background-color: white;
@@ -248,7 +260,6 @@ p {
   flex-direction: column;
   gap: 0.25rem;
 }
-/*!---Login drop down menu -----*/
 
 input.invalid {
   border: 1px solid red;
@@ -257,79 +268,18 @@ input.invalid {
   color: red;
 }
 
-.menu {
-  width: 100%;
-  height: 29px;
-}
-
-/*
-.arrow-up > .menu-content:focus .arrow-up {
-  opacity: 1;
-}
-
-hidden {
-  display: none;
-}*/
-
-.menu > .menu-content.active {
-  width: 200px;
-  height: 65px;
-  float: right;
-  font-family: var(--font-family);
-  font-size: var(--font-size-sm);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  position: relative;
-  color: var(--dark-clr);
-}
-.menu > .menu-content.active > a {
-  color: var(--dark-clr);
-}
-
-.arrow-up {
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid var(--accent-clr);
-  top: 59px;
-  right: 260px;
-  opacity: 0;
-}
-
-.login-form {
-  background-color: var(--light-clr);
-  position: absolute;
-  width: 300px;
-  height: auto;
-  top: 21px;
-  right: -100px;
-  border-radius: 2px;
-  border-bottom: 5px solid grey transparent;
-  opacity: 0;
-}
-
-.login-form > form {
-  font-family: var(--font-family);
-  width: 250px;
-  margin: 25px auto;
-  font-size: 14px;
-  color: var(--dark-clr);
-  line-height: -0.05em;
-}
 input[type="email"],
 input[type="username"],
 input[type="password"] {
-  font-family: var(--font-family);
-  font-size: 15px;
+  font-family: inherit;
+  font-size: inherit;
   width: 250px;
   height: 30px;
   border: 0px;
   outline: none;
   box-shadow: inset 0 0 10px #eee;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   margin-top: 5px;
 }
 
@@ -348,21 +298,47 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background: var(--success);
+/*button[type="submit"]*/
+.submit-buttons {
+  background-color: var(--accent-clr);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  width: 150px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
-.login-form > form a {
-  font-family: var(--font-family);
-  position: relative;
-  top: 10px;
-  font-size: var(--font-size-sm);
-  color: var(--dark-clr);
+
+.submit-button {
+  background-color: var(--accent-clr);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  width: 150px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
-form .message {
-  text-align: center;
-  margin: 15px 0 0;
-  font-size: var(--font-size-sm);
+.submit-buttons:hover,
+.submit-button:hover {
+  background-color: var(--success);
 }
+
 .fa-unlock-keyhole,
 .fa-user {
   cursor: pointer;

@@ -111,17 +111,24 @@ p {
 }
 
 .search-icon {
-  left: 2rem;
+  align-items: center;
+  left: 1rem;
+  color: var(--dark-clr);
 }
 .search-input {
-  width: 28 8rem;
-  height: 4.8rem;
-  padding: 1.2rem 6rem 1.2rem 4.4rem;
-  background-color: var(--light-clr);
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.04);
-  border-radius: 0.9rem;
-  border: 1px solid silver;
+  font-family: inherit;
+  font-size: inherit;
+  width: 270px;
+  height: 40px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  text-align: center;
 }
+
 .search-input::placeholder {
   font-weight: 500;
   line-height: 1.4;
@@ -196,69 +203,85 @@ p {
 
 /*!---Login drop down menu -----*/
 
-.menu {
-  width: 100%;
-  height: 29px;
+.link {
+  background: none;
+  border: none;
+  color: #777;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+.dropdown.active > .link,
+.link:hover {
+  color: #ff4f00;
 }
 
-.menu > .menu-content {
-  width: 200px;
-  height: 65px;
-  float: right;
-  font-family: var(--font-family);
+.dropdown-menu h4 {
+  text-transform: capitalize;
+
+  font-family: inherit;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+  color: var(--dark-clr);
+}
+.dropdown {
   position: relative;
-  color: var(--dark-clr);
-}
-.menu > .menu-content > a {
-  color: var(--dark-clr);
 }
 
-.arrow-up {
-  width: 0;
-  height: 0;
+.dropdown-menu {
   position: absolute;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid var(--accent-clr);
-  top: 59px;
-  right: 260px;
-  display: none;
+  left: -200px;
+  color: black;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+
+  padding: 40px;
+  /*padding: 75rem;*/
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
 
-.login-form {
-  background-color: var(--font-family);
-  position: absolute;
-  width: 300px;
-  height: auto;
-  top: 79px;
-  right: 150px;
-  border-radius: 2px;
-  border-bottom: 5px solid grey transparent;
-  display: none;
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-.login-form > form {
-  font-family: var(--font-family);
-  width: 250px;
-  margin: 25px auto;
-  font-size: 14px;
-  color: #fff;
-  line-height: -0.05em;
+.information-grid {
+  display: grid;
+
+  gap: 2rem;
 }
-input[type="text"],
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input.invalid {
+  border: 1px solid red;
+}
+.error-hint {
+  color: red;
+}
+
+input[type="email"],
+input[type="username"],
 input[type="password"] {
-  font-family: var(--font-family);
-  font-size: 15px;
+  font-family: inherit;
+  font-size: inherit;
   width: 250px;
   height: 30px;
   border: 0px;
   outline: none;
   box-shadow: inset 0 0 10px #eee;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   margin-top: 5px;
 }
 
@@ -273,19 +296,49 @@ input[type="submit"] {
   border: none;
   outline: none;
   font-weight: lighter;
-  color: var(--dark-clr);
+  color: var(--light-clr);
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background: var(--gray-dark);
-}
-.login-form > form a {
-  font-family: var(--body-font-family);
-  position: relative;
-  top: 10px;
-  font-size: var(--font-size-md);
+/*button[type="submit"]*/
+.submit-buttons {
+  background-color: var(--accent-clr);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  width: 150px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  cursor: pointer;
   color: white;
+  transition: opacity 150ms ease-in-out transform 150s ease-in-out;
+}
+
+.submit-button {
+  background-color: var(--accent-clr);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  width: 150px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 150ms ease-in-out transform 150s ease-in-out;
+}
+.submit-buttons:hover,
+.submit-button:hover {
+  background-color: var(--success);
 }
 
 .fa-unlock-keyhole,

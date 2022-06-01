@@ -51,7 +51,7 @@
                          <i class="fa-solid fa-magnifying-glass"></i>
                        </span>
                        <label for="search">
-                       <input type="text" class="search-input" placeholder="Search for Products here" />
+                       <input type="text" class="search-input" placeholder="Search for products here" />
                        </label>
                      </form>
                      </div>
@@ -60,30 +60,59 @@
                      <li><a href="about.html">About</a></li>
                      <li><a href="contact.html">Contact</a></li>
                      
-
-              <aside class="menu">
-              <div class="menu-content">
-              <i class="fa-solid fa-unlock-keyhole"></i><a href="#" id="login">Login</a> |<i class="fa-solid fa-user"></i><a href="#">Register</a>
-              </div>
-              <div class="arrow-up"></div>
-              <div class="login-form">
-                    <form>
-                       <div>
-                           <label>Username</label>
-                           <input type="text" placeholder="Username" required>
-                       </div>
-                       <div>
-                         <label>Password</label>
-                          <input type="password" placeholder="Password" required>
-                       </div>
-                        <div>
+                       <form>
+                        <div class="dropdown" data-dropdown>
+                          <button class="link" data-dropdown-button> <i class="fa-solid fa-unlock-keyhole "></i>Login</button> |
+                          <a href="#" class="link"></a>
+                          
+                           <div class="dropdown-menu information-grid">
+                               <h4>Already have a account login</h4>
+                               <div>
+                                  <label for="usernmae">Username</label>
+                                  <input type="username" name="username" id="username" required>
+                                  <div class="error-hint hidden" id="userNameError">user name, too, please!</div>
+                                  <div class="dropdown-links">
+                                  <label for="email">Email</label>
+                                   <input type="email" name="email" id="email" required>
+                                   <div class="error-hint hidden" id="emailError">Oops! You need to type your email here</div>
+                                  <label for="password">Password</label>
+                                   <input type="password" name="password" id="Password" required>
+                                   <div class="error-hint hidden" id="passwordError">Oops! Your password is incorrect! Try again.</div>
+                                  <button class="submit-buttons" type="submit">Login</button>
+                                   </form>
+                                  </div>
+                                  </div>
+                              </div>
+                             </div> 
+                         <form>
+                          <div class="dropdown" data-dropdown>
+                        
+                          <a href="#" class="link"></a>
+                         <button class="link" data-dropdown-button> <i class="fa-solid fa-user"></i>Register</button>
+                         <div class="dropdown-menu information-grid">
+                         <div>
+                           <h4>Don't have an account create</h4>
+                         <label for="usernmae">Username</label>
+                         <input type="username" name="username" id="username" required>
+                         <div class="error-hint hidden" id="userNameError">user name, too, please!</div>
+                         <div class="dropdown-links">
+                         <label for="email">Email</label>
+                          <input type="email" name="email" id="email" required>
+                           <div class="error-hint hidden" id="emailError">Oops! You need to type your email here</div>
+                           
+                         <label for="password">Password</label>
+                          <input type="password" name="password" id="Password" required>
+                           <div class="error-hint hidden" id="passwordError">Oops! Your password is incorrect! Try again.</div>
+                         <button class="submit-button"  type="submit">Create</button>
+                          </form>
+                          
+                         </div>
+                         </div>
+                     </div>
+                    </div>
                        
-                        <input type="submit" value="Log In" >
-                  </div>
-                  <div> <a href="#">Forget your password?</a></div>
-               </form>
-              </div>
-            </aside>
+                        
+         
               <li id="lg-bag"> <a class="active" href="cart2.html"><i class="fa-solid fa-cart-arrow-down"></i></a></li> 
                <a href="#" id="close"><i class="fa-regular fa-x"></i></a>
                    </ul>
@@ -443,7 +472,7 @@
         
            
      <!-- !SCRIPT -->
-
-    <script src="/js/script.js"></script>
+     <script src="/js/ui.js" defer></script>
+    <script src="/js/script.js" defer></script>
   </body>
 </html>
