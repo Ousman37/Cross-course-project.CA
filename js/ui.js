@@ -1,22 +1,18 @@
-const menuContent = document.getElementById("menuContent");
-const arrowUp = document.getElementById("arrowUp");
-const userName = document.getElementById("userName");
-const userNameError = document.getElementById("userNameError");
-const passWord = document.getElementById("passWord");
-const passwordError = document.getElementById("passwordError");
-const emailAddress = document.getElementById("emailAddress");
-const emailError = document.getElementById("emailError");
+document.addEventListener("click", (e) => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]");
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
 
-// shopping cart mouseover
-menuContent.addEventListener("click", (event) => {
-  if (arrowUp.style.display == "none") {
-    arrowUp.style.display == "block";
-  } else {
-    arrowUp.style.display == "none";
+  let currentDropdown;
+  if (isDropdownButton) {
+    currentDropdown = e.target.closest("[data-dropdown]");
+    currentDropdown.classList.toggle("active");
   }
-  arrowUp.classList.remove("hidden");
 
-  console.log(menuContent);
+  document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
+    if (dropdown === currentDropdown) return;
+    dropdown.classList.remove("active");
+  });
+  console.log("menuContent");
 });
 
 ///enuContent.addEventListener("click",  (event)

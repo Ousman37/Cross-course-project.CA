@@ -226,9 +226,13 @@ p {
   border-bottom: 20px solid var(--accent-clr);
   top: 59px;
   right: 260px;
-  display: none;
+  opacity: 0;
+  /*display: none;*/
 }
 
+.arrow-up.active {
+  opacity: 1;
+}
 .login-form {
   background-color: var(--body-font-color);
   position: absolute;
@@ -238,7 +242,8 @@ p {
   right: 150px;
   border-radius: 2px;
   border-bottom: 5px solid grey transparent;
-  display: none;
+  opacity: 0;
+  /*display: none;*/
 }
 
 .login-form > form {
@@ -1030,33 +1035,6 @@ footer .install img {
   }
   #sm-banner span {
     font-size: 1rem;
-  }
-
-  /* !Blog Page  START*/
-  .blog-details h4 {
-    font-size: 3rem;
-    color: var(--dark-color);
-  }
-
-  #blog-header {
-    height: 30vh;
-  }
-  #blog-content img {
-    width: 100%;
-  }
-
-  #blog-content {
-    padding: 100px 40px 0 40px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
   }
 }
 
