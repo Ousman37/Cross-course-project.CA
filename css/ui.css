@@ -227,7 +227,7 @@ p {
   border-bottom: 20px solid var(--accent-clr);
   top: 59px;
   right: 260px;
-  /*display: none;*/
+  display: none;
 }
 
 .login-form {

@@ -235,7 +235,7 @@ hidden {
   border-bottom: 20px solid var(--accent-clr);
   top: 59px;
   right: 260px;
-  /*display: none;*/
+  display: none;
 }
 
 .login-form {
@@ -247,7 +247,7 @@ hidden {
   right: -100px;
   border-radius: 2px;
   border-bottom: 5px solid grey transparent;
-  /*display: none;*/
+  display: none;
 }
 
 .login-form > form {
