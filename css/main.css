@@ -207,6 +207,9 @@ input.invalid {
   width: 100%;
   height: 29px;
 }
+hidden {
+  display: none;
+}
 
 .menu > .menu-content {
   width: 200px;

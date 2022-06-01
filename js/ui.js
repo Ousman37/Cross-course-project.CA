@@ -1,13 +1,37 @@
-const userName = document.querySelector("#userName");
-const userNameError = document.querySelector("#userNameError");
-const passWord = document.querySelector("#passWord");
-const passwordError = document.querySelector("#passwordError");
-const emailAddress = document.querySelector("#emailAddress");
-const emailError = document.querySelector("#emailError");
-//const emailError = document.querySelector("#emailError");
-//const emailError = document.querySelector("#emailError");
+const menuContent = document.getElementById("menuContent");
+const arrowUp = document.getElementById("arrowUp");
+const userName = document.getElementById("userName");
+const userNameError = document.getElementById("userNameError");
+const passWord = document.getElementById("passWord");
+const passwordError = document.getElementById("passwordError");
+const emailAddress = document.getElementById("emailAddress");
+const emailError = document.getElementById("emailError");
 
-console.log(userName);
+// shopping cart mouseover
+menuContent.addEventListener("click", (event) => {
+  if (arrowUp.style.display == "none") {
+    arrowUp.style.display == "block";
+  } else {
+    arrowUp.style.display == "none";
+  }
+  arrowUp.classList.remove("hidden");
+
+  console.log(menuContent);
+});
+
+//arrowUp.addEventListener("click", (event) => {
+//  if (arrowUp.style.display == "none") {
+//    arrowUp.style.display == "block";
+//  } else {
+//    arrowUp.style.display == "none";
+//  }
+//  arrowUp.classList.remove("hidden");
+//
+//  console.log(arrowUp);
+//});
+
+///enuContent.addEventListener("click",  (event)
+/// event.preventDefault(); // prevents the form from auto submitting
 
 function validateForm() {
   event.preventDefault();
