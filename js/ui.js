@@ -19,17 +19,6 @@ menuContent.addEventListener("click", (event) => {
   console.log(menuContent);
 });
 
-//arrowUp.addEventListener("click", (event) => {
-//  if (arrowUp.style.display == "none") {
-//    arrowUp.style.display == "block";
-//  } else {
-//    arrowUp.style.display == "none";
-//  }
-//  arrowUp.classList.remove("hidden");
-//
-//  console.log(arrowUp);
-//});
-
 ///enuContent.addEventListener("click",  (event)
 /// event.preventDefault(); // prevents the form from auto submitting
 
