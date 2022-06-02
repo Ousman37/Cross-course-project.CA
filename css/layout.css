@@ -270,9 +270,9 @@ input.invalid {
   color: red;
 }
 
-input[type="email"],
-input[type="username"],
-input[type="password"] {
+.dropdown input[type="email"],
+.dropdown input[type="username"],
+.dropdown input[type="password"] {
   font-family: inherit;
   font-size: inherit;
   width: 250px;
@@ -289,7 +289,7 @@ input[type="submit"] {
   font-family: var(--font-family);
   background: var(--accent-clr);
   width: 95%;
-  height: 35px;
+  height: 40px;
   font-size: 20px;
   letter-spacing: -0.05em;
   border-radius: 3px;
@@ -297,6 +297,7 @@ input[type="submit"] {
   outline: none;
   font-weight: lighter;
   color: var(--light-clr);
+
   cursor: pointer;
 }
 

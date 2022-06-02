@@ -274,15 +274,14 @@ input[type="password"] {
   font-family: inherit;
   font-size: inherit;
   width: 250px;
-  height: 30px;
+  height: 40px;
   border: 0px;
   outline: none;
   box-shadow: inset 0 0 10px #eee;
   border-radius: 5px;
   margin-bottom: 0.5rem;
-  margin-top: 5px;
 }
-
+/*
 input[type="submit"] {
   font-family: var(--font-family);
   background: var(--accent-clr);
@@ -296,7 +295,7 @@ input[type="submit"] {
   font-weight: lighter;
   color: var(--light-clr);
   cursor: pointer;
-}
+}*/
 
 /*button[type="submit"]*/
 .submit-buttons {
