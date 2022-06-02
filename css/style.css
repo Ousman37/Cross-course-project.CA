@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  width: 100%;
+  min-height: 100vh;
   font-size: var(--font-size-sm);
   font-family: var(--font-family);
   color: var(--dark-clr);
@@ -153,7 +153,7 @@ p {
   justify-content: space-between;
   padding: 20px 80px;
   background: var(--light-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
   z-index: 999;
   position: sticky;
   top: 0;
@@ -968,20 +968,32 @@ button.cta:hover {
 }
 
 /*!-----!*!FOOTER SECTION * ----------------- */
-
 footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+#footer {
+  margin-top: 70px;
+}
+
 footer .colum {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
   font-family: var(--font-family);
   font-weight: 500;
+}
+
+footer .colum a {
+  margin-top: 2px;
+}
+footer .colum a::after {
+  color: var(--accent-clr);
 }
 footer .logo {
   width: 10rem;
@@ -989,12 +1001,10 @@ footer .logo {
 }
 
 footer h4 {
-  font-size: var(--font-size-md);
-  margin-bottom: 20px;
+  font-size: var(--font-size-sm);
 }
 footer p {
   font-size: var(--font-size-sm);
-  margin-bottom: 0 0 8px 0;
 }
 .colum .install img {
   display: flex;
@@ -1049,7 +1059,7 @@ footer .social-media i {
 
 footer .social-media i:hover,
 footer a:hover {
-  color: var(--dark-clr);
+  color: var(--accent-clr);
 }
 
 footer .social-media i {
@@ -1108,7 +1118,7 @@ footer .install img {
 
 /*!-----!* START MEDIA QUERY * ------ ------------------------------------------------*/
 
-@media (max-width: 1000px) {
+@media (max-width: 810px) {
   /*.section-p1 {
     margin: 40px 40px;
   }
@@ -1130,7 +1140,7 @@ footer .install img {
     height: 100vh;
     width: 300px;
     background-color: var(--light-color);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -1140,6 +1150,13 @@ footer .install img {
   #navbar li {
     margin-bottom: 25px;
   }
+
+  #menu-toggle-icon i {
+    color: var(--orange);
+    font-size: 45px;
+    padding-left: 20px;
+  }
+  /*
   .mobile-menu {
     display: flex;
     align-items: center;
@@ -1147,7 +1164,7 @@ footer .install img {
   .mobile-menu i {
     font-size: 24px;
     padding-left: 20px;
-  }
+  }*/
 
   .hero {
     height: 60vh;
@@ -1217,33 +1234,6 @@ footer .install img {
   #sm-banner span {
     font-size: 1rem;
   }
-
-  /* !Blog Page  START ------------------*/
-  .blog-details h4 {
-    font-size: 3rem;
-    color: var(--dark-color);
-  }
-
-  #blog-header {
-    height: 30vh;
-  }
-  #blog-content img {
-    width: 100%;
-  }
-
-  #blog-content {
-    padding: 100px 40px 0 40px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
 }
 
 @media (max-width: 912px) {
@@ -1269,7 +1259,7 @@ footer .install img {
     height: 100vh;
     width: 300px;
     background-color: var(--light-color);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -1378,15 +1368,16 @@ footer .install img {
 }
 
 @media (max-width: 820px) {
-  .section-p1 {
+  /*.section-p1 {
     margin: 40px 40px;
-  }
+  }*/
   .section-m1 {
     margin: 0px 0px;
   }
 
   .logo {
-    width: 14rem;
+    width: 10rem;
+    top: 0px;
   }
 
   #navbar {
@@ -1400,7 +1391,7 @@ footer .install img {
     height: 100vh;
     width: 300px;
     background-color: var(--light-clr);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -1414,9 +1405,10 @@ footer .install img {
     display: flex;
     align-items: center;
   }
+
   #menu-toggle-icon i {
     color: var(--orange);
-    font-size: 24px;
+    font-size: 45px;
     padding-left: 20px;
   }
   #close {
@@ -1657,7 +1649,7 @@ footer .install img {
     height: 100vh;
     width: 300px;
     background-color: var(--light-clr);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -1694,7 +1686,7 @@ footer .install img {
 
   .logo {
     width: 11rem;
-    margin-top: 11px;
+    margin-left: -50px;
   }
   #header {
     padding: 10px 30px;
@@ -1722,9 +1714,7 @@ footer .install img {
     background-position: 55%;
     padding: 0 20px;
   }
-  /*.feature {
-    justify-content: space-between;
-  }*/
+
   .feature .fe-box {
     width: 155px;
 
@@ -1755,8 +1745,6 @@ footer .install img {
     flex-direction: column;
     justify-content: space-around;
     column-gap: 9rem;
-
-    height: 100vh;
   }
   #sm-banner .banner-box2 {
     margin-top: 20px;
@@ -1826,7 +1814,10 @@ footer .install img {
   }
 }
 
-@media (max-width: 477px) {
+@media (max-width: 428px) {
+  .section-p1 {
+    margin: 40px 0px;
+  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -1837,7 +1828,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1853,9 +1844,8 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    color: var(--orange);
-    font-size: 24px;
-    padding-left: 20px;
+    font-size: 40px;
+    padding-left: 150px;
   }
   #close {
     display: initial;
@@ -1874,10 +1864,9 @@ footer .install img {
   }
 
   .section-p1 {
-    margin: 40px 0px;
+    margin: 40px 30px;
   }
   .logo {
-    width: 11rem;
     margin-top: 11px;
   }
   #header {
@@ -1901,9 +1890,9 @@ footer .install img {
     margin-top: 12px;
   }
   .hero {
-    height: 70vh;
+    height: 30vh;
 
-    background-position: 55%;
+    background-position: center;
     padding: 0 20px;
   }
   .feature {
@@ -1939,8 +1928,6 @@ footer .install img {
     flex-direction: column;
     justify-content: space-around;
     column-gap: 9rem;
-
-    height: 100vh;
   }
   #sm-banner .banner-box2 {
     margin-top: 20px;
@@ -1980,121 +1967,6 @@ footer .install img {
   .footer-data {
     text-align: start;
   }
-
-  /* !single-product-details*/
-  #product-details {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-  .single-product-details {
-    text-align: start;
-  }
-
-  #product-details .single-pro-image {
-    width: 100%;
-    margin-right: 0px;
-  }
-  #product-details .single-product-details {
-    width: 100%;
-  }
-
-  /* !Blog Page  START*/
-
-  .blog-details h4 {
-    font-size: 2.3rem;
-    color: var(--dark-color);
-  }
-
-  #pagination a {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-  }
-
-  #blog-content {
-    padding: 100px 10px 0 10px;
-  }
-  #blog-content .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #blog-content .blog-image {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-
-  #blog-content .blog-details {
-    width: 100%;
-  }
-  /* !About  section*/
-  #about-head {
-    flex-direction: column;
-  }
-  #about-head img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #about-head div {
-    padding-left: 0px;
-  }
-  #about-head p {
-    text-align: start;
-    color: var(--dark-color-light);
-  }
-  #about-header h2 {
-    text-align: center;
-    font-family: " Oswald";
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  #about-stores video {
-    width: 100%;
-  }
-
-  /* !CONTACT PAGE FORM  section*/
-
-  #contact-header h2 {
-    font-size: 1.8rem;
-  }
-  #contact-header p {
-    font-size: 1rem;
-  }
-
-  #contact-details {
-    flex-direction: column;
-  }
-  #contact-details .details {
-    width: 100%;
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-  }
-
-  #contact-details .map {
-    width: 100%;
-  }
-  #form-details {
-    margin: 10px;
-    padding: 30px 10px;
-    flex-wrap: wrap;
-  }
-  #form-details form {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  #contact-details .details h2,
-  #form-details form h2 {
-    font-size: 1.4rem;
-    margin-right: 20px;
-  }
-
-  #contact-details .details {
-    width: 80%;
-  }
-  #contact-details .details li p {
-    font-size: 1.3rem;
-  }
 }
 
 @media (max-width: 414px) {
@@ -2113,7 +1985,7 @@ footer .install img {
     height: 100vh;
     width: 300px;
     background-color: var(--light-clr);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -2128,9 +2000,8 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    color: var(--orange);
-    font-size: 24px;
-    padding-left: 20px;
+    font-size: 40px;
+    padding-left: 160px;
   }
   #close {
     display: initial;
@@ -2147,11 +2018,6 @@ footer .install img {
     display: none;
   }
   .logo {
-    width: 150px;
-    height: 50px;
-    position: relative;
-    top: 7px;
-    padding-right: -40px;
     margin-left: -60px;
   }
   #newsletter .text-bok {
@@ -2201,7 +2067,7 @@ footer .install img {
     height: 100vh;
     width: 300px;
     background-color: var(--light-clr);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -2216,9 +2082,9 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    color: var(--orange);
-    font-size: 24px;
-    padding-left: 20px;
+    color: var(--dark-clr);
+    font-size: 42px;
+    padding-left: 160px;
   }
   #close {
     display: initial;
@@ -2235,13 +2101,14 @@ footer .install img {
     display: none;
   }
   .logo {
-    width: 150px;
-    height: 50px;
-    position: relative;
-    top: 7px;
-    padding-right: -40px;
     margin-left: -60px;
   }
+  .dropdown-menu {
+    position: absolute;
+    left: -48px;
+    color: black;
+  }
+
   #newsletter .text-bok {
     width: 260px;
     transition: 0.5s;
@@ -2255,6 +2122,17 @@ footer .install img {
   #sm-banner .banner-box2 {
     min-width: 100px;
     height: 30vh;
+  }
+  #supper-deals span {
+    font-size: 1.2rem;
+  }
+
+  #banner h2 {
+    text-shadow: rgba(15, 15, 10, 40);
+    font-family: var(--font-family);
+    color: var(--light-clr);
+    font-size: var(--font-size-lg);
+    padding: 10px 0;
   }
 
   .feature {
@@ -2288,8 +2166,8 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-clr);
+
     padding: 80px 0 0 10px;
     transition: 00.3s;
   }
@@ -2304,9 +2182,9 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    color: var(--orange);
-    font-size: 24px;
-    padding-left: 20px;
+    color: var(--dark-clr);
+    font-size: 40px;
+    padding-left: 120px;
   }
   #close {
     display: initial;
@@ -2325,10 +2203,6 @@ footer .install img {
   }
 
   .logo {
-    width: 150px;
-    height: 50px;
-    position: relative;
-    top: 7px;
     padding-left: -60px;
   }
 
