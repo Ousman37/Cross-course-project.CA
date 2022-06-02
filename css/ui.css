@@ -621,7 +621,7 @@ footer .social-media i {
 
 footer .social-media i:hover,
 footer a:hover {
-  color: var(--accent-clr);
+  color: var(--dark-clr);
 }
 
 footer .social-media i {

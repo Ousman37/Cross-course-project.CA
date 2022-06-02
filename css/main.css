@@ -651,15 +651,21 @@ footer .social-media i {
   color: var(--color-yellow-3);
 }
 
+footer .social-media i {
+  padding-right: 4px;
+  cursor: pointer;
+  color: var(--accent-clr);
+}
+
 footer .social-media i:hover,
 footer a:hover {
-  color: var(--accent-clr);
+  color: var(--dark-clr);
 }
 
 footer .social-media i {
   padding-right: 4px;
   cursor: pointer;
-  color: var(--color-yellow-3);
+  color: var(--accent-clr);
 }
 
 footer .install img {
