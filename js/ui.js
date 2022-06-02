@@ -18,7 +18,19 @@ document.addEventListener("click", (e) => {
 ///enuContent.addEventListener("click",  (event)
 /// event.preventDefault(); // prevents the form from auto submitting
 
-function validateForm() {
+//const form = document.querySelector("#contactForm");
+
+const userName = document.querySelector("#username");
+const userNameError = document.querySelector("#userNameError");
+
+const passWord = document.querySelector("#passWord");
+const passwordError = document.querySelector("#passwordError");
+
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+
+console.log(userName);
+function validateForm(event) {
   event.preventDefault();
 
   //console.log("hello");
@@ -29,20 +41,26 @@ function validateForm() {
     userNameError.style.display = "block";
   }
 
-  if (checkLength(passWord.value, 3) === true) {
+  if (checkLength(passWord.value, 6) === true) {
     passwordError.style.display = "none";
   } else {
     passwordError.style.display = "block";
   }
 
-  if (validateEmail(emailAddress.value, 24) === true) {
+  if (validateEmail(email.value, 24) === true) {
     emailError.style.display = "none";
   } else {
     emailError.style.display = "block";
   }
+
+  //if (checkLength(message.value, 0) === true) {
+  //  messageError.style.display = "none";
+  //} else {
+  //  messageError.style.display = "block";
+  //}
 }
 
-form.addEventListener("submit", validateForm);
+form.addEventListener("login", validateForm);
 
 function checkLength(value, len) {
   if (value.length > len) {

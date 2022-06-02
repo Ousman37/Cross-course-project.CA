@@ -265,10 +265,15 @@ p {
   gap: 0.25rem;
 }
 
-input.invalid {
+.input-invalid {
   border: 1px solid red;
 }
-.error-hint {
+
+.hide {
+  display: none;
+}
+
+.error-hint-hint {
   color: red;
 }
 

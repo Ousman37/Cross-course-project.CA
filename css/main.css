@@ -264,7 +264,11 @@ p {
 input.invalid {
   border: 1px solid red;
 }
-.error-hint {
+
+.hide {
+  display: none;
+}
+.error-hint-hint {
   color: red;
 }
 
