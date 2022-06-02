@@ -20,16 +20,27 @@ document.addEventListener("click", (e) => {
 
 //const form = document.querySelector("#contactForm");
 
-//const userName = document.querySelector("#username");
-//const userNameError = document.querySelector("#userNameError");
-//
-//const passWord = document.querySelector("#passWord");
-//const passwordError = document.querySelector("#passwordError");
-//
-//const email = document.querySelector("#email");
-//const emailError = document.querySelector("#emailError");
-//
-//console.log(userName);
+const form = document.querySelector("#form");
+
+const userName = document.querySelector("#username");
+const userNameError = document.querySelector("#userNameError");
+
+const passWord = document.querySelector("#passWord");
+const passwordError = document.querySelector("#passwordError");
+
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+console.log(form);
+form.onsubmit = (e) => {
+  e.preventDefault();
+
+  if (checkLength(userName.value) === true) {
+    userNameError.style.display = "none";
+  } else {
+    userNameError.style.display = "block";
+  }
+};
+
 //function validateForm(event) {
 //  event.preventDefault();
 //
