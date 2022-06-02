@@ -389,7 +389,8 @@ input[type="submit"] {
   text-transform: uppercase;
   color: var(--light-clr);
   margin-bottom: 25px;
-  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  text-shadow: 20px 20px 20px rgb(92, 84, 84), 0 0 5em rgb(73, 73, 100),
+    0 0 0.2em rgb(87, 87, 100);
 }
 
 #supper-deals {
