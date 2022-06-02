@@ -8,7 +8,7 @@ const emailError = document.querySelector("#emailError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 console.log(form);
-function validateForm() {
+function validateForm(event) {
   event.preventDefault();
 
   //console.log("hello");
