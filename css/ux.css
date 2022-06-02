@@ -39,7 +39,7 @@ body {
   font-size: var(--font-size-sm);
   font-family: var(--font-family);
   color: var(--dark-clr);
-  /*line-height: 1.5;*/
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -200,7 +200,6 @@ p {
 #close {
   display: none;
 }
-/*!---Login drop down menu -----*/
 
 /*!---Login drop down menu -----*/
 
@@ -361,7 +360,7 @@ input[type="submit"] {
     url("../images/shopping.jpg");
 
   /*background-image: url(../images/about-header.jpg);*/
-  height: 50vh;
+  height: 30vh;
   width: 100%;
   background-size: cover;
   background-position: top 30% right 0;
@@ -709,32 +708,6 @@ footer .social-media i {
   padding-right: 4px;
   cursor: pointer;
   color: var(--accent-clr);
-}
-
-.fa-facebook {
-  animation: calc(delay 1s);
-}
-.fa-twitter {
-  animation: calc(delay 2s);
-}
-.fa-pinterest-p {
-  animation: calc(delay 3s);
-}
-
-.fa-instagram {
-  animation: calc(delay 4s);
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(5);
-  }
 }
 
 footer .install img {
