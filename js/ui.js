@@ -35,7 +35,7 @@ function validateForm(event) {
 
   //console.log("hello");
 
-  if (checkLength(userName.value, 0) === true) {
+  if (checkLength(userName.value, 5) === true) {
     userNameError.style.display = "none";
   } else {
     userNameError.style.display = "block";
