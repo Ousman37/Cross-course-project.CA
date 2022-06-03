@@ -147,7 +147,7 @@ p {
   justify-content: space-between;
   padding: 20px 80px;
   background: var(--light-clr);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
   z-index: 999;
   position: sticky;
   top: 0;
@@ -686,10 +686,9 @@ footer p {
   border-color: var(--accent-clr);
 }
 .button-transparent {
-  background-color: transparent;
   display: flex;
   align-items: center;
-  color: var(--dark-color);
+  color: var(--light-clr);
 }
 
 footer .social-media {
@@ -990,9 +989,6 @@ footer .install img {
 }
 
 @media (max-width: 820px) {
-  .section-p1 {
-    margin: 40px 40px;
-  }
   .section-m1 {
     margin: 0px 0px;
   }
@@ -1011,7 +1007,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1113,6 +1109,36 @@ footer .install img {
   }
   #sm-banner span {
     font-size: 1rem;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    left: -150px;
+    color: black;
+    top: calc(20% + 0.12rem);
+    background-color: white;
+    padding: 40px;
+  }
+  #form-details form {
+    width: 50%;
+  }
+  #newsletter {
+    align-items: center;
+    height: 40vh;
+    margin-bottom: 20px;
+  }
+  #newsletter .email-box {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-left: 50px;
+  }
+  footer .social-media {
+    font-size: var(--font-size-md);
+  }
+  footer .install img {
+    width: 2rem;
+    margin: 9px 0 10px 0;
   }
 }
 
@@ -1445,7 +1471,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1462,8 +1488,8 @@ footer .install img {
   }
   #menu-toggle-icon i {
     color: var(--orange);
-    font-size: 24px;
-    padding-left: 20px;
+    font-size: 30px;
+    margin-left: 120px;
   }
   #close {
     display: initial;
@@ -1481,12 +1507,9 @@ footer .install img {
     display: none;
   }
 
-  .section-p1 {
-    margin: 40px 0px;
-  }
   .logo {
     width: 11rem;
-    margin-top: 11px;
+    margin-left: -50px;
   }
   #header {
     padding: 10px 30px;
@@ -1589,24 +1612,6 @@ footer .install img {
     text-align: start;
   }
 
-  /* !single-product-details*/
-  #product-details {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-  .single-product-details {
-    text-align: start;
-  }
-
-  #product-details .single-pro-image {
-    width: 100%;
-    margin-right: 0px;
-  }
-  #product-details .single-product-details {
-    width: 100%;
-  }
-
   /* !CONTACT PAGE FORM  section*/
 
   #contact-header h2 {
@@ -1649,6 +1654,13 @@ footer .install img {
   #contact-details .details li p {
     font-size: 1.3rem;
   }
+  #contact-header {
+    height: 20vh;
+    width: 100%;
+  }
+  #newsletter .text-bok {
+    width: 250px;
+  }
 }
 
 @media (max-width: 414px) {
@@ -1666,7 +1678,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1682,8 +1694,93 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    color: var(--orange);
+    font-size: 30px;
+    margin-left: 120px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--dark-color-light);
     font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
+  .fa-bag-shopping {
+    display: none;
+  }
+
+  .logo {
+    width: 10rem;
+    margin-left: -50px;
+  }
+  footer .social-media {
+    font-size: var(--font-size-md);
+  }
+  footer h4 {
+    font-size: var(--font-size-sm);
+  }
+  .footer-data {
+    text-align: center;
+  }
+  #newsletter .text-bok {
+    width: 200px;
+    transition: 0.5s;
+  }
+  #newsletter p {
+    font-size: var(--font-size-sm);
+    color: var(--light-clr);
+    font-weight: 600;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -50px;
+    color: black;
+    top: calc(20% + 0.12rem);
+    background-color: white;
+    padding: 40px;
+  }
+  #contact-header {
+    text-shadow: rgba(0, 0, 0, 0.2);
+    height: 20vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-p1 {
+    margin-bottom: 20px;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--light-clr);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 00.3s;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #menu-toggle-icon {
+    display: flex;
+    align-items: center;
+  }
+  #menu-toggle-icon i {
+    font-size: 40px;
     padding-left: 20px;
   }
   #close {
@@ -1701,22 +1798,117 @@ footer .install img {
     display: none;
   }
   .logo {
-    width: 150px;
-    height: 50px;
-    position: relative;
-    top: 7px;
-    padding-right: 40px;
+    width: 10rem;
   }
-  /* !Cart  PAGE */
-  #cart-add {
+  footer .social-media {
+    font-size: var(--font-size-md);
+  }
+  footer h4 {
+    font-size: var(--font-size-sm);
+  }
+  .footer-data {
+    text-align: center;
+  }
+  #newsletter {
+    height: 50vh;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -50px;
+    color: black;
+    top: calc(20% + 0.12rem);
+    background-color: white;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 412px) {
+  .section-p1 {
+    margin-bottom: 20px;
+  }
+
+  #navbar {
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--light-clr);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 00.3s;
   }
-  #coupon {
-    width: 100%;
+  #navbar.active {
+    right: 0px;
   }
-  #subtotal {
-    width: 100%;
-    padding: 20px;
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #menu-toggle-icon {
+    display: flex;
+    align-items: center;
+  }
+  #menu-toggle-icon i {
+    color: var(--orange);
+    font-size: 30px;
+    margin-left: 120px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--dark-color-light);
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
+  .fa-bag-shopping {
+    display: none;
+  }
+  .logo {
+    width: 14rem;
+    margin-left: -40px;
+  }
+  #contact-header {
+    height: 20vh;
+  }
+
+  #contact-header h2 {
+    font-size: var(--font-size-sm);
+    font-family: inherit;
+    font-weight: 900;
+    text-shadow: rgba(1, 1, 1, 0.1);
+  }
+  #newsletter .text-bok {
+    width: 300px;
+    transition: 0.5s;
+  }
+
+  #newsletter {
+    height: 50vh;
+  }
+  #newsletter .text-bok {
+    width: 250px;
+    transition: 0.5s;
+  }
+  #newsletter p span {
+    color: var(--color-red-3);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -50px;
+    color: black;
+    top: calc(20% + 0.12rem);
+    background-color: white;
+    padding: 40px;
   }
 }
 @media (max-width: 375px) {
@@ -1734,7 +1926,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
@@ -1751,8 +1943,7 @@ footer .install img {
   }
   #menu-toggle-icon i {
     color: var(--orange);
-    font-size: 24px;
-    padding-left: 20px;
+    font-size: 30px;
   }
   #close {
     display: initial;
@@ -1771,11 +1962,36 @@ footer .install img {
   }
 
   .logo {
-    width: 150px;
-    height: 50px;
-    position: relative;
-    top: 7px;
-    padding-right: 40px;
+    width: 10rem;
+
+    margin-left: -60px;
+  }
+
+  footer .logo {
+    width: 10rem;
+    margin-bottom: 30px;
+    margin-left: 0px;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -50px;
+    color: black;
+    top: calc(20% + 0.12rem);
+    background-color: white;
+    padding: 40px;
+  }
+  #newsletter {
+    height: 50vh;
+  }
+  #newsletter .text-bok {
+    width: 200px;
+
+    margin-left: 0px !important;
+  }
+  #newsletter p {
+    font-size: var(--font-size-sm);
+    color: var(--light-clr);
+    font-weight: 600;
   }
 }
 
@@ -1795,7 +2011,7 @@ footer .install img {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: var(--light-color);
+    background-color: var(--light-clr);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 00.3s;
