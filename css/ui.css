@@ -1797,13 +1797,14 @@ footer .install img {
     }
     #menu-toggle-icon i {
       font-size: 30px;
+      margin-left: 80px;
     }
     #close {
       display: initial;
       position: absolute;
       top: 30px;
       left: 30px;
-      color: var(--dark-color-light);
+      color: var(--dark-clr);
       font-size: 24px;
     }
     #lg-bag {
@@ -1841,6 +1842,21 @@ footer .install img {
   footer h4 {
     font-size: var(--font-size-sm);
     margin-bottom: 20px;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -90px;
+    color: black;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    padding: 40px;
+
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out transform 150s ease-in-out;
   }
 }
 
@@ -1882,8 +1898,8 @@ footer .install img {
   }
   #menu-toggle-icon i {
     font-size: 30px;
-    margin-left: 150px;
   }
+
   #close {
     display: initial;
     position: absolute;
