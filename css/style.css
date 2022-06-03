@@ -87,9 +87,10 @@ p {
   font-family: var(--body-font-color);
 }
 
+/*
 .section-p1 {
   margin: 40px 80px;
-}
+}*/
 
 .section-m1 {
   margin: 40px 0;
@@ -1237,13 +1238,6 @@ footer .install img {
 }
 
 @media (max-width: 912px) {
-  /*.section-p1 {
-    margin: 40px 40px;
-  }
-  .section-m1 {
-    margin: 0px 0px;
-  }*/
-
   .logo {
     width: 14rem;
   }
@@ -1368,13 +1362,6 @@ footer .install img {
 }
 
 @media (max-width: 820px) {
-  /*.section-p1 {
-    margin: 40px 40px;
-  }*/
-  .section-m1 {
-    margin: 0px 0px;
-  }
-
   .logo {
     width: 10rem;
     top: 0px;
@@ -1506,13 +1493,6 @@ footer .install img {
 }
 
 @media (max-width: 768px) {
-  /*.section-p1 {
-    margin: 40px 40px;
-  }
-  .section-m1 {
-    margin: 0px 0px;
-  }*/
-
   .logo {
     width: 14rem;
   }
@@ -1815,9 +1795,6 @@ footer .install img {
 }
 
 @media (max-width: 428px) {
-  .section-p1 {
-    margin: 40px 0px;
-  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -1862,10 +1839,10 @@ footer .install img {
   .fa-bag-shopping {
     display: none;
   }
-
+  /*
   .section-p1 {
     margin: 40px 30px;
-  }
+  }*/
   .logo {
     margin-top: 11px;
   }
@@ -2145,17 +2122,17 @@ footer .install img {
     width: 80%;
   }
   .hero {
-    height: 50vh;
+    height: 30vh;
     background-position: 55%;
     padding: 0 20px;
   }
 }
 
 @media (max-width: 375px) {
-  .section-p1 {
+  /* .section-p1 {
     margin-bottom: 20px;
   }
-
+*/
   #navbar {
     display: flex;
     flex-direction: column;
@@ -2221,6 +2198,10 @@ footer .install img {
     font-size: 1.3rem;
     transition: 00.2s;
     /* box-shadow: 2px 2px 2px 3px; */
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-sm);
   }
   #newsletter .text-bok {
     width: 260px;
