@@ -87,10 +87,9 @@ p {
   font-family: var(--body-font-color);
 }
 
-/*
 .section-p1 {
   margin: 40px 80px;
-}*/
+}
 
 .section-m1 {
   margin: 40px 0;
@@ -1743,11 +1742,17 @@ footer .install img {
 
     margin: 0 0 15px 0;
   }
-  .product1 .product {
-    width: 100%;
+
+  #sm-banner .banner-box {
+    width: 300px;
+    height: 30vh;
+    margin-right: -60px;
   }
   footer .colum {
     margin-left: 20px;
+  }
+  #banner3 .banner-box {
+    width: 90%;
   }
 
   #banner1 {
@@ -1788,7 +1793,7 @@ footer .install img {
   }
 
   #sm-banner .banner-box {
-    width: 340px;
+    width: 30px;
     height: 30vh;
   }
   #banner3 {
@@ -1803,7 +1808,7 @@ footer .install img {
   }
 
   #banner3 .banner-box {
-    width: 100%;
+    width: 90%;
   }
   #newsletter .form,
   #newsletter input {
@@ -1905,9 +1910,7 @@ footer .install img {
 
     margin: 0 0 15px 0;
   }
-  .product1 .product {
-    width: 100%;
-  }
+
   footer .colum {
     margin-left: 20px;
   }
@@ -1940,7 +1943,7 @@ footer .install img {
   }
 
   #sm-banner .banner-box {
-    width: 340px;
+    width: 30px;
     height: 30vh;
   }
   #banner3 {
@@ -1968,6 +1971,10 @@ footer .install img {
 
   .footer-data {
     text-align: start;
+  }
+  .product1 .product {
+    width: 300px;
+    height: 600px;
   }
 }
 
@@ -2047,9 +2054,15 @@ footer .install img {
     width: 80%;
   }
   .hero {
-    height: 50vh;
+    height: 40vh;
     background-position: 55%;
     padding: 0 20px;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -100px;
+    color: black;
+    top: calc(100% + 0.25rem);
   }
 }
 
