@@ -915,7 +915,8 @@ footer .install img {
 
 @media (max-width: 912px) {
   .logo {
-    width: 14rem;
+    width: 12rem;
+    margin-top: 10px;
   }
 
   #navbar {
@@ -944,7 +945,7 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    font-size: 30px;
+    font-size: 40px;
   }
   #close {
     display: initial;
@@ -968,6 +969,15 @@ footer .install img {
   }
   #newsletter {
     padding: 0 20px;
+  }
+  #wrapper {
+    height: 48vh;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -1143,6 +1153,174 @@ footer .install img {
   }
   #newsletter {
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  #nav {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: var(--light-clr);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  #container {
+    background: white;
+    height: 760px;
+    width: 300px;
+  }
+  #right-col {
+    width: calc(30% - 50px);
+  }
+  footer .social-media i {
+    padding-right: 12px;
+    cursor: pointer;
+    color: var(--color-yellow-3);
+  }
+
+  footer .social-media {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: var(--font-size-sm);
+  }
+  footer .colum {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  footer p {
+    font-size: var(--font-size-sm);
+    color: var(--dark-color);
+    font-weight: 800;
+  }
+
+  input[type="email"],
+  input[type="username"],
+  input[type="password"] {
+    width: 250px;
+    height: 42px;
+    border: 0px;
+    outline: none;
+
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    margin-top: 0px;
+  }
+
+  footer h4 {
+    font-size: var(--font-size-sm);
+    margin-bottom: 20px;
+  }
+
+  #menu-toggle-icon i {
+    color: var(--orange);
+    font-size: 36px;
+    margin-right: -80px;
+  }
+  h2 {
+    font-size: var(--font-size-sm);
+    line-height: 2.9rem;
+  }
+
+  .logo {
+    width: 11rem;
+    margin-top: 10px;
+    margin-left: -60px;
+  }
+
+  .button-group {
+    margin: 5rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5.4rem;
+  }
+
+  footer .logo {
+    width: 10rem;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+  label {
+    display: block;
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 14px 0 4px;
+  }
+
+  #right-col {
+    min-width: 225px;
+    height: 100%;
+    margin: 114px 8px;
+    float: right;
+  }
+  #newsletter .text-bok {
+    width: 283px;
+    transition: 0.5s;
+  }
+  p#support {
+    font-size: var(--font-size-sm);
+    margin-bottom: 52px;
+  }
+  img {
+    width: 50%;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -50px;
+    color: black;
+    top: calc(50% + 0.25rem);
+    background-color: white;
+    padding: 40px;
+  }
+  h2 {
+    float: left;
+  }
+  #left-col {
+    min-width: 300px;
+    height: 100%;
+    float: left;
+    background: #34495e;
+  }
+  #wrapper {
+    height: 182vh;
+    display: flex;
+    flex-direction: column;
+  }
+  p#support {
+    margin-top: 51px;
+  }
+  #container {
+    background: white;
+    height: 500px;
+    min-width: 300px;
+  }
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    width: 50%;
+    margin-bottom: 760px;
+  }
+  ::marker {
+    padding-bottom: 463px;
+  }
+  #newsletter .text-bok {
+    width: 234px;
+    transition: 0.5s;
+  }
+  #newsletter {
+    padding: 0 12px;
   }
 }
 
@@ -1932,11 +2110,126 @@ footer .install img {
 }
 
 @media (max-width: 280px) {
-  .section-p1 {
-    margin: 0px;
-    margin-bottom: 20px;
+  #container {
+    background: white;
+    height: 760px;
+    width: 300px;
   }
 
+  #menu-toggle-icon i {
+    font-size: 33px;
+    margin-right: -37px;
+  }
+  .logo {
+    width: 10rem;
+    margin-left: -60px;
+  }
+  label {
+    display: block;
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 14px 0 4px;
+  }
+
+  #right-col {
+    min-width: 225px;
+    height: 100%;
+    margin: 114px 8px;
+    float: right;
+  }
+  #newsletter .text-bok {
+    width: 283px;
+    transition: 0.5s;
+  }
+  p#support {
+    font-size: var(--font-size-sm);
+    margin-bottom: 52px;
+  }
+  img {
+    width: 50%;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: 3px;
+    color: black;
+    top: calc(10% + -5.72rem);
+    background-color: white;
+    padding: 21px;
+  }
+
+  #left-col {
+    min-width: 231px;
+    height: 100%;
+    float: left;
+    background: #34495e;
+  }
+  #wrapper {
+    height: 174vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .logo {
+    width: 10rem;
+    margin-left: 5px;
+    margin-bottom: 30px;
+  }
+
+  #newsletter .email-box {
+    display: flex;
+    height: 46px;
+    justify-content: center;
+  }
+
+  footer p {
+    font-size: var(--font-size-sm);
+    color: var(--dark-color);
+    font-weight: 800;
+  }
+
+  footer h4 {
+    color: var(--dark-color);
+    font-size: var(--font-size-sm);
+    margin-bottom: 10px;
+  }
+  p#support {
+    margin-top: 51px;
+  }
+  #container {
+    background: white;
+    height: 391px;
+    min-width: 230px;
+  }
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    width: 50%;
+    margin-bottom: 760px;
+  }
+  ::marker {
+    padding-bottom: 463px;
+  }
+  #newsletter .text-bok {
+    width: 133px;
+    transition: 0.5s;
+  }
+  #newsletter {
+    padding: 0 12px;
+  }
+
+  #newsletter {
+    height: 69vh;
+  }
+
+  #newsletter h4 {
+    font-size: var(--font-size-sm);
+    color: var(--light-clr);
+    font-weight: var(--font-weight-light);
+    margin: 28px 49px;
+  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -1963,9 +2256,7 @@ footer .install img {
     align-items: center;
   }
   #menu-toggle-icon i {
-    color: var(--orange);
-    font-size: 30px;
-    padding-left: 20px;
+    font-size: 40px;
   }
   #close {
     display: initial;
@@ -1977,23 +2268,5 @@ footer .install img {
   }
   #lg-bag {
     display: none;
-  }
-
-  .fa-bag-shopping {
-    display: none;
-  }
-
-  .logo {
-    width: 12rem;
-    margin-top: 10px;
-  }
-  #container {
-    background: white;
-    height: 440px;
-    min-width: 400px;
-    width: 600px;
-    -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
   }
 }
