@@ -1143,6 +1143,20 @@ footer .install img {
 }
 
 @media (max-width: 414px) {
+  #container {
+    background: white;
+    height: 440px;
+    min-width: 600px;
+  }
+  #wrapper {
+    height: 50vh;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 375px) {
 }
@@ -1202,5 +1216,14 @@ footer .install img {
   .logo {
     width: 12rem;
     margin-top: 10px;
+  }
+  #container {
+    background: white;
+    height: 440px;
+    min-width: 400px;
+    width: 600px;
+    -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
   }
 }
