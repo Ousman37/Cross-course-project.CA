@@ -508,7 +508,7 @@ p {
   background-color: var(--success);
 }
 .feature .fe-box:nth-child(5) h3 {
-  background-color: rgb(83, 7, 83);
+  background-color: rgb(2, 34, 90);
   color: var(--light-clr);
 }
 .feature .fe-box:nth-child(6) h3 {
@@ -753,7 +753,7 @@ button.cta:hover {
 
 .banner-box > #my-button {
   font-family: var(--font-family);
-  color: #404040;
+  color: white;
   font-size: var(--font-size-sm);
   background-color: #622404;
   border: none;
@@ -763,7 +763,7 @@ button.cta:hover {
 }
 
 .banner-box > #my-button:hover {
-  color: var(--light-clr) !important;
+  color: white;
   background: #281003;
   background: linear-gradient(to top, #351606, #291004);
 }
@@ -824,11 +824,11 @@ button.cta:hover {
   padding: 20px;
 }
 
-#sm-banner h4 {
+#sm-banner h3 {
   text-transform: uppercase;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-normal);
-  color: var(--light-clr);
+  color: #4f4f4f;
 }
 
 #sm-banner h2 {
