@@ -96,6 +96,7 @@ p {
 
 /* !SEARCH BOX START -------------*/
 .search-box {
+  text-align: center;
   margin-top: 0.8rem;
 }
 
