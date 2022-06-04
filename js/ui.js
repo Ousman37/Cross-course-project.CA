@@ -31,7 +31,7 @@ const passwordError = document.querySelector("#passwordError");
 const email = document.querySelector("#login_user_email");
 const emailError = document.querySelector("#login_user_email_error");
 
-console.log(form);
+console.log(userName);
 function validateForm(event) {
   event.preventDefault();
 
