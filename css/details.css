@@ -146,7 +146,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  background: var(--light-color);
+  background: var(--light-clr);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky;
@@ -206,7 +206,7 @@ p {
 .link {
   background: none;
   border: none;
-  color: #777;
+  color: #000000;
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
@@ -237,7 +237,7 @@ p {
   background-color: white;
 
   padding: 40px;
-  /*padding: 75rem;*/
+
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -303,7 +303,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/*button[type="submit"]*/
 .submit-buttons {
   background-color: var(--accent-clr);
   font-family: inherit;
@@ -582,7 +581,7 @@ input[type="submit"] {
   margin-top: 10px;
   padding: 10px 15px;
   cursor: pointer;
-  background-color: var(--accent-clr);
+  background-color: #752500;
   border-radius: 3px;
   font-size: var(--font-size-sm);
   font-weight: 400;
@@ -652,7 +651,7 @@ input[type="submit"] {
 }
 
 #newsletter .myButton {
-  background-color: var(--accent-clr);
+  background-color: #752500;
   color: var(--light-clr);
   padding: 0 10px;
   text-transform: uppercase;
@@ -786,7 +785,7 @@ footer .install img {
 }
 #pagination a {
   color: var(--light-clr);
-  background-color: var(--accent-clr);
+  background-color: #752500;
   padding: 15px 20px;
   border-radius: 4px;
   font-weight: 600;

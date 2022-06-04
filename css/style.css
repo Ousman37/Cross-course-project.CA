@@ -692,15 +692,16 @@ p {
 }
 
 #banner1 p {
-  color: var(--body-font-color);
+  color: #3d3d3d;
   font-size: var(--font-size-sm);
 }
 
 #banner1 h2 {
   font-family: var(--font-family);
   font-size: var(--font-size-md);
-  color: var(--dark-clr);
+  color: #170707;
   text-decoration: underline;
+  text-shadow: #3d3d3d;
   line-height: 1em;
 }
 
@@ -717,12 +718,12 @@ p {
   background-position: center;
 }
 #banner h4 {
-  color: var(--light-clr);
+  color: #424242;
   font-size: 16px;
 }
 #banner h2 {
   font-family: var(--font-family);
-  color: var(--light-clr);
+  color: #4a4a4a;
   font-size: var(--font-size-lg);
   padding: 10px 0;
 }
@@ -752,7 +753,7 @@ button.cta:hover {
 
 .banner-box > #my-button {
   font-family: var(--font-family);
-  color: var(--light-clr);
+  color: #404040;
   font-size: var(--font-size-sm);
   background-color: #622404;
   border: none;
@@ -763,15 +764,15 @@ button.cta:hover {
 
 .banner-box > #my-button:hover {
   color: var(--light-clr) !important;
-  background: #ed590e;
-  background: linear-gradient(to top, #ed590e, #ed590e);
+  background: #281003;
+  background: linear-gradient(to top, #351606, #291004);
 }
 
 .banner-box2 > #my-button2 {
   font-family: var(--font-family);
-  color: var(--light-clr);
+  color: white;
   font-size: var(--font-size-sm);
-  background-color: #622404;
+  background-color: #461d07;
   border: none;
   padding: 15px 29px;
   font-weight: 800;
@@ -780,8 +781,8 @@ button.cta:hover {
 
 .banner-box2 > #my-button2:hover {
   color: var(--light-clr) !important;
-  background: #ed590e;
-  background: linear-gradient(to top, #ed590e, #ed590e);
+  background: #6d2703;
+  background: linear-gradient(to top, #5b2104, #2c1306);
 }
 
 #pro-section1 {
@@ -1103,7 +1104,7 @@ footer .install img {
 }
 #pagination a {
   color: var(--light-clr);
-  background-color: var(--accent-clr);
+  background-color: #140700;
   padding: 15px 20px;
   border-radius: 4px;
   font-weight: 600;

@@ -208,7 +208,7 @@ p {
 .link {
   background: none;
   border: none;
-  color: #777;
+  color: #000000;
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
@@ -239,7 +239,7 @@ p {
   background-color: white;
 
   padding: 40px;
-  /*padding: 75rem;*/
+
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -377,7 +377,7 @@ input[type="submit"] {
   justify-content: center;
 }
 
-.blog-text h2 {
+.blog-text h1 {
   text-transform: uppercase;
   color: var(--light-clr);
   font-size: var(--font-size-lg);
@@ -532,7 +532,7 @@ input[type="submit"] {
 }
 
 #newsletter .myButton {
-  background-color: var(--accent-clr);
+  background-color: #752500;
   color: var(--light-clr);
   padding: 0 10px;
   text-transform: uppercase;
@@ -585,7 +585,7 @@ footer p {
 .button {
   display: inline-block;
   text-align: center;
-  background-color: var(--accent-clr);
+  background-color: #752500;
   color: var(--light-clr);
   border: 1px solid var(--accent-clr);
   border-radius: 6px;
@@ -611,6 +611,10 @@ footer .social-media {
   animation: float 5s ease-in-out infinite;
   margin-top: 20px;
   font-size: 44px;
+}
+
+footer .social-media h3 {
+  font-size: var(--font-size-md);
 }
 
 footer .social-media i {
@@ -668,7 +672,7 @@ footer .install img {
 }
 #pagination a {
   color: var(--light-clr);
-  background-color: var(--accent-clr);
+  background-color: #752500;
   padding: 15px 20px;
   border-radius: 4px;
   font-weight: 600;
