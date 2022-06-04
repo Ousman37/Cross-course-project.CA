@@ -21,7 +21,7 @@ const firstNameError = document.querySelector("#firstNameError");
 const lastName = document.querySelector("#lastName");
 const lastNameError = document.querySelector("#lastNameError");
 const email = document.querySelector("#email");
-const emailError = document.querySelector("#emailError");
+const emailError = document.querySelector("#emailError_contact_form");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 console.log(form);

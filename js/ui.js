@@ -20,70 +20,57 @@ document.addEventListener("click", (e) => {
 
 //const form = document.querySelector("#contactForm");
 
-const form = document.querySelector("#form");
+const form = document.querySelector("#login_form_validation");
 
-const userName = document.querySelector("#username");
-const userNameError = document.querySelector("#userNameError");
+const userName = document.querySelector("#login_user_name");
+const userNameError = document.querySelector("#login_user_name_error");
 
 const passWord = document.querySelector("#passWord");
 const passwordError = document.querySelector("#passwordError");
 
-const email = document.querySelector("#email");
-const emailError = document.querySelector("#emailError");
-console.log(form);
-form.onsubmit = (e) => {
-  e.preventDefault();
+const email = document.querySelector("#login_user_email");
+const emailError = document.querySelector("#login_user_email_error");
 
-  if (checkLength(userName.value) === true) {
+console.log(form);
+function validateForm(event) {
+  event.preventDefault();
+
+  // alert("button click"); login_user_name
+  //console.log("hello");
+
+  if (checkLength(userName.value, 5) === true) {
+    alert("field is filled.");
     userNameError.style.display = "none";
   } else {
+    alert("fill the filed username");
     userNameError.style.display = "block";
   }
-};
 
-//function validateForm(event) {
-//  event.preventDefault();
-//
-//  //console.log("hello");
-//
-//  if (checkLength(userName.value) === true) {
-//    userNameError.style.display = "none";
-//  } else {
-//    userNameError.style.display = "block";
-//  }
-//
-//  if (checkLength(passWord.value, 6) === true) {
-//    passwordError.style.display = "none";
-//  } else {
-//    passwordError.style.display = "block";
-//  }
-//
-//  if (validateEmail(email.value, 24) === true) {
-//    emailError.style.display = "none";
-//  } else {
-//    emailError.style.display = "block";
-//  }
-//
-//  //if (checkLength(message.value, 0) === true) {
-//  //  messageError.style.display = "none";
-//  //} else {
-//  //  messageError.style.display = "block";
-//  //}
-//}
-//
-//form.addEventListener("login", validateForm);
-//
-//function checkLength(value, len) {
-//  if (value.length > len) {
-//    return true;
-//  } else {
-//    return false;
-//  }
-//}
-//
-//function validateEmail(email) {
-//  const regEx = /\S+@\S+\.\S+/;
-//  const patternMatches = regEx.test(email);
-//  return patternMatches;
-//}
-//
+  if (checkLength(passWord.value, 6) === true) {
+    passwordError.style.display = "none";
+  } else {
+    passwordError.style.display = "block";
+  }
+
+  if (validateEmail(email.value, 24) === true) {
+    emailError.style.display = "none";
+  } else {
+    emailError.style.display = "block";
+  }
+}
+
+form.addEventListener("submit", validateForm);
+
+function checkLength(value, len) {
+  if (value.length > len) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function validateEmail(email) {
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(email);
+  return patternMatches;
+}
