@@ -149,7 +149,7 @@ function updateCartUI() {
     price = Math.round((price * 100) / 100);
     count += 1;
     total += price;
-    // total = Math.round((total * 100) / 100);
+
     cartItem.innerHTML = `
                             <img src="${value.img}">
                             <div class="details">
@@ -182,22 +182,3 @@ function updateCartUI() {
     updateCartUI();
   });
 }
-
-// log in  from validation
-
-//document.addEventListener("click", (e) => {
-//  const isDropdownButton = e.target.matches("[data-dropdown-button]");
-//  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
-//
-//  let currentDropdown;
-//  if (isDropdownButton) {
-//    currentDropdown = e.target.closest("[data-dropdown]");
-//    currentDropdown.classList.toggle("active");
-//  }
-//
-//  document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
-//    if (dropdown === currentDropdown) return;
-//    dropdown.classList.remove("active");
-//  });
-//  console.log("menuContent");
-//});

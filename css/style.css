@@ -493,16 +493,16 @@ p {
 }
 
 .feature .fe-box:nth-child(1) h3 {
-  background-color: #ffb694;
-  color: black;
+  background-color: #542008;
+  color: white;
 }
 .feature .fe-box:nth-child(2) h3 {
   background-color: #2b2b2b;
   color: var(--light-clr);
 }
 .feature .fe-box:nth-child(3) h3 {
-  background-color: yellow;
-  color: var(--dark-clr);
+  background-color: rgb(25, 25, 2);
+  color: var(--light-clr);
 }
 .feature .fe-box:nth-child(4) h3 {
   background-color: var(--success);
@@ -887,12 +887,12 @@ button.cta:hover {
 }
 
 #banner3 h2 {
-  color: var(--light-clr);
+  color: #090101;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-md);
 }
 #banner3 h3 {
-  color: var(--light-clr);
+  color: #100303;
   font-weight: 800;
   font-size: var(--font-size-md);
 }
@@ -958,8 +958,8 @@ button.cta:hover {
 }
 
 #newsletter .myButton {
-  background-color: #4f2108;
-  color: var(--light-clr);
+  background-color: #fbdbcb;
+  color: #404040;
   padding: 0 10px;
   text-transform: uppercase;
   cursor: pointer;
