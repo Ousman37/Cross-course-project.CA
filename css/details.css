@@ -1843,10 +1843,18 @@ footer .install img {
     padding-right: 40px;
   }
   #newsletter .text-bok {
-    width: 250px;
+    width: 187px;
   }
   #newsletter {
     height: 60vh;
+  }
+  .card-item {
+    width: 286px;
+    height: 500px;
+    justify-content: center;
+  }
+  #header-main h1 {
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -1862,7 +1870,7 @@ footer .install img {
     justify-content: flex-start;
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -17px;
     height: 100vh;
     width: 300px;
     background-color: var(--light-color);
@@ -1907,6 +1915,14 @@ footer .install img {
     position: relative;
     top: 7px;
     padding-right: 40px;
+  }
+  .full-cart-window {
+    background-color: var(--light-clr);
+    border-top: none;
+    border: solid lightgray 1px;
+    position: fixed;
+    top: 30vh;
+    margin-right: 2%;
   }
 }
 
