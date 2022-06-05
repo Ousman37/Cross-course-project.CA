@@ -264,7 +264,12 @@ p {
   flex-direction: column;
   gap: 0.25rem;
 }
-
+#email {
+  color: #eee;
+  text-align: center;
+  margin-right: 20px;
+  font-size: var(--font-size-md);
+}
 #error_name,
 #error_email,
 #error_pass,

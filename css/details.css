@@ -201,6 +201,12 @@ p {
   display: none;
 }
 
+#email {
+  color: #eee;
+  text-align: center;
+  margin-right: 20px;
+  font-size: var(--font-size-md);
+}
 /*!---Login drop down menu -----*/
 
 .link {

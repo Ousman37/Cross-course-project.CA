@@ -45,15 +45,16 @@
                       <li><a  href="/index.html">Home</a></li>
                       <li><a  class="active" href="shop.html">Shop</a></li>
            
-                   <div class="search-box">
-                 <form action="" class="search-form">
-  
-  
-                <label for="">
-                 <input type="text" class="search-input" placeholder="Search Products here" />
-                 </label>
-                   </form>
-                   </div>
+          
+          
+                       <div class="search-box">
+                      <form action="" class="search-form">
+                       <label for="search_F" id="search_bar" style="display:none;">abc</label>
+                       
+                      <input type="text" aria-labelledby="search_bar" id="search_F" class="search-input" placeholder="Search Products here" />
+                      
+                      </form>
+                      </div>
                    
                      <li><a href="blog.html">Blog</a></li>
                      <li><a href="about.html">About</a></li>
@@ -241,11 +242,13 @@
          <h1>Sign Up For Newsletters</h1>
         <p> Get E-mail updates about our latest shop and <span> special offers. </span></p>
       </div>
+      
       <div class="email-box">
-        <input class="text-bok" type="email"  name="" placeholder="Your email address">
-         <button type="button" class="myButton">Sign Up</button>
+        <label for="" id="email" >Email</label>
+        <input  type="email"  class="text-bok" aria-labelledby="email" name="" placeholder="Your email address">
+         <button type="button"  class="myButton">Sign Up</button>
         </div>
-  </section>
+     </section>
  
       <!-- !FOOTER SECTION -->
            <footer class="section-p1">
