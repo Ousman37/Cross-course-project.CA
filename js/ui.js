@@ -15,10 +15,7 @@ document.addEventListener("click", (e) => {
   console.log("menuContent");
 });
 
-///enuContent.addEventListener("click",  (event)
-/// event.preventDefault(); // prevents the form from auto submitting
-
-//const form = document.querySelector("#contactForm");
+//log in form
 
 function validateForm() {
   let name = document.forms["myForm"]["name"].value;

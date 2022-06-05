@@ -15,6 +15,34 @@ document.addEventListener("click", (e) => {
   console.log("menuContent");
 });
 
+//log in form
+
+function validateForm() {
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let pass = document.forms["myForm"]["pass"].value;
+
+  if (name == "") {
+    document.getElementById("error_name").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("error_name").style.display = "none";
+  }
+  if (email == "") {
+    document.getElementById("error_email").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("error_email").style.display = "none";
+  }
+  if (pass == "") {
+    document.getElementById("error_pass").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("error_email").style.display = "none";
+  }
+}
+
+// contact form
 const form = document.querySelector("#contactForm");
 const firstName = document.querySelector("#firstName");
 const firstNameError = document.querySelector("#firstNameError");
