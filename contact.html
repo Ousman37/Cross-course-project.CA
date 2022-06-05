@@ -53,9 +53,10 @@
            
                     <div class="search-box">
                     <form action="" class="search-form">
-                    <label for="search">
-                     <input type="text" class="search-input" placeholder="Search Products here" />
-                     </label>
+                      <label for="search_F" id="search_bar" style="display:none;">abc</label>
+                      
+                     <input type="text" aria-labelledby="search_bar" id="search_F" class="search-input" placeholder="Search Products here" />
+                     
                      </form>
                      </div>
                   
@@ -68,46 +69,48 @@
                        <a href="#" class="link">
                       <button class="link" data-dropdown-button> <i class="fa-solid fa-unlock-keyhole "></i>Login</button> |
                          </a>
-                             <div class="dropdown-menu information-grid">
-                              <h4>Already have a account login</h4>
-                              <div>
-                                 <form name="myForm" action="" onsubmit="return validateForm()" method="post">
-                                 <input type="text" placeholder="Username" name="name"  class="input_field"><br>
-                                  <span id="error_name">your, username too, please!<br></span>
-                                  <input type="email" placeholder="Your Email" name="email" class="input_field"><br>
-                                  <span id="error_email">Please provide your email!<br></span>
-                                  <input type="password" placeholder="Your Password" name="pass"  class="input_field"><br>
-                                  <span id="error_pass">Please provide your password!<br></span>
-                                  <input type="submit" value="Submit" class="btn">
-                                  </form>
-                                </div>
-                              </div>
-                            </div> 
-                            
-                      
-                         <div class="dropdown" data-dropdown>
-                       
-                         <a href="#" class="link">
-                        <button class="link" data-dropdown-button> <i class="fa-solid fa-user"></i>Register</button></a>
-                        <div class="dropdown-menu information-grid">
-                        <div>
-                          <h4>Don't have an account create</h4>
-                        <div>
-                       <form name="myForm" action="" onsubmit="return validateForm()" method="post">
-                        <input type="text" placeholder="Username" name="name"  class="input_field" required><br>
-                        <span id="error_name">Create a  user name, please!<br></span>
-                        <input type="email" placeholder="Your Email" name="email" class="input_field"><br>
-                        <span id="error_email">Oops! You need to type your email here<br></span>
-                        <input type="password" placeholder="Your Password" name="pass"  class="input_field"><br>
-                        <span id="error_pass">Seems, your password is incorrect! Try again<br></span>
-                        <input type="submit" value="Submit" class="btn">
-                       </form>
-                        </div>
-
-                        </div>
-                        </div>
-                       </div>
-             
+        
+                                    
+                            <div class="dropdown-menu information-grid">
+                           <h4>Already have a account login</h4>
+                           <div>
+                          <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+                          <input type="text" placeholder="Username" name="name"  class="input_field"><br>
+                           <span id="error_name">your, username too, please!<br></span>
+                           <input type="email" placeholder="Your Email" name="email" class="input_field"><br>
+                           <span id="error_email">Please provide your email!<br></span>
+                           <input type="password" placeholder="Your Password" name="pass"  class="input_field"><br>
+                           <span id="error_pass">Please provide your password!<br></span>
+                           <input type="submit" value="Submit" class="btn">
+                           </form>
+                         </div>
+                         </div>
+                        </div> 
+                              
+                        
+                           <div class="dropdown" data-dropdown>
+                         
+                           <a href="#" class="link">
+                          <button class="link" data-dropdown-button> <i class="fa-solid fa-user"></i>Register</button></a>
+                          <div class="dropdown-menu information-grid">
+                          <div>
+                            <h4>Don't have an account create</h4>
+                          <div>
+                            <form name="myForm2" action="" onsubmit="return validateForm2()" method="post">
+                              <input type="text" placeholder="Username" name="name2"  class="input_field"><br>
+                               <span id="error_name2">your, username too, please!<br></span>
+                               <input type="email" placeholder="Your Email" name="email2" class="input_field"><br>
+                               <span id="error_email2">Please provide your email!<br></span>
+                               <input type="password" placeholder="Your Password" name="pass2"  class="input_field"><br>
+                               <span id="error_pass2">Please provide your password!<br></span>
+                               <input type="submit" value="Submit" class="btn"> 
+                              </form>
+                   
+                          </div>
+                          </div>
+                          </div>
+                         </div>
+                  
 
                      <li id="lg-bag"> <i class="fa-solid fa-cart-arrow-down"></i></li> 
                       <a href="#" id="close"><i class="fa-regular fa-x"></i></a>
@@ -176,25 +179,42 @@
                  <span>LEAVE A MESSAGE</span>
                  <h2>We love to hear from you</h2>
 
-                 <label>First name </label>
+                     
+                 <label for="" id="search_bar" >First name</label>
+                   <input type="text" aria-labelledby="name" id="firstName" class="search-input" placeholder="Your first and last name" />
+                          <div class="error-hint hidden" id="firstNameError">We need your first name – it’s nicer that way</div>
+                <!-- <label>First name </label>
                  <input name="name" id="firstName" placeholder="Your first and last name" />
-                 <div class="error-hint hidden" id="firstNameError">We need your first name – it’s nicer that way</div>
+                 <div class="error-hint hidden" id="firstNameError">We need your first name – it’s nicer that way</div>-->
 
 
-                   <label>Last  name </label>
+
+                  <label for="" id="name" >Last  name</label>
+                  <input type="text" aria-labelledby="name" id="lastName" class="search-input" placeholder="Your first and last name" />
+                   <div class="error-hint hidden" id="lastNameError">Last name, too, please!</div>       
+
+                 <!--  <label>Last  name </label>
                    <input name="name" id="lastName" placeholder="Your first and last name" />
-                   <div class="error-hint hidden" id="lastNameError">Last name, too, please!</div>
+                   <div class="error-hint hidden" id="lastNameError">Last name, too, please!</div>-->
 
-                   <label>Email </label>
+
+                     <label for="" id="name" >Email</label>
+                    <input type="text" aria-labelledby="email" id="email" class="search-input" placeholder="your email address " />
+                  <div class="error-hint hidden" id="emailError_contact_form">Oops! You need to type your email here</div>
+                 <!--    <label>Email </label>
                     <input name="email" id="email"  placeholder="your email address " />
-                    <div class="error-hint hidden" id="emailError_contact_form">Oops! You need to type your email here</div>
+                    <div class="error-hint hidden" id="emailError_contact_form">Oops! You need to type your email here</div> -->
                     
                     
-
-                    <label>Message</label>
+                  <label for="" id="name" >Message</label>
+                   <textarea name="message"  aria-labelledby="message"  id="message" cols="30" rows="10"  placeholder="your message "></textarea>
+                     <div class="error-hint hidden" id="messageError">
+                   your message is required.</div>  
+                  
+                   <!--  <label>Message</label>
                     <textarea name="message"  id="message" cols="30" rows="10"  placeholder="your message "></textarea>
                     <div class="error-hint hidden" id="messageError">
-                      your message is required.</div>  
+                      your message is required.</div> --> 
                   
                   <hr />
 
@@ -229,12 +249,14 @@
      
               <section id="newsletter" class="section-m1 section-p1">
              <div class="news_text">
-              <h4>Sign Up For Newsletters</h4>
+              <h3>Sign Up For Newsletters</h3>
              <p> Get E-mail updates about our latest shop and <span> special offers. </span></p>
               </div>
               <div class="email-box">
-             <input class="text-bok" type="email"  name="" placeholder="Your email address">
-              <button type="button" class="myButton">Sign Up</button>
+                  
+             <label for="" id="name" >Email</label>
+             <input  type="email" aria-labelledby="email" class="text-bok"  name="" placeholder="Your email address">
+              <button type="button"  class="myButton">Sign Up</button>
              </div>
             </section>
  
@@ -245,12 +267,12 @@
            <footer class="section-p1">
             <div class="colum">
             <img class="logo" src="./images/RainyDays_Logo.png" alt=" photo logo">
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <p><strong>Address:</strong>  President Harbitz'z gate 14, 0259 Oslo Noway </p>
             <p><strong>Phone:</strong> +47 455 40 443/(+47 235 56 498) </p>
             <p><strong>Hours:</strong> 10:00 -18:00, Mon- Sat</p>
             <div class="social-media">
-              <h4>Follow us</h4>
+              <h2>Follow us</h2>
               <div class="icons">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-twitter"></i>
@@ -260,7 +282,7 @@
             </div>
           </div>
           <div class="colum">
-            <h4>About</h4>
+            <h3>About</h3>
             <a href="#">About us</a>
             <a href="#">Delivery Information</a>
             <a href="#">Products</a>
@@ -272,7 +294,7 @@
           </div>
 
          <div class="colum">
-          <h4>My Account</h4>
+          <h3>My Account</h3>
           <a href="#">Sign In </a>
           <a href="#">View Cart</a>
           <a href="#">My Wishlist</a>
@@ -284,7 +306,7 @@
           </div>
           
           <div class="colum">
-          <h4>More Sample links</h4>
+          <h3>More Sample links</h3>
           <a href="#">Sample link</a>
           <a href="#">Sample link</a>
           <a href="#">Sample link</a>
@@ -295,7 +317,7 @@
            <a href="#">Sample link</a>
           </div>
         <div class="colum install">
-          <h4>Download our app</h4>
+          <h3>Download our app</h3>
           <p>From App Store or Google play</p>
           <div class="row">
         <div class="button-group">

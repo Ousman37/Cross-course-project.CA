@@ -265,7 +265,10 @@ p {
 
 #error_name,
 #error_email,
-#error_pass {
+#error_pass,
+#error_name2,
+#error_email2,
+#error_pass2 {
   color: red;
   display: none;
 }
