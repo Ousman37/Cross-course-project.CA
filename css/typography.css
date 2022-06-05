@@ -439,10 +439,12 @@ span {
   height: 100%;
   margin: 20px 25px;
   float: right;
+  color: #141313;
 }
-h2 {
+p {
   float: left;
   margin: 6px 0 0 0;
+  color: white;
 }
 
 div#logotype {
@@ -505,12 +507,13 @@ label {
   font-weight: 600;
   text-transform: uppercase;
   margin: 14px 0 4px;
+  color: #2b2b2b;
 }
 
 #cvc-label i {
   cursor: pointer;
   margin-left: 3px;
-  color: #3d3d3d;
+  color: #2b2b2b;
 }
 
 input {
@@ -580,6 +583,11 @@ select {
   border-color: #003087;
   color: white;
 }
+
+.right {
+  color: #2b2b2b;
+}
+
 .right i {
   color: #009cde;
 }
@@ -799,12 +807,16 @@ footer .install img {
 .copyright-information {
   text-align: center;
   line-height: 2.4rem;
+  color: #4a4a4a;
+  cursor: pointer;
 }
 
 .legal-information {
   font-weight: 500;
+  color: #545454;
   margin: 0 1.5rem;
   transition: color 0.5s;
+  cursor: pointer;
 }
 
 .legal-information a:hover,
