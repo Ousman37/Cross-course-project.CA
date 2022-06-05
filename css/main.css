@@ -266,19 +266,15 @@ p {
   gap: 0.25rem;
 }
 
-input.invalid {
-  border: 1px solid red;
-}
-
-.hide {
-  display: none;
-}
-.error-hint-hint {
+#error_name,
+#error_email,
+#error_pass {
   color: red;
+  display: none;
 }
 
 input[type="email"],
-input[type="username"],
+input[type="text"],
 input[type="password"] {
   font-family: inherit;
   font-size: inherit;
@@ -290,7 +286,7 @@ input[type="password"] {
   border-radius: 5px;
   margin-bottom: 0.5rem;
 }
-/*
+
 input[type="submit"] {
   font-family: var(--font-family);
   background: var(--accent-clr);
@@ -304,10 +300,10 @@ input[type="submit"] {
   font-weight: lighter;
   color: var(--light-clr);
   cursor: pointer;
-}*/
+}
 
 /*button[type="submit"]*/
-.submit-buttons {
+.btn {
   background-color: var(--accent-clr);
   font-family: inherit;
   font-size: inherit;
@@ -325,7 +321,7 @@ input[type="submit"] {
   transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
 
-.submit-button {
+.btn {
   background-color: var(--accent-clr);
   font-family: inherit;
   font-size: inherit;
@@ -342,8 +338,8 @@ input[type="submit"] {
   color: white;
   transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
-.submit-buttons:hover,
-.submit-button:hover {
+.btn:hover,
+.btn:hover {
   background-color: var(--success);
 }
 

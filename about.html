@@ -47,8 +47,8 @@
            
                     <div class="search-box">
                    <form action="" class="search-form">
-                   <label for="">Search
-                    <input type="search" class="search-input" placeholder="Search Products here" />
+                   <label for="search">
+                    <input type="text" class="search-input" placeholder="Search Products here" />
                     </label>
                   </form>
                   </div>
@@ -58,7 +58,7 @@
                      <li><a href="contact.html">Contact</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                     
-                   <form  id="login_form_validation">
+                  
                      <div class="dropdown" data-dropdown>
 
                       <a href="#" class="link"> 
@@ -67,28 +67,22 @@
                         <div class="dropdown-menu information-grid">
                             <h4>Already have a account login</h4>
                             <div>
-                               <label for="usernmae">Username</label>
-                               <input type="username" name="username" id="login_user_name" required>
-                               <div class="error-hint-hint  hide" id="login_user_name_error">user name, too, please!</div>
-                               <div class="dropdown-links">
-                               <label for="email">Email</label>
-
-                                <input type="email" name="email" id="login_user_email" required>
-                                <div class="error-hint-hint hide" id="login_user_email_error">Oops! You need to type your email here</div>
-                               <label for="password">Password</label>
-
-                                <input type="password" name="password" id="Password" required>
-                                <div class="error-hint-hint hide" id="passwordError">Oops! Your password is incorrect! Try again.</div>
-                               <input type="submit" class="submit-buttons" value="Login">
+                               <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+                               <input type="text" placeholder="Username" name="name"  class="input_field"><br>
+                                <span id="error_name">your, username too, please!<br></span>
+                                <input type="email" placeholder="Your Email" name="email" class="input_field"><br>
+                                <span id="error_email">Please provide your email!<br></span>
+                                <input type="password" placeholder="Your Password" name="pass"  class="input_field"><br>
+                                <span id="error_pass">Please provide your password!<br></span>
+                                <input type="submit" value="Submit" class="btn">
                                 </form>
-                               </div>
-                               </div>
-                           </div>
+                              </div>
+                            </div>
                           </div> 
 
 
-                          
-                      <form id="form">
+                     
+                     
                        <div class="dropdown" data-dropdown>
                      
                        <a href="#" class="link">
@@ -96,26 +90,23 @@
                       <div class="dropdown-menu information-grid">
                       <div>
                         <h4>Don't have an account create</h4>
-                      <label for="usernmae">Username</label>
-                      <input type="username" name="username" id="username" required>
-                      <div class="error-hint-hint hide" id="userNameError">user name, too, please!</div>
+              
+                      <div>
+                      <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+                      <input type="text" placeholder="Username" name="name"  class="input_field" required><br>
+                      <span id="error_name">Create a  user name, please!<br></span>
+                      <input type="email" placeholder="Your Email" name="email" class="input_field"><br>
+                      <span id="error_email">Oops! You need to type your email here<br></span>
+                      <input type="password" placeholder="Your Password" name="pass"  class="input_field"><br>
+                      <span id="error_pass">Seems, your password is incorrect! Try again<br></span>
+                      <input type="submit" value="Submit" class="btn">
+                     </form>
+                      </div>
 
-                      <div class="dropdown-links">
-                      <label for="email">Email</label>
-                       <input type="email" name="email" id="email" required>
-                        <div class="error-hint-hint hide" id="emailError">Oops! You need to type your email here</div>
-                        
-                      <label for="password">Password</label>
-                       <input type="password" name="password" id="Password" required>
-                        <div class="error-hint-hint hide" id="passwordError">Oops! Your password is incorrect! Try again.</div>
-                      <button class="submit-button"  type="submit">Create</button>
-                       </form>
-
-                       
                       </div>
                       </div>
-                  </div>
-                 </div>
+                     </div>
+                 
                       
                    <li id="lg-bag"> <i class="fa-solid fa-cart-arrow-down"></i></li> 
                       <a href="#" id="close"><i class="fa-regular fa-x"></i></a>
@@ -125,7 +116,7 @@
                    <div class="menu-toggle-icon lg-screen-hidden place-items-center" id="menu-toggle-icon">
                     <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
                     <i id="bar" class="fa-solid fa-bars"></i>
-                  
+                   </div>
                    </div>
                    </nav>
                </header>

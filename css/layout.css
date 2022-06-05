@@ -263,20 +263,15 @@ p {
   gap: 0.25rem;
 }
 
-input.invalid {
-  border: 1px solid red;
-}
-
-.hide {
+#error_name,
+#error_email,
+#error_pass {
+  color: red;
   display: none;
 }
 
-.error-hint-hint {
-  color: red;
-}
-
 .dropdown input[type="email"],
-.dropdown input[type="username"],
+.dropdown input[type="text"],
 .dropdown input[type="password"] {
   font-family: inherit;
   font-size: inherit;
@@ -306,8 +301,8 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.submit-button-cta {
-  background-color: #4f2108;
+.btn {
+  background-color: var(--accent-clr);
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
@@ -324,8 +319,8 @@ input[type="submit"] {
   transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
 
-.submit-button-btn {
-  background-color: #4f2108;
+.btn {
+  background-color: var(--accent-clr);
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
@@ -341,8 +336,8 @@ input[type="submit"] {
   color: white;
   transition: opacity 150ms ease-in-out transform 150s ease-in-out;
 }
-.submit-button-cta:hover,
-.submit-button-btn:hover {
+.btn:hover,
+.btn:hover {
   background-color: var(--success);
 }
 

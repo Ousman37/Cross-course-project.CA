@@ -20,57 +20,27 @@ document.addEventListener("click", (e) => {
 
 //const form = document.querySelector("#contactForm");
 
-const form = document.querySelector("#login_form_validation");
+function validateForm() {
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let pass = document.forms["myForm"]["pass"].value;
 
-const userName = document.querySelector("#login_user_name");
-const userNameError = document.querySelector("#login_user_name_error");
-
-const passWord = document.querySelector("#passWord");
-const passwordError = document.querySelector("#passwordError");
-
-const email = document.querySelector("#login_user_email");
-const emailError = document.querySelector("#login_user_email_error");
-
-console.log(userName);
-function validateForm(event) {
-  event.preventDefault();
-
-  // alert("button click"); login_user_name
-  //console.log("hello");
-
-  if (checkLength(userName.value, 5) === true) {
-    alert("field is filled.");
-    userNameError.style.display = "none";
-  } else {
-    alert("fill the filed username");
-    userNameError.style.display = "block";
-  }
-
-  if (checkLength(passWord.value, 6) === true) {
-    passwordError.style.display = "none";
-  } else {
-    passwordError.style.display = "block";
-  }
-
-  if (validateEmail(email.value, 24) === true) {
-    emailError.style.display = "none";
-  } else {
-    emailError.style.display = "block";
-  }
-}
-
-form.addEventListener("submit", validateForm);
-
-function checkLength(value, len) {
-  if (value.length > len) {
-    return true;
-  } else {
+  if (name == "") {
+    document.getElementById("error_name").style.display = "block";
     return false;
+  } else {
+    document.getElementById("error_name").style.display = "none";
   }
-}
-
-function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(email);
-  return patternMatches;
+  if (email == "") {
+    document.getElementById("error_email").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("error_email").style.display = "none";
+  }
+  if (pass == "") {
+    document.getElementById("error_pass").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("error_email").style.display = "none";
+  }
 }
