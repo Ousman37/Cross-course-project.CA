@@ -460,7 +460,7 @@ input[type="submit"] {
 
 #blog-content .blog-box h1 {
   position: absolute;
-  top: -40px;
+  top: -60px;
   left: 0;
   font-size: 70px;
   font-weight: 700;
@@ -2095,7 +2095,7 @@ footer h4 {
   }
 
   #newsletter .text-bok {
-    width: 250px;
+    width: 202px;
     transition: 0.5s;
   }
   #newsletter p {
