@@ -106,46 +106,6 @@
               </div>
              </div>
          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-         
                     <li id="lg-bag"><i class="fa-solid fa-cart-arrow-down"></i></li> 
                     <a href="#" id="close"><i class="fa-regular fa-x"></i></a>
                     </ul>
@@ -214,14 +174,18 @@
 			<form action="">
 				<label for="">Card Number</label>
 				<div id="cardnumber">
-					<input type="number" max="4" max-length="4" min="4" placeholder="0123" /> <span class="divider">-</span>
-					<input type="number" max="4" max-length="4" min="4" placeholder="4567" /> <span class="divider">-</span>
-					<input type="number" max="4" max-length="4" min="4" placeholder="8901" /> <span class="divider">-</span>
-					<input type="number" max="4" max-length="4" min="4" placeholder="2345" />
+           <label for="" id="number" >number</label>
+					<input type="number" aria-labelledby="number"  max="4" max-length="4" min="4" placeholder="0123" /> <span class="divider">-</span>
+					<input type="number" aria-labelledby="number"  max="4" max-length="4" min="4" placeholder="4567" /> <span class="divider">-</span>
+					<input type="number" aria-labelledby="number"  max="4" max-length="4" min="4" placeholder="8901" /> <span class="divider">-</span>
+					<input type="number" aria-labelledby="number" max="4" max-length="4" min="4" placeholder="2345" />
 				</div>
 				
-				<label for="">Cardholder</label>
-				<input id="cardholder" type="text" placeholder="John Smith" />
+       
+				
+           <label for="" id="Cardholder" >Cardholder</label>
+       
+				<input type="text" aria-labelledby="Cardholder"   id="cardholder"  placeholder="John Smith" />
 				<div class="left">
 					<label for="">Expiration Date</label>
 					<select name="month" id="month" onchange="" size="1">
@@ -256,7 +220,9 @@
 				
 				<div class="right">
 					<label id="cvc-label" for="">CVC <i class="fa-solid fa-circle-question"></i></label>
-					<input id="cvc" type="text" placeholder="123" maxlength="3" />
+             <label for="" id="cvc" >cvc</label>
+           
+					<input  type="text" id="cvc" aria-labelledby="cvc"  placeholder="123" maxlength="3" />
 				</div>
 				<button class="my-btn" id="purchase">Purchase</button>
 				<button id="paypal"><i class="fa-brands fa-cc-paypal"></i> Pay with PayPal</button>
@@ -293,12 +259,12 @@
            <footer class="section-p1">
             <div class="colum">
             <img class="logo" src="./images/RainyDays_Logo.png" alt=" photo logo">
-            <h4>Contact</h4>
+            <h2>Contact</h2>
             <p><strong>Address:</strong>  President Harbitz´z gate 14, 0259 Oslo Noway </p>
             <p><strong>Phone:</strong> +47 455 40 443/(+47 235 56 498) </p>
             <p><strong>Hours:</strong> 10:00 -18:00, Mon- Sat</p>
             <div class="social-media">
-              <h4>Follow us</h4>
+              <h2>Follow us</h2>
               <div class="icons">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-twitter"></i>
@@ -308,7 +274,7 @@
             </div>
           </div>
           <div class="colum">
-            <h4>About</h4>
+            <h2>About</h2>
             <a href="#">About us</a>
             <a href="#">Delivery Information</a>
             <a href="#">Products</a>
@@ -321,7 +287,7 @@
           <a href="#">Sample link</a>
           </div>
            <div class="colum">
-          <h4>My Account</h4>
+          <h2>My Account</h2>
           <a href="#">Sign In </a>
           <a href="#">View Cart</a>
           <a href="#">My Wishlist</a>
@@ -335,7 +301,7 @@
         </div>
        
         <div class="colum install">
-          <h4>Download our app</h4>
+          <h2>Download our app</h2>
           <p>From App Store or Google play</p>
           <div class="row">
         <div class="button-group">

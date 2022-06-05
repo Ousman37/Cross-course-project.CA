@@ -579,11 +579,6 @@ select {
   background: none;
   border: 1px solid lightgrey;
 }
-#wrapper:hover {
-  background: #003087;
-  border-color: #003087;
-  color: white;
-}
 
 .right {
   color: #2b2b2b;
@@ -650,7 +645,7 @@ a i {
 }
 
 #email {
-  color: #eee;
+  color: #242424;
   text-align: center;
   margin-right: 20px;
   font-size: var(--font-size-md);
@@ -658,7 +653,7 @@ a i {
 }
 #newsletter h1 {
   font-size: var(--font-size-md);
-  color: var(--light-clr);
+  color: #454545;
   font-weight: var(--font-weight-light);
   margin: 40px 80px;
 }
