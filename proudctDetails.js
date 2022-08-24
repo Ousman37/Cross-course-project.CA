@@ -6,7 +6,7 @@ const id = new URLSearchParams(location.search).get("id");
 
 const loading_div = document.createElement("div");
 const loadingTemplate = `
-<div>loading</div>
+<div class="" >loading.....</div>
 `;
 
 const featurePdList = document.getElementById("loading");
@@ -28,7 +28,7 @@ if (id) {
     const pdTemplate = `
     <p>Product id:${data?.id} </p>
     <p>product name :${data?.name}</p>
-    <img src=${data?.images[0].src} />
+    <img  src=${data?.images[0].src} />
    `;
     new_div.innerHTML = pdTemplate;
 
