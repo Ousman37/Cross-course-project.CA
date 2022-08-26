@@ -27,7 +27,8 @@ if (id) {
     const new_div = document.createElement("div");
     const pdTemplate = `
     <p>Product id:${data?.id} </p>
-    <p>product name :${data?.name}</p>
+    <p>Product name :${data?.name}</p>
+    <p>Price  :${data?.price}</p>
     <img  src=${data?.images[0].src} />
    `;
     new_div.innerHTML = pdTemplate;
