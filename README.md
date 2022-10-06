@@ -1,4 +1,4 @@
-# Semester 1 Cross Course Project - Noroff
+# Semester  Cross Course Project - Noroff
 
 ![crosscourseproject](https://github.com/Ousman37/Cross-course_project_Redesign/blob/main/images/hero.jpg)
 
@@ -18,6 +18,8 @@ Headless Wordpress API
 
 ## Getting Started
 
+## Installing
+
 1. Clone the repo:
 
 ```bash
@@ -29,6 +31,11 @@ git clone https://github.com/Ousman37/Cross-course_project_Redesign.git
 ```
 npm install
 ```
+
+Inserting a link 
+
+[Home](https://tiny-sunburst-0d99af.netlify.app/index.html "netlify.app")
+
 
 ## Contact
 [My LinkedIn page] https://www.linkedin.com/in/ethmane-didi-34885844/
