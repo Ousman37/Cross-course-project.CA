@@ -8,13 +8,19 @@ This project was completed in stages throughout the first year of the Noroff Fro
 
 ## Built With
 
-HTML
+- HTML
 
-CSS
+- CSS
 
-JavaScript
+- JavaScript
 
-Headless Wordpress API
+## WordPress installation
+
+- Headless CMS
+- WordPress REST API to 
+- Fetching  the data
+
+
 
 ## Getting Started
 
