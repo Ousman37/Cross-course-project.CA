@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Hero Section */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Checkout Section */
+  .checkout-section {
+    display: flex;
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+  }
+  
+  .checkout-form-container,
+  .checkoutsummary {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .checkout-form-container h1,
+  .checkoutsummary h1 {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-group button:hover {
+    background: #555;
+  }
+  
+  /* Purchase Summary */
+  .checkoutsummary {
+    border-left: 1px solid #ddd;
+  }
+  
+  .checkoutitem1 {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .priceinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .delivery {
+    margin-top: 20px;
+  }
+  
+  .delivery div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .delivery img {
+    margin-right: 10px;
+  }
+  
+  .ToU {
+    margin-top: 20px;
+  }
+  
+  .ToU a {
+    color: #06c;
+  }
+  
+  .cta {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #06c;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta:hover {
+    background: #0056b3;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    /* Other modal styles */
+  }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+      width: 95%;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .checkout-section {
+      flex-direction: column;
+    }
+  
+    .checkoutsummary {
+      border-left: none;
+      border-top: 1px solid #ddd;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      padding: 8px;
+    }
+  
+    .checkoutitem1 {
+      width: 80px;
+    }
+  }  
