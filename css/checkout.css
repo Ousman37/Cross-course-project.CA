@@ -1,0 +1,483 @@
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --background-color: #f8f9fa; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --accent-color: #ff6347; /* Tomato Red */
+    --success-color: #00b55a; /* Green */
+  
+    --font-family: "Merriweather", sans-serif;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3.6rem;
+  
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+/* Example usage */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: var(--background-color); 
+}
+
+
+/* Style the menu icon */
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Style the hidden menu */
+/* CSS for the hamburger menu icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; 
+    cursor: pointer;
+    margin-right: 20px; 
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Additional styles for the hidden menu */
+.hidden-menu {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 20px; 
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; 
+}
+
+.hidden-menu.active {
+    display: block;
+}
+
+
+/* Media Query to show/hide the menu icon and hidden menu */
+@media only screen and (max-width:768px) {
+    .menu-icon {
+        display: block; 
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    #navbar {
+        display: none; 
+    }
+
+    .active {
+        display: none; 
+    }
+
+    /* Show the hidden menu when the menu icon is clicked */
+    #menu-icon.active ~ #hidden-menu {
+        display: block;
+    }
+}
+
+
+/* Add styles for the header */
+
+.header {
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+}
+
+.list li {
+    margin: 0 15px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* Style for the checkout-item-image */
+.checkout-item-image img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Style for the product-cart-container */
+.product-cart-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+/* Style for the product information within the cart */
+.product .product-info {
+    flex: 1;
+}
+
+.product .product-info h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.product .product-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Style for the remove button */
+.product .remove button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    min-width: 100px; 
+}
+
+/* Media query for responsive design */
+/* CSS for the layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.checkout-form-container {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+/* Style for Checkout Form */
+.checkout-section {
+    width: 55%; 
+    margin-left: 32px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-cart-section {
+    width: 30%;
+    margin-right: 20px;
+    margin-top: -704px;
+}
+
+.checkout-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-group button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list li {
+        margin: 0;
+    }
+    
+    .product-cart-section {
+        width: 86%;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .checkout-section {
+        width: 86%;
+        margin-left: 13px;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .checkout-item-image img {
+        max-width: 100%
+    }
+}
+
+
+
+/* Add styles for the footer */
+#footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 20px 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.footer-links li {
+    margin-bottom: 5px; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--background-color);
+    display: block; 
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-social li {
+    margin-right: 10px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+main {
+    padding: 20px;
+}
+.product-cart-checkout h2 {
+    margin-bottom: 20px;
+    /* text-align: center; Center the H2 text */
+}
+/* Brand Space Section */
+.product-cart-container {
+    /* text-align: center; */
+    margin-bottom: 20px;
+}
+
+.product-cart-container img {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Main Checkout Section */
+.mainC {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.js-chechout-cart,
+.checkoutsummary {
+    flex-basis: 48%; /* Adjust the width as needed */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Summary */
+.Ordersummary h2 {
+    margin-bottom: 15px;
+}
+
+.priceinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.deliveryinfo {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.deliveryinfo img {
+    margin-right: 10px;
+}
+
+/* Payment Methods */
+.payment {
+    margin-top: 20px;
+}
+
+.cards div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cards img {
+    margin-left: 10px;
+}
+
+.ToU {
+    margin-top: 20px;
+}
+
+.ToU a {
+    color: #06c;
+}
+
+.cta {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #06c;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cta:hover {
+    background: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .mainC {
+        flex-direction: column;
+    }
+
+    .js-chechout-cart,
+    .checkoutsummary {
+        flex-basis: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+}
+
+
+
