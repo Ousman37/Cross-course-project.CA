@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Product details for Rainydays waterproof jackets." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays | Single Product</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/03d5a1f99a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/product-detail.css" />
+</head>
+<body>
+   
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <!-- Navigation Menu -->
+        <nav class="nav container" id="nav">
+            <a href="index.html">
+                <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+            </a>
+            <ul class="list" id="navbar">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="all-jackets.html">All Jackets</a></li>
+                <li><a href="mens-jackets.html">Men's Jackets</a></li>
+                <li><a href="womens-jackets.html">Women's Jackets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+            </ul>
+            
+            <!-- Hidden Menu -->
+            <div id="hidden-menu" class="hidden-menu">
+                <ul class="list" id="hidden-navbar">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="all-jackets.html">All Jackets</a></li>
+                    <li><a href="mens-jackets.html">Men's Jackets</a></li>
+                    <li><a href="womens-jackets.html">Women's Jackets</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+                </ul>
+            </div>
+            <!-- Add the hamburger menu icon on the right -->
+            <div id="menu-icon" class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Product Detail Section -->
+        <section class="single-product container">
+            <!-- Product Image (Left) -->
+            <div class="product-image-container">
+                <img class="product-image" src="" alt="Product Image" />
+            </div>
+    
+            <!-- Product Information (Right) -->
+            <div class="product-info">
+                <!-- Product Name -->
+                <h1 class="product-name"></h1>
+    
+                <!-- Product Price -->
+                <p class="product-price"></p>
+    
+                <!-- Product Description -->
+                <p class="product-description"></p>
+    
+                <!-- Size Options -->
+                <div class="size-options">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+                </div>
+    
+                <!-- Quantity Options -->
+                <div class="quantity-options">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+                </div>
+    
+                <!-- Add to Cart Button -->
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    
+    
+
+ 
+    
+
+    <!-- Footer Section -->
+    <footer id="footer" class="section-p1">
+        <div class="footer-content container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Rainy-days. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/cart.js"></script>
+    <!-- Include the external JavaScript file -->
+<script type="module" src="js/product-detail.js"></script>
+<script type="module" src="js/menu.js" defer></script>
+
+</body>
+</html>
