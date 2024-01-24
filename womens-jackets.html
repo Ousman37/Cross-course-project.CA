@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Rainy-days create amazing outdoors waterproof jackets with timeless design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays | Women's Jackets</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/03d5a1f99a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/all-jackets.css" />
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header" id="header">
+    <!-- Navigation Menu -->
+    <nav class="nav container" id="nav">
+        <a href="index.html">
+            <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+        </a>
+        <ul class="list" id="navbar">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="all-jackets.html">All Jackets</a></li>
+            <li><a href="mens-jackets.html">Men's Jackets</a></li>
+            <li><a href="womens-jackets.html">Women's Jackets</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add the cart quantity element here -->
+            <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+        </ul>
+
+        <!-- Hidden Menu -->
+        <div id="hidden-menu" class="hidden-menu">
+            <ul class="list" id="hidden-navbar">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="all-jackets.html">All Jackets</a></li>
+                <li><a href="mens-jackets.html">Men's Jackets</a></li>
+                <li><a href="womens-jackets.html">Women's Jackets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Add the cart quantity element here -->
+                <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+            </ul>
+        </div>
+        <!-- Add the hamburger menu icon on the right -->
+        <div id="menu-icon" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Pushing the comfort zone</h1>
+                <!-- Add a div container for both buttons -->
+                <div class="button-container">
+                    <a href="all-jackets.html">
+                        <button id="my-button" type="button">Shop Now</button>
+                    </a>
+                    <a href="special_offers.html">
+                        <button id="special-button" type="button">Special Offers</button>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../images/hero.jpg" alt="Pushing the comfort zone">
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading spinner -->
+    <div class="loader"></div>
+
+    <!-- Featured Products Title -->
+    <div class="featured-title">
+        <h2>Featured Jackets</h2>
+    </div>
+
+    <!-- Search and Pagination Options -->
+    <div class="search-and-pagination">
+        <!-- Search input -->
+        <input type="text" id="search-input" placeholder="Search products">
+        
+        <!-- Number of products per page dropdown -->
+        <label for="products-per-page">Number per page:</label>
+        <select id="products-per-page">
+            <option value="10">One</option>
+            <option value="20">Two</option>
+            <option value="30">Three</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <!-- Featured checkbox -->
+        <label>
+            <input type="checkbox" id="featured-checkbox"> Featured
+        </label>
+
+        <!-- Premium checkbox -->
+        <label>
+            <input type="checkbox" id="premium-checkbox"> Premium
+        </label>
+
+        <!-- Simple checkbox -->
+        <label>
+            <input type="checkbox" id="simple-checkbox"> Simple
+        </label>
+    </div>
+
+       
+    <section>
+        <!-- Container for Product Grid (populated dynamically with JavaScript) -->
+    <div id="categoryA" class="product-container products-image-grid loader">
+        
+        <!-- Sample product card template -->
+    <div class="product" data-product-id="875">
+        <img src="./images/RainyDays_Jacket13.jpeg" alt="Product Name">
+        <h3>Black Jacket</h3>
+        <p>Price: $1599.00</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="add-to-cart-grid">
+            <button class="add-to-cart-button js-add-to-cart" data-product-id="875">Add to cart</button>
+            <div class='added-to-cart-message' data-product-id="875"> ✔ Added to cart!</div>
+        </div>
+    </div>
+    
+    </div>
+    </section>
+   
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe to our Newsletter</h1>
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured-products" class="section-p1">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product">
+                    <img src="images/item7.png" alt="Product 1">
+                    <h3>Product Name 1</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product">
+                    <img src="images/item8.png" alt="Product 2">
+                    <h3>Product Name 2</h3>
+                    <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product">
+                    <img src="images/RainyDays_Jacket13.jpeg" alt="Product 3">
+                    <h3>Product Name 3</h3>
+                    <p>Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer id="footer" class="section-p1">
+    <div class="footer-content container">
+        <div class="footer-logo">
+            <a href="index.html">
+                <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+            </a>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Rainy-days. All Rights Reserved.</p>
+    </div>
+</footer>
+<script type="module" src="js/cart.js"></script>
+<script type="module" src="./js/product-list.js"></script>
+<script type="module" src="js/menu.js" defer></script>
+</body>
+</html>
