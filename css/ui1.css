@@ -1,0 +1,651 @@
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --background-color: #f8f9fa; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --accent-color: #ff6347; /* Tomato Red */
+    --success-color: #00b55a; /* Green */
+  
+    --font-family: "Merriweather", sans-serif;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3.6rem;
+  
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+/* Example usage */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: var(--background-color); 
+}
+
+
+/* Style the menu icon */
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Style the hidden menu */
+/* CSS for the hamburger menu icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; 
+    cursor: pointer;
+    margin-right: 20px; 
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Additional styles for the hidden menu */
+.hidden-menu {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 20px; 
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; 
+}
+
+.hidden-menu.active {
+    display: block;
+}
+
+
+/* Media Query to show/hide the menu icon and hidden menu */
+@media only screen and (max-width:768px) {
+    .menu-icon {
+        display: block; 
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    #navbar {
+        display: none; 
+    }
+
+    .active {
+        display: none; 
+    }
+
+    /* Show the hidden menu when the menu icon is clicked */
+    #menu-icon.active ~ #hidden-menu {
+        display: block;
+    }
+}
+
+
+/* Add styles for the header */
+
+.header {
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+}
+
+.list li {
+    margin: 0 15px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.hero h4 {
+    font-size: 1.4rem;
+    padding-bottom: 15px;
+    color: var(--background-color);
+}
+
+.hero h1 {
+    font-family: var(--font-family);
+    font-weight: bold;
+    line-height: 2em;
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    color: var(--background-color);
+    margin-bottom: 25px;
+    text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the hero image container */
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Style the hero image itself */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Style the button container */
+.button-container {
+    position: relative;
+    text-align: center;
+    height: 55vh;
+}
+
+/* Style the hero image */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Style the h1 and buttons */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-family);
+    font-weight: bold;
+    line-height: 2em;
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top: 86px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Style the buttons */
+.hero-content a {
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+/* Style the hero-content */
+.hero-content {
+    z-index: 1;
+    text-align: center;
+    color: var(--light-clr);
+}
+
+/* Style the button-container for both buttons */
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Style the button-container for both buttons */
+.button-container a {
+    text-decoration: none;
+}
+
+/* Style the "Shop Now" button */
+#my-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the "Special Offers" button */
+#special-button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to both buttons */
+#my-button:hover, #special-button:hover {
+    background-color: #ff4f00;
+}
+
+/* Center-align text in the "supper-deals" section */
+#supper-deals {
+    text-align: center;
+}
+
+/* Style "supper-deals" section */
+#supper-deals strong {
+    color: var(--primary-color);
+}
+
+
+
+/* Style the Featured Products section */
+#featured-products {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+}
+
+#featured-products h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product {
+    flex: 1;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product .image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.product .product-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.product:hover .product-img {
+    opacity: 0.8;
+}
+
+.product .cardtext {
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product:hover .cardtext {
+    background-color: var(--accent-color); /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive styles for small screens */
+@media only screen and (max-width: 768px) {
+    .product {
+        flex: 0 0 100%; 
+        margin: 10px 0; 
+    }
+}
+
+
+
+/* Style the newsletter section */
+#newsletter {
+    background: #35424a;
+    color: #fff; 
+    padding: 60px 0; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#newsletter h1 {
+    float: left;
+    margin-right: 20px; /* Add margin between the h1 and the form */
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+}
+
+.button_1 {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Add hover effect to the button */
+.button_1:hover {
+    background-color: #ff4f00; 
+}
+
+
+
+/* Style the Featured Products Section */
+#featured-products {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping to keep products in a row */
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+}
+
+.product {
+    width: calc(33.33% - 20px); /* 3 columns with some spacing */
+    margin-right: 20px; /* Spacing between products */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product:last-child {
+    margin-right: 0; /* Remove margin for the last product */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+ 
+
+/* Add styles for the footer */
+#footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 20px 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.footer-links li {
+    margin-bottom: 5px; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--background-color);
+    display: block; 
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-social li {
+    margin-right: 10px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+/* Add hover effect to the subscribe button */
+#subscribe-button:hover {
+    background-color: #ff4f00;
+}
+
+/* Media Query for Responsiveness */
+@media only screen and (max-width:768px){
+    .email-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-box {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* Style the product images */
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width:768px){
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list li {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .button-container {
+        height: auto;
+    }
+
+    .hero-content h1 {
+        margin-top: 30px;
+    }
+
+    .product-list #category {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-list .card1,
+    .product-list .card2,
+    .product-list .card3 {
+        width: 100%;
+    }
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width:768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list li {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .button-container {
+        height: auto;
+    }
+
+    .hero-content h1 {
+        margin-top: 30px;
+    }
+
+    .product-list #category {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 10px; 
+    }
+
+    .product-list .card1,
+    .product-list .card2,
+    .product-list .card3 {
+        width: 100%; 
+    }
+}
