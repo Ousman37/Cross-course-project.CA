@@ -1,0 +1,439 @@
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --background-color: #f8f9fa; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --accent-color: #ff6347; /* Tomato Red */
+    --success-color: #00b55a; /* Green */
+  
+    --font-family: "Merriweather", sans-serif;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3.6rem;
+  
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+
+
+/* Style for the product detail page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.product-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-container h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.product-container p {
+    font-size: 16px;
+    color: #777;
+}
+
+.add-to-cart-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Style the menu icon */
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Style the hidden menu */
+/* CSS for the hamburger menu icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; 
+    cursor: pointer;
+    margin-right: 20px; 
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Additional styles for the hidden menu */
+.hidden-menu {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 20px; 
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; 
+}
+
+.hidden-menu.active {
+    display: block;
+}
+
+
+/* Add styles for the header */
+
+.header {
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+}
+
+.list li {
+    margin: 0 15px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.hero h4 {
+    font-size: 1.4rem;
+    padding-bottom: 15px;
+    color: var(--background-color);
+}
+
+.hero h1 {
+    font-family: var(--font-family);
+    font-weight: bold;
+    line-height: 2em;
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    color: var(--background-color);
+    margin-bottom: 25px;
+    text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the hero image container */
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Style the hero image itself */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Style the button container */
+.button-container {
+    position: relative;
+    text-align: center;
+    height: 55vh;
+}
+
+/* Style the hero image */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Style the h1 and buttons */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-family);
+    font-weight: bold;
+    line-height: 2em;
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top: 86px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Style the buttons */
+.hero-content a {
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+/* Style the hero-content */
+.hero-content {
+    z-index: 1;
+    text-align: center;
+    color: var(--light-clr);
+}
+
+
+
+
+/* Add styles for the footer */
+#footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 20px 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.footer-links li {
+    margin-bottom: 5px; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--background-color);
+    display: block; 
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-social li {
+    margin-right: 10px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+/* Default styles for larger screens */
+.single-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-image-container {
+    flex: 1;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.size-options, .quantity-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .single-product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product-info {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .product-name {
+        font-size: 24px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .product-description {
+        font-size: 14px;
+    }
+
+    .size-options, .quantity-options {
+        margin-top: 15px;
+    }
+
+    select, input {
+        width: 100%;
+        max-width: 200px;
+        margin: 5px 0;
+    }
+
+    .add-to-cart-button {
+        font-size: 16px;
+    }
+}
