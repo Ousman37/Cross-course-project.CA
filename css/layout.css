@@ -1,11 +1,3 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --primary-color: #007bff; /* Blue */
   --secondary-color: #6c757d; /* Gray */
@@ -25,74 +17,124 @@
   --font-weight-bold: 700;
 }
 
-html {
-  /* font-size: 10px; */
-  font-size: 62.5%;
-}
-
+/* Example usage */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family);
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
 }
+
 a {
-  color: var(--dark-clr);
   text-decoration: none;
-  font: inherit;
-  color: inherit;
-  outline: none;
+  color: black;
 }
 
-/* ! REUSABLE CLASSES */
-h1 {
-  font-family: var(--body-font-family);
-  font-size: 3.125rem;
-  line-height: 4rem;
-}
-h2 {
-  font-size: 2.875 rem;
-  line-height: 2.875rem;
-}
-
-h4 {
-  font-size: 1.25 rem;
-}
-h5 {
-  font-weight: 700;
-  font-size: 0.75rem;
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background-color: lightcoral;
+  height: 75px;
+  padding: 0 25px;
 }
 
-
-
-.section-p1 {
-  margin: 40px 80px;
+header .navbar .web-nav {
+  margin-left: auto; /* Push the navigation to the right */
+  display: flex;
+}
+header .navbar .web-nav li {
+  padding-left: 20px; /* Space between links */
+}
+header .ham-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 75px;
+  z-index: 999;
+  background-color: beige;
+  width: 100%;
+  height: calc(100% - 75px);
 }
 
-.section-m1 {
-  margin: 40px 0;
-}
-.logo {
-  width: 12rem;
-}
-
-
-
-
-/* Style the menu icon */
-.menu-icon {
-  display: none; 
-  cursor: pointer;
+header .ham-nav .links {
+  height: 100%;
+  background-color: antiquewhite;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
+header .ham-nav .footer {
+  width: 100%;
+  padding: 10px;
   background-color: #fff;
-  margin: 4px 0;
+}
+
+header .ham-menu {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+}
+
+header .ham-menu .ham-menu-icon span {
+  background-color: #fff;
+  height: 3px;
+  width: 30px;
+  display: block;
+  margin-bottom: 6px;
+  transition: transform 0.5s ease;
+}
+
+header .ham-menu .ham-menu-icon.change span:nth-child(1) {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+header .ham-menu .ham-menu-icon.change span:nth-child(2) {
+  opacity: 0;
+}
+
+header .ham-menu .ham-menu-icon.change span:nth-child(3) {
+  transform: rotate(45deg) translate(-7px, -6px);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 60px;
 }
 
 
@@ -107,14 +149,15 @@ h5 {
   margin: 20px 0; /* Add margin */
 }
 
-#contact-details .details {
-  width: 50%; /* Adjust the width as needed */
-}
-
 #contact-details .details h3 {
   font-size: 1.8rem; /* Heading font size */
   color: #333; /* Text color */
   margin-bottom: 10px; /* Spacing */
+}
+
+#contact-details .details ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
 }
 
 #contact-details .details li {
@@ -123,12 +166,10 @@ h5 {
   margin-bottom: 10px; /* Spacing between items */
 }
 
-#contact-details .details li img {
-  width: 30px; /* Adjust the image size as needed */
-  height: 30px;
-  object-fit: cover;
+#contact-details .details li i {
+  font-size: 1.4rem; /* Icon size */
+  color: #666; /* Icon color */
   margin-right: 15px; /* Spacing */
-  border-radius: 50%;
 }
 
 #contact-details .details li p {
@@ -150,128 +191,12 @@ h5 {
   border: none; /* Remove iframe border */
 }
 
-/* Media Query for screens smaller than 768px */
-@media only screen and (max-width: 768px) {
-  
-}
-
-/* Style the hidden menu */
-/* CSS for the hamburger menu icon */
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end; 
-  cursor: pointer;
-  margin-right: 20px; 
-}
-
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 3px 0;
-  border-radius: 2px;
-  transition: 0.4s;
-}
-
-/* Additional styles for the hidden menu */
-.hidden-menu {
-  display: none;
-  position: absolute;
-  top: 60px; 
-  right: 20px; 
-  background-color: #35424a;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 1000; 
-}
-
-.hidden-menu.active {
-  display: block;
-}
 
 
-/* Media Query to show/hide the menu icon and hidden menu */
-@media only screen and (max-width:768px) {
-  .menu-icon {
-      display: block; 
-  }
 
-  .nav {
-      justify-content: space-between;
-  }
-
-  #navbar {
-      display: none; 
-  }
-
-  .active {
-      display: none; 
-  }
-
-  /* Show the hidden menu when the menu icon is clicked */
-  #menu-icon.active ~ #hidden-menu {
-      display: block;
-  }
-}
-
-/* !HEADER START ------------------*/
-#nav {
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px;
-  background: var(--light-clr);
-
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#navbar li {
-  list-style: none;
-  padding: 0 20px;
-  position: relative;
-}
 
 
 /*!-----!!Contact page  section------ */
-#contact-header {
-  background: linear-gradient(rgba(1, 3, 0, 0), rgba(1, 3, 0, 24)),
-    url("../images/shopping.jpg");
-
-  height: 30vh;
-  width: 100%;
-  background-size: cover;
-  background-position: top 30% right 0;
-  padding: 14px;
-  display: flex;
-  background-color: transparent;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  bottom: 20px;
-}
-
-#contact-header h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 5rem;
-  font-family: " Oswald";
-  font-weight: 900;
-  color: var(--light-clr);
-  margin: 13px;
-}
-
 #contact-details {
   display: flex;
   align-items: center;
@@ -334,43 +259,37 @@ h5 {
 
 /*! end of the Contact details*/
 
+/* Styles for the form-details section */
 #form-details {
   background-color: white;
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
   border: 3px solid whitesmoke;
-}
-
-#form-details {
   display: flex;
   justify-content: space-between;
   margin: 30px;
-  padding: 80px;
+  padding: 20px; /* Adjust padding */
   border: 1px solid #e1e1e1;
+  flex-wrap: wrap; /* Wrap elements on smaller screens */
 }
 
 #form-details form {
-  width: 65%;
+  width: 60%; /* Adjust width for larger screens */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-#form-details form input,
-#form-details form textarea {
+
+#form-details input[type="text"],
+#form-details textarea {
   width: 100%;
-  padding: 10px 15px;
-  outline: none;
-  margin-bottom: 20px;
+  padding: 10px;
   border: 1px solid #e1e1e1;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-input.invalid {
-  border: 1px solid red;
-}
-.error-hint {
-  color: red;
-}
-
-hr {
+#form-details hr {
   width: 100%;
   border: 1px solid rgb(165, 171, 15);
   border-radius: 1px;
@@ -378,40 +297,31 @@ hr {
   outline: none;
   margin-bottom: 2rem;
 }
-.submit-button {
-  background: none;
-  border: 1px solid rgb(165, 171, 15);
-  width: 150px;
-  padding: 0.5rem;
-  font-weight: 700;
-  font-size: 1.2rem;
 
+#form-details .submit-button {
+  background-color: transparent;
+  border: 2px solid rgb(165, 171, 15);
+  width: 150px;
+  padding: 10px; /* Adjust padding */
+  font-weight: bold;
+  font-size: 1.4rem;
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.5s;
+  color: rgb(165, 171, 15);
 }
-.submit-button:hover {
+
+#form-details .submit-button:hover {
   background-color: rgb(165, 171, 15);
   color: white;
-  border: black;
-}
-.hidden {
-  display: none;
+  border: 2px solid black;
 }
 
-label {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+#form-details .people {
+  width: 35%; /* Adjust width for larger screens */
+  margin-top: 20px;
 }
 
-.thank-you {
-  padding: 2rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-/*! people starts here */
 #form-details .people div {
   padding-bottom: 25px;
   display: flex;
@@ -439,8 +349,7 @@ label {
 }
 
 
-/*!-----!*!FOOTER SECTION * ----------------- */
-/* Add styles for the footer */
+
 /* Add styles for the footer */
 #footer {
   background-color: var(--secondary-color);
@@ -499,36 +408,34 @@ label {
   padding-top: 20px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Media Query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  #form-details {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  #form-details form {
+    width: 100%; /* Take up full width on smaller screens */
+  }
+
+  #form-details .people {
+    width: 100%; /* Take up full width on smaller screens */
+  }
 }
+
 
 /* Media Query for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
-  /* Adjust the base font size for smaller screens */
-  html {
-    font-size: 55%; /* 9px */
-  }
-
-  /* Show the menu icon and hide the regular navigation */
-  .menu-icon {
-    display: block;
-  }
-
-  #navbar {
+  header .navbar .web-nav {
     display: none;
   }
 
-  /* Show the hidden menu when the menu icon is active */
-  .menu-icon.active ~ .hidden-menu {
-    display: block;
+  header .ham-menu {
+    display: flex;
   }
 
-  /* Make header responsive */
-  #nav {
-    padding: 10px 20px; 
+  header .ham-nav.active {
+    display: flex;
   }
 
   /* Make form-details responsive */
@@ -590,6 +497,40 @@ label {
   }
 }
 
+input.invalid {
+  border: 1px solid red;
+}
+.error-hint {
+  color: red;
+}
 
+hr {
+  width: 100%;
+  border: 1px solid rgb(165, 171, 15);
+  border-radius: 1px;
+  margin-top: 2rem;
+  outline: none;
+  margin-bottom: 2rem;
+}
+.submit-button {
+  background: none;
+  border: 1px solid rgb(165, 171, 15);
+  width: 150px;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.submit-button:hover {
+  background-color: rgb(165, 171, 15);
+  color: white;
+  border: black;
+}
+.hidden {
+  display: none;
+}
 
 
