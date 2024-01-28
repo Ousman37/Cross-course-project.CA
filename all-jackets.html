@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="./css/all-jackets.css" />
 </head>
 <body>
-   
-    <!-- Header Section -->
-  <header class="header" id="header">
-    <!-- Navigation Menu -->
-    <nav class="nav container" id="nav">
-        <a href="index.html">
+    <header>
+        <!-- Main Navbar -->
+        <nav class="navbar">
+          <a href="index.html" class="logo">
             <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
-        </a>
-        <ul class="list" id="navbar">
+          </a>
+      
+          <!-- Web Navigation Links -->
+          <ul class="web-nav">
             <li><a href="/index.html">Home</a></li>
             <li><a href="all-jackets.html">All Jackets</a></li>
             <li><a href="mens-jackets.html">Men's Jackets</a></li>
@@ -26,48 +26,34 @@
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-        </ul>
-        
-        <!-- Hidden Menu -->
-        <div id="hidden-menu" class="hidden-menu">
-            <ul class="list" id="hidden-navbar">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="all-jackets.html">All Jackets</a></li>
-                <li><a href="mens-jackets.html">Men's Jackets</a></li>
-                <li><a href="womens-jackets.html">Women's Jackets</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-            </ul>
+          </ul>
+      
+          <!-- Hamburger Menu Icon -->
+          <div class="ham-menu" id="ham-menu-icon">
+            <div class="ham-menu-icon" id="ham-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <!-- Add the hamburger menu icon on the right -->
-        <div id="menu-icon" class="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
-</header>
-
+        </nav>
+      
+        <!-- Hamburger Navigation -->
+        <nav class="ham-nav" id="hidden-menu">
+          <ul class="links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="all-jackets.html">All Jackets</a></li>
+            <li><a href="mens-jackets.html">Men's Jackets</a></li>
+            <li><a href="womens-jackets.html">Women's Jackets</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+          </ul>
+         
+        </nav>
+      </header>
+   
 <main>
-    <!-- Hero Section -->
-    <section class="button-container">
-      <div class="hero-content">
-          <h1>Pushing the comfort zone</h1>
-          <!-- Add a div container for both buttons -->
-          <div class="button-container">
-              <a href="all-jackets.html">
-                  <button id="my-button" type="button">Shop Now</button>
-              </a>
-              <a href="special_offers.html">
-                  <button id="special-button" type="button">Special Offers</button>
-              </a>
-          </div>
-      </div>
-      <div class="hero-image">
-          <img src="../images/hero.jpg" alt="Pushing the comfort zone">
-      </div>
-  </section>
   
   <section>
     <!-- Loading spinner -->
@@ -149,6 +135,8 @@
 
 <script type="module" src="js/cart.js"></script>
 <script type="module" src="./js/product-list.js"></script>
+<script type="module" src="js/menu.js" defer></script>
+
 
 </body>
 </html>
