@@ -7,7 +7,7 @@
     <title>Rainy-days | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/03d5a1f99a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/ui1.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
  <!-- Hotjar Tracking Code for https://snazzy-peony-dce120.netlify.app/ -->
  <script>
@@ -21,49 +21,48 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <body>
-  <!-- Header Section -->
-<header class="header" id="header">
-    <!-- Navigation Menu -->
-    <nav class="nav container" id="nav">
-        <a href="index.html">
+    <header>
+        <!-- Main Navbar -->
+        <nav class="navbar">
+          <a href="index.html" class="logo">
             <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
-        </a>
-        <ul class="list" id="navbar">
+          </a>
+      
+          <!-- Web Navigation Links -->
+          <ul class="web-nav">
             <li><a href="/index.html">Home</a></li>
-                    <li><a href="all-jackets.html">All Jackets</a></li>
-                    <li><a href="mens-jackets.html">Men's Jackets</a></li>
-                    <li><a href="womens-jackets.html">Women's Jackets</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                <!-- Add the cart quantity element here -->
-         <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-        </ul>
-       
-                 
-        
-        <!-- Hidden Menu -->
-        <div id="hidden-menu" class="hidden-menu">
-            <ul class="list" id="hidden-navbar">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="all-jackets.html">All Jackets</a></li>
-                <li><a href="mens-jackets.html">Men's Jackets</a></li>
-                <li><a href="womens-jackets.html">Women's Jackets</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            <!-- Add the cart quantity element here -->
+            <li><a href="all-jackets.html">All Jackets</a></li>
+            <li><a href="mens-jackets.html">Men's Jackets</a></li>
+            <li><a href="womens-jackets.html">Women's Jackets</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-            </ul>
-           
+          </ul>
+      
+          <!-- Hamburger Menu Icon -->
+          <div class="ham-menu" id="ham-menu-icon">
+            <div class="ham-menu-icon" id="ham-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <!-- Add the hamburger menu icon on the right -->
-        <div id="menu-icon" class="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
-</header>
+        </nav>
+      
+        <!-- Hamburger Navigation -->
+        <nav class="ham-nav" id="hidden-menu">
+          <ul class="links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="all-jackets.html">All Jackets</a></li>
+            <li><a href="mens-jackets.html">Men's Jackets</a></li>
+            <li><a href="womens-jackets.html">Women's Jackets</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+          </ul>
+        </nav>
+      </header>
+      
 <main>
  <!-- Hero Section -->
     <section class="button-container">
@@ -104,7 +103,9 @@
                     </div>
                     <div class="cardtext">
                         <h3>All jackets</h3>
-                        Stain resistant, climbing, smells like camping and comfortable.
+                        <p>Stain resistant, climbing, smells like camping and comfortable. </p>
+
+                        
                     </div>
                 </a>
             </div>
@@ -115,7 +116,7 @@
                     </div>
                     <div class="cardtext">
                         <h3>Women's Jackets</h3>
-                        High-quality outdoor gear for all your adventures.
+                       <p> High-quality outdoor gear for all your adventures.</p>
                     </div>
                 </a>
             </div>
@@ -126,7 +127,7 @@
                     </div>
                     <div class="cardtext">
                         <h3>Men's Jackets</h3>
-                        Stay warm and dry with our latest waterproof jackets.
+                        <p>Stay warm and dry with our latest waterproof jackets.</p>
                     </div>
                 </a>
             </div>
@@ -206,9 +207,8 @@
         </div>
     </footer>
 
-    <script type="module" src="js/cart.js"></script>   
-        
-    <script type="module" src="./js/product-list.js"></script> 
+    <script type="module" src="js/cart.js" defer></script>   
+
     <script type="module" src="js/menu.js" defer></script>
 </body>
 </html>
