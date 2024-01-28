@@ -7,7 +7,7 @@
     <title>Rainydays | Purchase</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/03d5a1f99a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/ui1.css" />
+ 
     <link rel="stylesheet" href="./css/purchase.css" />
 </head>
  <!-- Hotjar Tracking Code for https://snazzy-peony-dce120.netlify.app/ -->
@@ -22,49 +22,49 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <body>
-  <!-- Header Section -->
-<header class="header" id="header">
-    <!-- Navigation Menu -->
-    <nav class="nav container" id="nav">
-        <a href="index.html">
-            <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
-        </a>
-        <ul class="list" id="navbar">
-            <li><a href="/index.html">Home</a></li>
-                    <li><a href="all-jackets.html">All Jackets</a></li>
-                    <li><a href="mens-jackets.html">Men's Jackets</a></li>
-                    <li><a href="womens-jackets.html">Women's Jackets</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                <!-- Add the cart quantity element here -->
-         <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-        </ul>
-       
-                 
-        
-        <!-- Hidden Menu -->
-        <div id="hidden-menu" class="hidden-menu">
-            <ul class="list" id="hidden-navbar">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="all-jackets.html">All Jackets</a></li>
-                <li><a href="mens-jackets.html">Men's Jackets</a></li>
-                <li><a href="womens-jackets.html">Women's Jackets</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            <!-- Add the cart quantity element here -->
-            <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-            </ul>
-           
+<!-- Header Section -->
+<header>
+    <!-- Main Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+      </a>
+  
+      <!-- Web Navigation Links -->
+      <ul class="web-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="all-jackets.html">All Jackets</a></li>
+        <li><a href="mens-jackets.html">Men's Jackets</a></li>
+        <li><a href="womens-jackets.html">Women's Jackets</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+      </ul>
+  
+      <!-- Hamburger Menu Icon -->
+      <div class="ham-menu" id="ham-menu-icon">
+        <div class="ham-menu-icon" id="ham-icon">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <!-- Add the hamburger menu icon on the right -->
-        <div id="menu-icon" class="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+    </div>
     </nav>
-</header>
+  
+    <!-- Hamburger Navigation -->
+    <nav class="ham-nav" id="hidden-menu">
+      <ul class="links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="all-jackets.html">All Jackets</a></li>
+        <li><a href="mens-jackets.html">Men's Jackets</a></li>
+        <li><a href="womens-jackets.html">Women's Jackets</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
+      </ul>
+    </nav>
+  </header>
+
 <main>
  <!--Purchase main section Left side form-->
   <section class="checkout-section container">
@@ -187,5 +187,6 @@
     <script type="module" src="js/cart.js"></script>   
         
     <script type="module" src="./js/product-list.js"></script> 
+    <script type="module" src="js/menu.js" defer></script>
 </body>
 </html>
