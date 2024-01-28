@@ -76,64 +76,112 @@ h1 {
 
 
 
-/* Style the menu icon */
-.menu-icon {
-    display: none; 
-    cursor: pointer;
-}
+/* General Styles */
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-}
-
-/* Style the hidden menu */
-/* CSS for the hamburger menu icon */
-.menu-icon {
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: lightcoral;
+    height: 75px;
+    padding: 0 25px;
+  }
+  
+  header .navbar .web-nav {
+    margin-left: auto; /* Push the navigation to the right */
+    display: flex;
+  }
+  header .navbar .web-nav li {
+    padding-left: 20px; /* Space between links */
+  }
+  header .ham-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    z-index: 999;
+    background-color: beige;
+    width: 100%;
+    height: calc(100% - 75px);
+  }
+  
+  header .ham-nav .links {
+    height: 100%;
+    background-color: antiquewhite;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end; 
-    cursor: pointer;
-    margin-right: 20px; 
-}
-
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
-    border-radius: 2px;
-    transition: 0.4s;
-}
-
-/* Additional styles for the hidden menu */
-.hidden-menu {
-    display: none;
-    position: absolute;
-    top: 60px; 
-    right: 20px; 
-    background-color: #35424a;
-    color: #fff;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  header .ham-nav .footer {
+    width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    z-index: 1000; 
-}
-
-.hidden-menu.active {
+    background-color: #fff;
+  }
+  
+  header .ham-menu {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+  
+  header .ham-menu .ham-menu-icon span {
+    background-color: #fff;
+    height: 3px;
+    width: 30px;
     display: block;
-}
-
+    margin-bottom: 6px;
+    transition: transform 0.5s ease;
+  }
+  
+  header .ham-menu .ham-menu-icon.change span:nth-child(1) {
+    transform: rotate(-45deg) translate(-7px, 6px);
+  }
+  
+  header .ham-menu .ham-menu-icon.change span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  header .ham-menu .ham-menu-icon.change span:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -6px);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    header .navbar .web-nav {
+      display: none;
+    }
+  
+    header .ham-menu {
+      display: flex;
+    }
+  
+    header .ham-nav.active {
+      display: flex;
+    }
+  }
+  
+  /* Add additional styles as necessary */
 
 /* Add styles for the header */
 
-.header {
-    background-color: var(--background-color);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-}
 
 .container {
     max-width: 1200px;
@@ -145,26 +193,6 @@ h1 {
     height: 60px;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.list {
-    list-style: none;
-    display: flex;
-}
-
-.list li {
-    margin: 0 15px;
-}
-
-.list li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 700;
-}
 
 .hero h4 {
     font-size: 1.4rem;
