@@ -1,22 +1,12 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
-  --light-clr: #fff;
-  --dark-clr: #504f4f;
-  --dark-color: #141313;
-  --color-red-3: #990000;
-  --accent-clr: #ff4f00;
-  --success: #00b55a;
-  --font-clr: #676767;
-  --accent-g-clr: hsla(171, 71%, 26%, 0.781);
-  --font-family: "Merriweather" sans-serif;
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #6c757d; /* Gray */
+  --background-color: #f8f9fa; /* Light Gray */
+  --text-color: #333; /* Dark Gray */
+  --accent-color: #ff6347; /* Tomato Red */
+  --success-color: #00b55a; /* Green */
 
+  --font-family: "Merriweather", sans-serif;
   --font-size-xsm: 1.2rem;
   --font-size-sm: 1.6rem;
   --font-size-md: 2.4rem;
@@ -25,119 +15,15 @@
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-
-  --after-content: "0";
 }
 
-html {
-  /* font-size: 10px; */
-  font-size: 62.5%;
-}
-
+/* Example usage */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family);
 }
 
-ul {
-  list-style: none;
-}
-a {
-  color: var(--dark-clr);
-  text-decoration: none;
-  font: inherit;
-  color: inherit;
-  outline: none;
-}
-
-/* ! REUSABLE CLASSES */
-h1 {
-  font-family: var(--body-font-family);
-  font-size: 3.125rem;
-  line-height: 4rem;
-}
-h2 {
-  font-size: 2.875 rem;
-  line-height: 2.875rem;
-}
-
-h4 {
-  font-size: 1.25 rem;
-}
-h5 {
-  font-weight: 700;
-  font-size: 0.75rem;
-}
-
-p {
-  font-size: var();
-  color: var(--body-font-color);
-  font-weight: 400;
-  margin: 15px 0 20px 0;
-  font-family: var(--body-font-color);
-}
-
-.section-p1 {
-  margin: 40px 80px;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-.logo {
-  width: 12rem;
-}
-
-/* !Menu Toggler START*/
-/* Existing Code */
-a {
-  color: var(--dark-clr);
-  text-decoration: none;
-  font: inherit;
-  color: inherit;
-  outline: none;
-}
-
-/* ! REUSABLE CLASSES */
-h1 {
-  font-family: var(--body-font-family);
-  font-size: 3.125rem;
-  line-height: 4rem;
-}
-h2 {
-  font-size: 2.875rem;
-  line-height: 2.875rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-h5 {
-  font-weight: 700;
-  font-size: 0.75rem;
-}
-
-p {
-  font-size: var(--font-size-sm); /* Please specify the font size value here */
-  color: var(--body-font-color);
-  font-weight: 400;
-  margin: 15px 0 20px 0;
-  font-family: var(--body-font-color);
-}
-
-.section-p1 {
-  margin: 40px 80px;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-.logo {
-  width: 12rem;
-}
-
-/* !Menu Toggler START*/
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -148,186 +34,176 @@ a {
   color: var(--background-color);
 }
 
-/* Style the menu icon */
-.menu-icon {
-  display: none;
-  cursor: pointer;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-}
-
-/* Style the hidden menu */
-/* CSS for the hamburger menu icon */
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 3px 0;
-  border-radius: 2px;
-  transition: 0.4s;
-}
-
-/* Additional styles for the hidden menu */
-.hidden-menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #35424a;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 1000;
-}
-
-.hidden-menu.active {
-  display: block;
-}
-
-/* Media Query to show/hide the menu icon and hidden menu */
-@media only screen and (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav {
-    justify-content: space-between;
-  }
-
-  #navbar {
-    display: none;
-  }
-
-  .active {
-    display: none;
-  }
-
-  /* Show the hidden menu when the menu icon is clicked */
-  #menu-icon.active ~ #hidden-menu {
-    display: block;
-  }
-}
-
-/* !HEADER START ------------------*/
-#nav {
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px;
-  background: var(--light-clr);
-
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#navbar li {
+ul {
   list-style: none;
-  padding: 0 20px;
-  position: relative;
 }
 
-#navbar li a {
+a {
   text-decoration: none;
-  font-size: var(--font-size-sm);
-  font-weight: 400;
-  font-family: var(--font-family);
-  color: var(--accent-color);
-  transition: 0.3s ease;
+  color: black;
 }
 
-/*!-----!!Contact page  section------ */
-#about-header {
-  background: linear-gradient(rgba(1, 3, 0, 0), rgba(1, 3, 0, 24)),
-    url("../images/outdoor2.jpg");
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background-color: lightcoral;
+  height: 75px;
+  padding: 0 25px;
+}
 
-  height: 30vh;
+header .navbar .web-nav {
+  margin-left: auto; /* Push the navigation to the right */
+  display: flex;
+}
+header .navbar .web-nav li {
+  padding-left: 20px; /* Space between links */
+}
+header .ham-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 75px;
+  z-index: 999;
+  background-color: beige;
   width: 100%;
-  background-size: cover;
-  background-position: top 50% right 0;
-  padding: 14px;
+  height: calc(100% - 75px);
+}
+
+header .ham-nav .links {
+  height: 100%;
+  background-color: antiquewhite;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+header .ham-nav .footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
+
+header .ham-menu {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+}
+
+header .ham-menu .ham-menu-icon span {
+  background-color: #fff;
+  height: 3px;
+  width: 30px;
+  display: block;
+  margin-bottom: 6px;
+  transition: transform 0.5s ease;
+}
+
+header .ham-menu .ham-menu-icon.change span:nth-child(1) {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+header .ham-menu .ham-menu-icon.change span:nth-child(2) {
+  opacity: 0;
+}
+
+header .ham-menu .ham-menu-icon.change span:nth-child(3) {
+  transform: rotate(45deg) translate(-7px, -6px);
+}
+
+
+/* Add additional styles as necessary */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 60px;
+}
+
+
+
+
+/* Style the newsletter section */
+#newsletter {
+  background: #35424a;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#about-header h2 {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#newsletter h1 {
+  float: left;
+  margin-right: 20px; /* Add margin between the h1 and the form */
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.button_1 {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to the button */
+.button_1:hover {
+  background-color: #ff4f00;
+}
+
+/* Style the Featured Products Section */
+#featured-products {
+  background-color: #f5f5f5;
+  padding: 40px 0;
   text-align: center;
-  font-size: var(--font-size-lg);
-  font-family: var(--font-family);
-  font-weight: 800;
-  margin: 13px;
-  color: var(--light-clr);
-  text-shadow: rgba(0, 0, 0, 0.04);
 }
 
-#about-head p {
-  text-align: start;
-  font-family: var(--font-family);
-  font-size: var(--font-size-sm);
-  color: var(--dark-clr);
-}
-
-#about-header .blog-text p {
-  font-size: var(--font-size-sm);
-  font-family: var(--font-family);
-  text-align: center;
-}
-
-#about-head {
-  display: flex;
-  align-items: center;
-}
-
-#about-head img {
-  width: 40%;
-  height: auto;
-  background-color: var(--light-color);
-}
-
-#about-head div {
-  padding-left: 40px;
-}
-#about-stores {
-  text-align: center;
-}
-
-#about-stores video {
-  width: 70%;
-  height: 100%;
-  margin: 30px auto 0 auto;
-}
-
-#about-stores .video video {
-  width: 60%;
-  height: 100%;
-  border-radius: 20px;
-}
-
-#about-stores a span {
-  color: var(--accent-clr);
+#featured-products h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 /* Add styles for the footer */
@@ -388,8 +264,110 @@ a {
   padding-top: 20px;
 }
 
+/*!-----!!Contact page section------ */
+#about-header {
+  background: linear-gradient(rgba(1, 3, 0, 0), rgba(1, 3, 0, 24)),
+    url("../images/outdoor2.jpg");
+
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 50% right 0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-header h2 {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family);
+  font-weight: 800;
+  margin: 13px;
+  color: var(--light-clr);
+  text-shadow: rgba(0, 0, 0, 0.04);
+}
 
 
 
+#about-header .blog-text h1 {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  color: var(--background-color);
+  text-align: center;
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the About Section */
+
+/* Style the About Section */
+#about-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 2rem; /* Adjust the font size as needed */
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.about-content p {
+  font-size: 1.4rem; 
+  line-height: 1.6; 
+  margin-bottom: 20px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+/* Media Query to show/hide the menu icon and hidden menu */
+@media only screen and (max-width: 768px) {
+  header .navbar .web-nav {
+    display: none;
+  }
+
+  header .ham-menu {
+    display: flex;
+  }
+
+  header .ham-nav.active {
+    display: flex;
+  }
+  .email-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 
