@@ -106,8 +106,11 @@
      <!--purchase order summary Right side-->
   <div class="checkoutsummary">
     <div class="purchasesummary"><img src="images/RainyDays_Jacket13.jpeg" alt="Patagonia Jacket" class="checkoutitem1"><div><h1>Black Jacket</h1>Industrial Green Hiking Jacket.<br><h1>50$</h1></div></div>
-   
-    <div class="priceinfo">  
+    <div class="priceinfo">
+      <!-- Remove this static price element -->
+  </div>
+  
+    <!-- <div class="priceinfo">  
    
      <div class="Orderdet">
        Item Total<br>
@@ -118,7 +121,7 @@
     <div class="priceinfo">
       <div class="Ordertotal"> Order Total: </div>
       <div class="Ordertotal"><b>69$</b></div>
-   </div>
+   </div> -->
      <div class="delivery">
        <div><input type="radio" id="delivery" name="delivery" placeholder="delivery"> <img src="images/truck.png" alt="Truck">Delivery estimated 3 / 5 workdays</div>
        
@@ -185,7 +188,7 @@
     </footer>
 
     <script type="module" src="js/cart.js"></script>   
-        
+    <script type="module" src="./js/priceinfo.js"></script> 
     <script type="module" src="./js/product-list.js"></script> 
     <script type="module" src="js/menu.js" defer></script>
 </body>
