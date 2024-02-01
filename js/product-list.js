@@ -1,436 +1,171 @@
+// Import cart-related functions and variables
+import cart, { removeFromCart, renderCartQuantity } from './cart.js';
 
-
-// Import necessary functions from cart.js
-import { addToCart, renderCartQuantity, initializeCart } from './cart.js';
-
-// Call initializeCart to initialize the cart
-initializeCart();
-
-// Define your WooCommerce API URL with consumer_key and consumer_secret
 const consumerKey = 'ck_47853e2df96ba65807d856cfe84cc229618f2ba6';
 const consumerSecret = 'cs_d257f6fd840118c8fe85ac0545c5f535c1d73cb3';
 
 const baseUrl = `https://startwebsolution.com/wp-json/wc/v3/products?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}`;
 
-// Function to fetch products from WooCommerce API
+// Check if the page is the checkout page
+const isCheckoutPage = window.location.href.includes('checkout.html');
+
 async function getProducts(url) {
-  try {
-    const response = await fetch(url);
+    try {
+        const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const products = await response.json();
+        return products;
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        return [];
     }
-
-    const products = await response.json();
-    return products;
-  } catch (error) {
-    console.error('Error:', error);
-    return [];
-  }
 }
 
-// Function to filter and display products
 function filterAndDisplayProducts(products) {
-  const productsGridContainer = document.querySelector('.products-image-grid');
-  const searchInput = document.querySelector('#search-input');
-  const featuredCheckbox = document.querySelector('#featured-checkbox');
-  const premiumCheckbox = document.querySelector('#premium-checkbox');
-  const simpleCheckbox = document.querySelector('#simple-checkbox');
-  const productsPerPageSelect = document.querySelector('#products-per-page');
+    try {
+        const productsGridContainer = document.querySelector('.products-image-grid');
 
-  const featuredSelected = featuredCheckbox.checked;
-  const premiumSelected = premiumCheckbox.checked;
-  const simpleSelected = simpleCheckbox.checked;
-  const perPageSelected = parseInt(productsPerPageSelect.value);
+        if (!productsGridContainer) {
+            console.error('Products grid container not found.');
+            return;
+        }
 
-  productsGridContainer.innerHTML = '';
+        // Clear the existing content
+        productsGridContainer.innerHTML = '';
 
-  products.slice(0, perPageSelected).forEach((product) => {
-    const matchesSearch = product.name.toLowerCase().includes(searchInput.value.toLowerCase());
-    const matchesFeatured = !featuredSelected || product.featured;
-    const matchesPremium = !premiumSelected || product.premium;
-    const matchesSimple = !simpleSelected || product.simple;
+        products.forEach((product) => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('product');
 
-    if (matchesSearch && matchesFeatured && matchesPremium && matchesSimple) {
-      const productElement = createProductElement(product);
-      productsGridContainer.appendChild(productElement);
+            const imageElement = document.createElement('img');
+            imageElement.src = product.images[0].src;
+            imageElement.alt = product.name;
+
+            const productNameElement = document.createElement('h3');
+            productNameElement.textContent = product.name;
+
+            const productPriceElement = document.createElement('p');
+            productPriceElement.textContent = `Price: $${product.price}`;
+
+            const productDescriptionElement = document.createElement('p');
+            if (product.description) {
+                productDescriptionElement.innerHTML = product.description;
+            }
+
+            const actionButton = document.createElement('button');
+            if (isCheckoutPage) {
+                // On the checkout page, display a "Remove" button
+                actionButton.textContent = 'Remove';
+                actionButton.style.backgroundColor = 'red';
+                actionButton.style.color = 'white';
+                actionButton.style.padding = '5px 10px'; 
+                actionButton.style.marginBottom = '10px'; 
+                actionButton.style.marginTop = '15px'; 
+                actionButton.addEventListener('click', () => {
+                    // Call the removeFromCart function here
+                    removeFromCart(product.id);
+                    // Remove the product element from the page
+                    productElement.remove();
+                    // Update the cart quantity display
+                    renderCartQuantity();
+                    // Remove the item from local storage
+                    const updatedCart = cart.filter((item) => item.productId !== product.id);
+                    localStorage.setItem('cart', JSON.stringify(updatedCart));
+                });
+            } else {
+                // On other pages, display the "View the Product" button
+                actionButton.textContent = 'View the Product';
+                actionButton.style.backgroundColor = 'blue';
+                actionButton.style.color = 'white';
+                actionButton.style.marginBottom = '10px'; 
+                actionButton.style.marginTop = '15px'; 
+                actionButton.style.padding = '10px 20px'; // Add padding here
+                actionButton.addEventListener('click', () => {
+                    window.location.href = `single-product.html?product_id=${product.id}`;
+                });
+            }
+
+            productElement.appendChild(imageElement);
+            productElement.appendChild(productNameElement);
+            productElement.appendChild(productPriceElement);
+            productElement.appendChild(productDescriptionElement);
+            productElement.appendChild(actionButton);
+
+            productsGridContainer.appendChild(productElement);
+        });
+    } catch (error) {
+        console.error('Error filtering and displaying products:', error);
     }
-  });
-}
-
-// Function to create a product element
-function createProductElement(product) {
-  const productElement = document.createElement('div');
-  productElement.classList.add('product');
-
-  const imageElement = document.createElement('img');
-  imageElement.src = product.images[0].src;
-  imageElement.alt = product.name;
-
-  const productNameElement = document.createElement('h3');
-  productNameElement.textContent = product.name;
-
-  const productPriceElement = document.createElement('p');
-  productPriceElement.textContent = `Price: $${product.price}`;
-
-  const productDescriptionElement = document.createElement('p');
-  if (product.description) {
-    productDescriptionElement.innerHTML = product.description;
-  }
-
-  // Replace "Add to cart" with "View the product" and update click functionality
-  const viewProductButton = document.createElement('button');
-  viewProductButton.classList.add('add-to-cart-button', 'js-add-to-cart');
-  viewProductButton.dataset.productId = product.id;
-  viewProductButton.textContent = 'View the product';
-
-  viewProductButton.addEventListener('click', () => {
-    // Redirect to single product info page after viewing
-    const singleProductURL = `single-product.html?id=${product.id}`;
-    window.location.href = singleProductURL;
-  });
-
-  productElement.appendChild(imageElement);
-  productElement.appendChild(productNameElement);
-  productElement.appendChild(productPriceElement);
-  productElement.appendChild(productDescriptionElement);
-  productElement.appendChild(viewProductButton);
-
-  return productElement;
 }
 
 // Function to handle checkbox and search input changes
 function handleFilterAndSearch() {
-  const loader = document.querySelector('.loader');
-  loader.style.display = 'block';
+    try {
+        // Check if the loader element exists
+        const loader = document.querySelector('.loader');
 
-  getProducts(baseUrl)
-    .then((products) => {
-      loader.style.display = 'none';
-      filterAndDisplayProducts(products);
-    })
-    .catch((error) => {
-      console.error('Error fetching products:', error);
-    });
+        if (loader) {
+            loader.style.display = 'block';
+
+            // Get the search input value
+            const searchInput = document.querySelector('#search-input');
+            const searchQuery = searchInput ? searchInput.value.trim() : '';
+
+            // Construct the URL with the search query
+            const searchUrl = searchQuery
+                ? `${baseUrl}&search=${encodeURIComponent(searchQuery)}`
+                : baseUrl;
+
+            getProducts(searchUrl)
+                .then((products) => {
+                    if (loader) {
+                        loader.style.display = 'none';
+                    }
+                    filterAndDisplayProducts(products);
+                })
+                .catch((error) => {
+                    console.error('Error fetching products:', error);
+                    if (loader) {
+                        loader.style.display = 'none';
+                    }
+                });
+        } else {
+            console.error('Loader element not found.');
+        }
+    } catch (error) {
+        console.error('Error in handleFilterAndSearch:', error);
+    }
 }
 
-// Initial load and setup
-handleFilterAndSearch();
+// Add event listener for DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        handleFilterAndSearch();
 
-// Add event listeners for changes in checkboxes and search input
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const searchInput = document.querySelector('#search-input');
-const productsPerPageSelect = document.querySelector('#products-per-page');
+        const searchInput = document.querySelector('#search-input');
+        const featuredCheckbox = document.querySelector('#featured-checkbox');
+        const premiumCheckbox = document.querySelector('#premium-checkbox');
+        const simpleCheckbox = document.querySelector('#simple-checkbox');
+        const productsPerPageSelect = document.querySelector('#products-per-page');
 
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener('change', handleFilterAndSearch);
+        if (searchInput) {
+            searchInput.addEventListener('input', handleFilterAndSearch);
+        }
+
+        if (featuredCheckbox || premiumCheckbox || simpleCheckbox || productsPerPageSelect) {
+            const checkboxes = [featuredCheckbox, premiumCheckbox, simpleCheckbox, productsPerPageSelect];
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener('change', handleFilterAndSearch);
+            });
+        }
+    } catch (error) {
+        console.error('Error in DOMContentLoaded event:', error);
+    }
 });
 
-searchInput.addEventListener('input', handleFilterAndSearch);
-productsPerPageSelect.addEventListener('change', handleFilterAndSearch);
-
-// Render initial cart quantity
 renderCartQuantity();
 
-// // Import necessary functions from cart.js
-// import { addToCart, renderCartQuantity, initializeCart } from './cart.js';
-
-// // Call initializeCart to initialize the cart
-// initializeCart();
-
-// // Define your WooCommerce API URL with consumer_key and consumer_secret
-// const consumerKey = 'ck_47853e2df96ba65807d856cfe84cc229618f2ba6';
-// const consumerSecret = 'cs_d257f6fd840118c8fe85ac0545c5f535c1d73cb3';
-
-// const baseUrl = `https://startwebsolution.com/wp-json/wc/v3/products?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}`;
-
-// // Function to fetch products from WooCommerce API
-// async function getProducts(url) {
-//   try {
-//     const response = await fetch(url);
-
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! Status: ${response.status}`);
-//     }
-
-//     const products = await response.json();
-//     return products;
-//   } catch (error) {
-//     console.error('Error:', error);
-//     return [];
-//   }
-// }
-
-// // Function to filter and display products
-// function filterAndDisplayProducts(products) {
-//   const productsGridContainer = document.querySelector('.products-image-grid');
-//   const searchInput = document.querySelector('#search-input');
-//   const featuredCheckbox = document.querySelector('#featured-checkbox');
-//   const premiumCheckbox = document.querySelector('#premium-checkbox');
-//   const simpleCheckbox = document.querySelector('#simple-checkbox');
-//   const productsPerPageSelect = document.querySelector('#products-per-page');
-
-//   const featuredSelected = featuredCheckbox.checked;
-//   const premiumSelected = premiumCheckbox.checked;
-//   const simpleSelected = simpleCheckbox.checked;
-//   const perPageSelected = parseInt(productsPerPageSelect.value);
-
-//   productsGridContainer.innerHTML = '';
-
-//   products.slice(0, perPageSelected).forEach((product) => {
-//     const matchesSearch = product.name.toLowerCase().includes(searchInput.value.toLowerCase());
-//     const matchesFeatured = !featuredSelected || product.featured;
-//     const matchesPremium = !premiumSelected || product.premium;
-//     const matchesSimple = !simpleSelected || product.simple;
-
-//     if (matchesSearch && matchesFeatured && matchesPremium && matchesSimple) {
-//       const productElement = createProductElement(product);
-//       productsGridContainer.appendChild(productElement);
-//     }
-//   });
-// }
-
-// // Function to create a product element
-// function createProductElement(product) {
-//   const productElement = document.createElement('div');
-//   productElement.classList.add('product');
-
-//   const imageElement = document.createElement('img');
-//   imageElement.src = product.images[0].src;
-//   imageElement.alt = product.name;
-
-//   const productNameElement = document.createElement('h3');
-//   productNameElement.textContent = product.name;
-
-//   const productPriceElement = document.createElement('p');
-//   productPriceElement.textContent = `Price: $${product.price}`;
-
-//   const productDescriptionElement = document.createElement('p');
-//   if (product.description) {
-//     productDescriptionElement.innerHTML = product.description;
-//   }
-
-//   const addToCartGrid = document.createElement('div');
-//   addToCartGrid.classList.add('add-to-cart-grid');
-
-//   const addToCartButton = document.createElement('button');
-//   addToCartButton.classList.add('add-to-cart-button', 'js-add-to-cart');
-//   addToCartButton.dataset.productId = product.id;
-//   addToCartButton.textContent = 'Add to cart';
-
-//   addToCartButton.addEventListener('click', () => {
-//     addToCart(product.id);
-//     renderCartQuantity();
-//     console.log('Button clicked:', product.id);
-//   });
-
-//   const addedToCartMessage = document.createElement('div');
-//   addedToCartMessage.classList.add('added-to-cart-message');
-//   addedToCartMessage.dataset.productId = product.id;
-//   addedToCartMessage.textContent = ' ✔ Added to cart!';
-
-//   addToCartGrid.appendChild(addToCartButton);
-//   addToCartGrid.appendChild(addedToCartMessage);
-
-//   productElement.appendChild(imageElement);
-//   productElement.appendChild(productNameElement);
-//   productElement.appendChild(productPriceElement);
-//   productElement.appendChild(productDescriptionElement);
-//   productElement.appendChild(addToCartGrid);
-
-//   return productElement;
-// }
-
-// // Function to handle checkbox and search input changes
-// function handleFilterAndSearch() {
-//   const loader = document.querySelector('.loader');
-//   loader.style.display = 'block';
-
-//   getProducts(baseUrl)
-//     .then((products) => {
-//       loader.style.display = 'none';
-//       filterAndDisplayProducts(products);
-//     })
-//     .catch((error) => {
-//       console.error('Error fetching products:', error);
-//     });
-// }
-
-// // Initial load and setup
-// handleFilterAndSearch();
-
-// // Add event listeners for changes in checkboxes and search input
-// const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-// const searchInput = document.querySelector('#search-input');
-// const productsPerPageSelect = document.querySelector('#products-per-page');
-
-// checkboxes.forEach((checkbox) => {
-//   checkbox.addEventListener('change', handleFilterAndSearch);
-// });
-
-// searchInput.addEventListener('input', handleFilterAndSearch);
-// productsPerPageSelect.addEventListener('change', handleFilterAndSearch);
-
-// // Render initial cart quantity
-// renderCartQuantity();
-
-
-
-// const baseUrl = 'https://startwebsolution.com/wp-json/wc/store/products?per_page=20&_embed';
-
-
-// // Function to filter products based on checkboxes and search input
-// function filterAndDisplayProducts(products) {
-//     const productsGridContainer = document.querySelector('.products-image-grid');
-//     const searchInput = document.querySelector('#search-input');
-//     const featuredCheckbox = document.querySelector('#featured-checkbox');
-//     const premiumCheckbox = document.querySelector('#premium-checkbox');
-//     const simpleCheckbox = document.querySelector('#simple-checkbox');
-//     const productsPerPageSelect = document.querySelector('#products-per-page');
-
-//     // Get selected options from checkboxes and select element
-//     const featuredSelected = featuredCheckbox.checked;
-//     const premiumSelected = premiumCheckbox.checked;
-//     const simpleSelected = simpleCheckbox.checked;
-//     const perPageSelected = parseInt(productsPerPageSelect.value);
-
-//     // Clear any existing content in the container
-//     productsGridContainer.innerHTML = '';
-
-//     // Filter and display products
-//     products.slice(0, perPageSelected).forEach((product) => {
-//         // Check if the product matches the filter criteria
-//         const matchesSearch = product.name.toLowerCase().includes(searchInput.value.toLowerCase());
-//         const matchesFeatured = !featuredSelected || product.featured;
-//         const matchesPremium = !premiumSelected || product.premium;
-//         const matchesSimple = !simpleSelected || product.simple;
-
-//         if (matchesSearch && matchesFeatured && matchesPremium && matchesSimple) {
-//             const productElement = document.createElement('div');
-//             productElement.classList.add('product');
-
-//             // Create an image element for the product's image
-//             const imageElement = document.createElement('img');
-//             imageElement.src = product.images[0].src; // Assuming the first image is used
-//             imageElement.alt = product.name; // Set the alt text for accessibility
-
-//             // Create other product information elements as needed
-//             const productNameElement = document.createElement('h3');
-//             productNameElement.textContent = product.name;
-
-//             const productPriceElement = document.createElement('p');
-//             productPriceElement.textContent = `Price: ${product.prices.price}`;
-
-        
-
-//             // Format the description based on your API response structure
-//             const productDescriptionElement = document.createElement('p');
-//             if (product.description) {
-//                 productDescriptionElement.innerHTML = product.description;
-//             }
-
-//             // Append the image and other product information to the product element
-//             productElement.appendChild(imageElement);
-//             productElement.appendChild(productNameElement);
-//             productElement.appendChild(productPriceElement);
-//             productElement.appendChild(productDescriptionElement);
-
-//             // Append the product element to the product grid container
-//             productsGridContainer.appendChild(productElement);
-//         }
-//     });
-// }
-
-// // Function to handle checkbox and search input changes
-// // Function to handle checkbox and search input changes
-// function handleFilterAndSearch() {
-//     // Show the loading spinner initially
-//     const loader = document.querySelector('.loader');
-//     loader.style.display = 'block';
-
-//     // Fetch products and apply filtering/display
-//     getProducts(baseUrl).then((products) => {
-//         // Hide the loading spinner once the data is ready
-//         loader.style.display = 'none';
-
-//         filterAndDisplayProducts(products);
-
-//         // Add event listeners for changes in checkboxes and search input
-//         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-//         const searchInput = document.querySelector('#search-input');
-//         const productsPerPageSelect = document.querySelector('#products-per-page');
-
-//         checkboxes.forEach((checkbox) => {
-//             checkbox.addEventListener('change', () => {
-//                 filterAndDisplayProducts(products);
-//             });
-//         });
-
-//         searchInput.addEventListener('input', () => {
-//             filterAndDisplayProducts(products);
-//         });
-
-//         productsPerPageSelect.addEventListener('change', () => {
-//             filterAndDisplayProducts(products);
-//         });
-//     });
-// }
-
-// // Function to fetch products
-// async function getProducts(url) {
-//     try {
-//         const response = await fetch(url);
-
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         }
-
-//         const products = await response.json();
-//         return products;
-//     } catch (error) {
-//         console.error('Error:', error);
-//         return [];
-//     }
-// }
-
-// // Initial load and setup
-// handleFilterAndSearch();
-
-
-
-// // 
-// // Initialize an empty cart array to store selected products
-// let cart = [];
-
-// // Function to handle "Add to Cart" button clicks
-// function handleAddToCartClick(event) {
-//     if (event.target.classList.contains('add-to-cart-button')) {
-//         const productId = event.target.getAttribute('data-product-id');
-//         const productName = event.target.getAttribute('data-product-name');
-//         const productPrice = parseFloat(event.target.getAttribute('data-product-price'));
-
-//         // Check if the product is already in the cart
-//         const existingProduct = cart.find((product) => product.id === productId);
-
-//         if (existingProduct) {
-//             // If the product is in the cart, update the quantity
-//             existingProduct.quantity++;
-//         } else {
-//             // If the product is not in the cart, add it
-//             cart.push({
-//                 id: productId,
-//                 name: productName,
-//                 price: productPrice,
-//                 quantity: 1,
-//             });
-//         }
-
-//         // You can update the cart UI or save the cart to localStorage here
-//         // For now, let's log the updated cart to the console
-//         console.log('Updated Cart:', cart);
-//     }
-// }
-
-// // Add an event listener to the product container to handle button clicks
-// const productsGridContainer = document.querySelector('.products-image-grid');
-// productsGridContainer.addEventListener('click', handleAddToCartClick);
