@@ -14,7 +14,7 @@
         <!-- Main Navbar -->
         <nav class="navbar">
           <a href="index.html" class="logo">
-            <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+            <img src="images/RainyDays_Logo.png" class="logo" alt="logo photo" />
           </a>
       
           <!-- Web Navigation Links -->
@@ -53,61 +53,65 @@
         </nav>
       </header>
    
-<main>
-  
-  <section>
-    <!-- Loading spinner -->
-    <div class="loader"></div>
+      <main>
+        <section>
+            <!-- Loading spinner -->
+            <div class="loader"></div>
+    
+            <!-- Featured Products Title -->
+            <div class="featured-title">
+                <h2>Featured Jackets</h2>
+            </div>
+    
+            <!-- Search and Pagination Options -->
+            <div class="search-and-pagination">
+                <!-- Input field for searching products -->
+                <input type="text" id="search-input" placeholder="Search products">
+    
+                <!-- Number of products per page dropdown -->
+                <label for="products-per-page">Number per page:</label>
+                <select id="products-per-page">
+                    <option value="10">One</option>
+                    <option value="20">Two</option>
+                    <option value="30">Three</option>
+                    <!-- Add more options as needed -->
+                </select>
+    
+                <!-- Featured checkbox -->
+                <label>
+                    <input type="checkbox" id="featured-checkbox"> Featured Products
+                </label>
+    
+                <!-- Premium checkbox -->
+                <label>
+                    <input type="checkbox" id="premium-checkbox"> Premium
+                </label>
+    
+                <!-- Simple checkbox -->
+                <label>
+                    <input type="checkbox" id="simple-checkbox"> Simple
+                </label>
+            </div>
+    
+            
+            <!-- Container for Product Grid (populated dynamically with JavaScript) -->
+           <div id="categoryA" class="product-container products-image-grid loader">
+           <div class="products-image-grid">
+           <!-- Your product elements go here -->
+      </div>
+  </div>
 
-    <!-- Featured Products Title -->
-    <div class="featured-title">
-        <h2>Featured Jackets</h2>
-    </div>
-
-    <!-- Search and Pagination Options -->
-    <div class="search-and-pagination">
-        <!-- Search input -->
-        <input type="text" id="search-input" placeholder="Search products">
-        
-        <!-- Number of products per page dropdown -->
-        <label for="products-per-page">Number per page:</label>
-        <select id="products-per-page">
-            <option value="10">One</option>
-            <option value="20">Two</option>
-            <option value="30">Three</option>
-            <!-- Add more options as needed -->
-        </select>
-
-        <!-- Featured checkbox -->
-        <label>
-            <input type="checkbox" id="featured-checkbox"> Featured
-        </label>
-
-        <!-- Premium checkbox -->
-        <label>
-            <input type="checkbox" id="premium-checkbox"> Premium
-        </label>
-
-        <!-- Simple checkbox -->
-        <label>
-            <input type="checkbox" id="simple-checkbox"> Simple
-        </label>
-    </div>
-  </section>
-  <section>
-    <!-- Container for Product Grid (populated dynamically with JavaScript) -->
- <div id="categoryA" class="product-container products-image-grid loader">
-
-</div>
-</section>
-</main>
-
+            
+   </section>
+    </main>
+    
+      
 <!-- Footer Section -->
 <footer id="footer" class="section-p1">
     <div class="footer-content container">
         <div class="footer-logo">
             <a href="index.html">
-                <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+                <img src="images/RainyDays_Logo.png" class="logo" alt="logo photo" />
             </a>
         </div>
         <div class="footer-links">
@@ -136,7 +140,6 @@
 <script type="module" src="js/cart.js"></script>
 <script type="module" src="./js/product-list.js"></script>
 <script type="module" src="js/menu.js" defer></script>
-
 
 </body>
 </html>
