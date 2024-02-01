@@ -17,6 +17,11 @@
     --font-weight-bold: 700;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
 /* Example usage */
 body {
     background-color: var(--background-color);
@@ -35,14 +40,9 @@ a {
 }
 
 
-/* Style the menu icon */
 
 /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
+
   ul {
     list-style: none;
   }
@@ -191,16 +191,20 @@ a {
 }
 
 /* Style for the remove button */
-.product .remove button {
-    background-color: #007bff;
-    color: #fff;
+
+.remove-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px; /* Added padding */
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
-    min-width: 100px; 
 }
 
+
 /* Media query for responsive design */
+
+
+
 /* CSS for the layout */
 .container {
     display: flex;
@@ -399,14 +403,127 @@ main {
 
 .js-chechout-cart,
 .checkoutsummary {
-    flex-basis: 48%; /* Adjust the width as needed */
+    flex-basis: 48%; 
     background: #fff;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Checkout Summary Styles */
+.checkout-summary {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+.order-summary-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.order-summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summary-item span {
+    flex: 1;
+}
+
+.order-summary-item .item-total-price {
+    font-weight: bold;
+}
+
+.order-summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.order-summary-total span {
+    flex: 1;
+    font-weight: bold;
+}
+
+.order-summary-total .order-total-price {
+    color: #e74c3c; /* Customize the color to your preference */
+    font-size: 1.2em;
+}
+
+/* Payment Methods Styles */
+.payment {
+    border: 1px solid #ccc;
+    padding: 37px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cards div {
+    display: flex;
+    align-items: center;
+}
+
+.cards input[type="radio"] {
+    margin-right: 10px;
+}
+
+.payment-methods-label {
+    font-weight: bold;
+}
+
+.delivery-info {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.terms-of-use {
+    color: #007BFF; /* Customize the color to your preference */
+    text-decoration: none;
+}
+
+.terms-of-use:hover {
+    text-decoration: underline;
+}
+
+.buy {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; 
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+} 
+
 /* Order Summary */
-.Ordersummary h2 {
+/* .Ordersummary h2 {
     margin-bottom: 15px;
 }
 
@@ -424,10 +541,10 @@ main {
 
 .deliveryinfo img {
     margin-right: 10px;
-}
+} */
 
 /* Payment Methods */
-.payment {
+/* .payment {
     margin-top: 20px;
 }
 
@@ -447,23 +564,24 @@ main {
 
 .ToU a {
     color: #06c;
-}
+} */
 
-.cta {
+/* .cta {
     display: block;
     width: 100%;
     padding: 10px;
-    background: #06c;
+    background-color: #007BFF; 
     color: #fff;
     text-align: center;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     text-decoration: none;
 }
 
 .cta:hover {
-    background: #0056b3;
-}
+    background-color: #0056b3;
+} */
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
