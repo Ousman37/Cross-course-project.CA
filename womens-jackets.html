@@ -53,107 +53,60 @@
     
     </nav>
   </header>
-
-
-<main>
-<!-- Loading spinner -->
-    <div class="loader"></div>
-
-    <!-- Featured Products Title -->
-    <div class="featured-title">
-        <h2>Featured Jackets</h2>
-    </div>
-
-    <!-- Search and Pagination Options -->
-    <div class="search-and-pagination">
-        <!-- Search input -->
-        <input type="text" id="search-input" placeholder="Search products">
-        
-        <!-- Number of products per page dropdown -->
-        <label for="products-per-page">Number per page:</label>
-        <select id="products-per-page">
-            <option value="10">One</option>
-            <option value="20">Two</option>
-            <option value="30">Three</option>
-            <!-- Add more options as needed -->
-        </select>
-
-        <!-- Featured checkbox -->
-        <label>
-            <input type="checkbox" id="featured-checkbox"> Featured
-        </label>
-
-        <!-- Premium checkbox -->
-        <label>
-            <input type="checkbox" id="premium-checkbox"> Premium
-        </label>
-
-        <!-- Simple checkbox -->
-        <label>
-            <input type="checkbox" id="simple-checkbox"> Simple
-        </label>
-    </div>
-
-       
+  <main>
     <section>
-        <!-- Container for Product Grid (populated dynamically with JavaScript) -->
-    <div id="categoryA" class="product-container products-image-grid loader">
+        <!-- Loading spinner -->
+        <div class="loader"></div>
+
+        <!-- Featured Products Title -->
+        <div class="featured-title">
+            <h2>Featured Jackets</h2>
+        </div>
+
+        <!-- Search and Pagination Options -->
+        <div class="search-and-pagination">
+            <!-- Input field for searching products -->
+            <input type="text" id="search-input" placeholder="Search products">
+
+            <!-- Number of products per page dropdown -->
+            <label for="products-per-page">Number per page:</label>
+            <select id="products-per-page">
+                <option value="10">One</option>
+                <option value="20">Two</option>
+                <option value="30">Three</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Featured checkbox -->
+            <label>
+                <input type="checkbox" id="featured-checkbox"> Featured Products
+            </label>
+
+            <!-- Premium checkbox -->
+            <label>
+                <input type="checkbox" id="premium-checkbox"> Premium
+            </label>
+
+            <!-- Simple checkbox -->
+            <label>
+                <input type="checkbox" id="simple-checkbox"> Simple
+            </label>
+        </div>
+
         
-        <!-- Sample product card template -->
-    <div class="product" data-product-id="875">
-        <img src="./images/RainyDays_Jacket13.jpeg" alt="Product Name">
-        <h3>Black Jacket</h3>
-        <p>Price: $1599.00</p>
-        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="add-to-cart-grid">
-            <button class="add-to-cart-button js-add-to-cart" data-product-id="875">Add to cart</button>
-            <div class='added-to-cart-message' data-product-id="875"> ✔ Added to cart!</div>
-        </div>
-    </div>
-    
-    </div>
-    </section>
-   
-    <!-- Newsletter Section -->
-    <section id="newsletter">
-        <div class="container">
-            <h1>Subscribe to our Newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter Email...">
-                <button type="submit" class="button_1">Subscribe</button>
-            </form>
-        </div>
-    </section>
+        <!-- Container for Product Grid (populated dynamically with JavaScript) -->
+       <div id="categoryA" class="product-container products-image-grid loader">
+       <div class="products-image-grid">
+       <!-- Your product elements go here -->
+  </div>
+</div>
 
-    <!-- Featured Products Section -->
-    <section id="featured-products" class="section-p1">
-        <div class="container">
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product">
-                    <img src="images/item7.png" alt="Product 1">
-                    <h3>Product Name 1</h3>
-                    <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <img src="images/item8.png" alt="Product 2">
-                    <h3>Product Name 2</h3>
-                    <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product">
-                    <img src="images/RainyDays_Jacket13.jpeg" alt="Product 3">
-                    <h3>Product Name 3</h3>
-                    <p>Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        
+</section>
 </main>
+
+
+
 
 <!-- Footer Section -->
 <footer id="footer" class="section-p1">
