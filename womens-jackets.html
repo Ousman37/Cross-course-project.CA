@@ -1,145 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Rainy-days create amazing outdoors waterproof jackets with timeless design." />
+    <meta
+      name="description"
+      content="Rainy-days create amazing outdoors waterproof jackets with timeless design."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rainydays | Women's Jackets</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/03d5a1f99a.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/03d5a1f99a.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/all-jackets.css" />
-</head>
-<body>
-<!-- Header Section -->
-<header>
-    <!-- Main Navbar -->
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
-      </a>
-  
-      <!-- Web Navigation Links -->
-      <ul class="web-nav">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="all-jackets.html">All Jackets</a></li>
-        <li><a href="mens-jackets.html">Men's Jackets</a></li>
-        <li><a href="womens-jackets.html">Women's Jackets</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-      </ul>
-  
-      <!-- Hamburger Menu Icon -->
-      <div class="ham-menu" id="ham-menu-icon">
-        <div class="ham-menu-icon" id="ham-icon">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Main Navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
+        </a>
+
+        <!-- Web Navigation Links -->
+        <ul class="web-nav">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="all-jackets.html">All Jackets</a></li>
+          <li><a href="mens-jackets.html">Men's Jackets</a></li>
+          <li><a href="womens-jackets.html">Women's Jackets</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="checkout.html"
+              ><div class="js-cart-quantity">Checkout (0)</div></a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="ham-menu" id="ham-menu-icon">
+          <div class="ham-menu-icon" id="ham-icon">
             <span></span>
             <span></span>
             <span></span>
+          </div>
         </div>
-    </div>
-    </nav>
-  
-    <!-- Hamburger Navigation -->
-    <nav class="ham-nav" id="hidden-menu">
-      <ul class="links">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="all-jackets.html">All Jackets</a></li>
-        <li><a href="mens-jackets.html">Men's Jackets</a></li>
-        <li><a href="womens-jackets.html">Women's Jackets</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="checkout.html"><div class="js-cart-quantity">Checkout (0)</div></a></li>
-      </ul>
-    
-    </nav>
-  </header>
-  <main>
-    <section>
+      </nav>
+
+      <!-- Hamburger Navigation -->
+      <nav class="ham-nav" id="hidden-menu">
+        <ul class="links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="all-jackets.html">All Jackets</a></li>
+          <li><a href="mens-jackets.html">Men's Jackets</a></li>
+          <li><a href="womens-jackets.html">Women's Jackets</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="checkout.html"
+              ><div class="js-cart-quantity">Checkout (0)</div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
         <!-- Loading spinner -->
         <div class="loader"></div>
 
         <!-- Featured Products Title -->
         <div class="featured-title">
-            <h2>Featured Jackets</h2>
+          <h2>Featured Jackets</h2>
         </div>
 
         <!-- Search and Pagination Options -->
         <div class="search-and-pagination">
-            <!-- Input field for searching products -->
-            <input type="text" id="search-input" placeholder="Search products">
+          <!-- Input field for searching products -->
+          <input type="text" id="search-input" placeholder="Search products" />
 
-            <!-- Number of products per page dropdown -->
-            <label for="products-per-page">Number per page:</label>
-            <select id="products-per-page">
-                <option value="10">One</option>
-                <option value="20">Two</option>
-                <option value="30">Three</option>
-                <!-- Add more options as needed -->
-            </select>
+          <!-- Number of products per page dropdown -->
+          <label for="products-per-page">Number per page:</label>
+          <select id="products-per-page">
+            <option value="10">One</option>
+            <option value="20">Two</option>
+            <option value="30">Three</option>
+            <!-- Add more options as needed -->
+          </select>
 
-            <!-- Featured checkbox -->
-            <label>
-                <input type="checkbox" id="featured-checkbox"> Featured Products
-            </label>
+          <!-- Featured checkbox -->
+          <label>
+            <input type="checkbox" id="featured-checkbox" /> Featured Products
+          </label>
 
-            <!-- Premium checkbox -->
-            <label>
-                <input type="checkbox" id="premium-checkbox"> Premium
-            </label>
+          <!-- Premium checkbox -->
+          <label>
+            <input type="checkbox" id="premium-checkbox" /> Premium
+          </label>
 
-            <!-- Simple checkbox -->
-            <label>
-                <input type="checkbox" id="simple-checkbox"> Simple
-            </label>
+          <!-- Simple checkbox -->
+          <label> <input type="checkbox" id="simple-checkbox" /> Simple </label>
         </div>
 
-        
         <!-- Container for Product Grid (populated dynamically with JavaScript) -->
-       <div id="categoryA" class="product-container products-image-grid loader">
-       <div class="products-image-grid">
-       <!-- Your product elements go here -->
-  </div>
-</div>
+        <div
+          id="categoryA"
+          class="product-container products-image-grid loader"
+        >
+          <div class="products-image-grid">
+            <!-- Your product elements go here -->
+          </div>
+        </div>
+      </section>
+    </main>
 
-        
-</section>
-</main>
-
-
-
-
-<!-- Footer Section -->
-<footer id="footer" class="section-p1">
-    <div class="footer-content container">
+    <!-- Footer Section -->
+    <footer id="footer" class="section-p1">
+      <div class="footer-content container">
         <div class="footer-logo">
-            <a href="index.html">
-                <img src="/images/RainyDays_Logo.png" class="logo" alt="logo photo" />
-            </a>
+          <a href="index.html">
+            <img
+              src="/images/RainyDays_Logo.png"
+              class="logo"
+              alt="logo photo"
+            />
+          </a>
         </div>
         <div class="footer-links">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
         <div class="footer-social">
-            <h4>Follow Us</h4>
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 Rainy-days. All Rights Reserved.</p>
-    </div>
-</footer>
-<script type="module" src="js/cart.js"></script>
-<script type="module" src="./js/product-list.js"></script>
-<script type="module" src="js/menu.js" defer></script>
-</body>
+      </div>
+    </footer>
+    <script type="module" src="js/cart.js"></script>
+    <script type="module" src="./js/product-list.js"></script>
+    <script type="module" src="js/menu.js" defer></script>
+  </body>
 </html>
