@@ -371,8 +371,8 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 }
 
 .product:hover .cardtext {
-  background-color: var(--accent-color); /* Background color on hover */
-  color: white; /* Text color on hover */
+  background-color: var(--accent-color);
+  color: white;
 }
 
 .product h3 {
@@ -414,7 +414,7 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 
 #newsletter h1 {
   float: left;
-  margin-right: 20px; /* Add margin between the h1 and the form */
+  margin-right: 20px;
 }
 
 #newsletter form {
@@ -461,13 +461,13 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 .product-grid {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap; /* Prevent wrapping to keep products in a row */
-  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .product {
-  width: calc(33.33% - 20px); /* 3 columns with some spacing */
-  margin-right: 20px; /* Spacing between products */
+  width: calc(33.33% - 20px);
+  margin-right: 20px;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -475,7 +475,7 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 }
 
 .product:last-child {
-  margin-right: 0; /* Remove margin for the last product */
+  margin-right: 0;
 }
 
 .product img {
@@ -604,16 +604,6 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
   .hero-content h1 {
     margin-top: 30px;
   }
-
-  .product-list #category {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .product-list .card1,
-  .product-list .card2,
-  .product-list .card3 {
-    width: 100%;
-  }
 }
 
 /* Media Queries for Responsiveness */
@@ -642,16 +632,5 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 
   .hero-content h1 {
     margin-top: 30px;
-  }
-
-  .product-list #category {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-  }
-
-  .product-list .card1,
-  .product-list .card2,
-  .product-list .card3 {
-    width: 100%;
   }
 }
