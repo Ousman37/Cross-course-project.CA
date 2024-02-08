@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #6c757d; /* Gray */
-  --background-color: #f8f9fa; /* Light Gray */
-  --text-color: #333; /* Dark Gray */
-  --accent-color: #ff6347; /* Tomato Red */
-  --success-color: #00b55a; /* Green */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --accent-color: #ff6347;
+  --success-color: #00b55a;
 
   --font-family: "Merriweather", sans-serif;
   --font-size-xsm: 1.2rem;
@@ -93,11 +93,11 @@ header .navbar {
 }
 
 header .navbar .web-nav {
-  margin-left: auto; /* Push the navigation to the right */
+  margin-left: auto;
   display: flex;
 }
 header .navbar .web-nav li {
-  padding-left: 20px; /* Space between links */
+  padding-left: 20px;
 }
 header .ham-nav {
   display: none;
