@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #6c757d; /* Gray */
-  --background-color: #f8f9fa; /* Light Gray */
-  --text-color: #333; /* Dark Gray */
-  --accent-color: #ff6347; /* Tomato Red */
-  --success-color: #00b55a; /* Green */
+  --primary-color: #007bff; 
+  --secondary-color: #6c757d; 
+  --background-color: #f8f9fa; 
+  --text-color: #333; 
+  --accent-color: #ff6347; 
+  --success-color: #00b55a; 
 
   --font-family: "Merriweather", sans-serif;
   --font-size-xsm: 1.2rem;
@@ -60,11 +60,11 @@ header .navbar {
 }
 
 header .navbar .web-nav {
-  margin-left: auto; /* Push the navigation to the right */
+  margin-left: auto; 
   display: flex;
 }
 header .navbar .web-nav li {
-  padding-left: 20px; /* Space between links */
+  padding-left: 20px; 
 }
 header .ham-nav {
   display: none;
@@ -370,8 +370,8 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 }
 
 .product:hover .cardtext {
-  background-color: var(--accent-color); /* Background color on hover */
-  color: white; /* Text color on hover */
+  background-color: var(--accent-color); 
+  color: white;
 }
 
 .product h3 {
@@ -413,7 +413,7 @@ header .ham-menu .ham-menu-icon.change span:nth-child(3) {
 
 #newsletter h1 {
   float: left;
-  margin-right: 20px; /* Add margin between the h1 and the form */
+  margin-right: 20px; 
 }
 
 #newsletter form {
@@ -820,8 +820,8 @@ input[type="radio"] {
 }
 /* Modal Styles */
 .modal {
-  display: none; /* Hidden by default */
-  /* Other modal styles */
+  display: none; 
+  
 }
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
