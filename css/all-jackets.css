@@ -175,6 +175,12 @@ input[type="checkbox"] {
   margin-right: 5px;
 }
 
+.actionButton {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  /* Other styles as needed */
+}
 /* Media query for small screens */
 @media (max-width: 768px) {
   .featured-title {
@@ -396,10 +402,18 @@ input[type="checkbox"] {
 
 /* Media Query to show/hide the menu icon and hidden menu */
 @media only screen and (max-width: 768px) {
-  .product-grid .product .actionButton {
+  .product-grid .product {
     padding: 5px 10px;
     font-size: 14px;
     width: auto;
+  }
+
+  .actionButton {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 15px;
   }
   header .navbar .web-nav {
     display: none;
